@@ -36,7 +36,7 @@ int main()
     while (true)
     {
         ProcessEvents();
-        Update();
+        //        Update();
         Render();
         ITUGames::Console::InitScreenForRendering();
         engine->StepLoop();
@@ -44,23 +44,7 @@ int main()
         if (framesSinceStep == FRAME_SKIPS_BETWEEN_STEPS)
         {
             framesSinceStep = 0;
-            switch (player->currDir)
-            {
-            case UP:
-                player->pos_y--;
-                break;
-            case DOWN:
-                player->pos_y++;
-                break;
-            case LEFT:
-                player->pos_x--;
-                break;
-            case RIGHT:
-                player->pos_x++;
-                break;
-            default:
-                break;
-            }
+            player->MoveStep();
         }
         PrintInfo(engine->time_elapsed, engine->time_compute);
     }
@@ -75,6 +59,7 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
     ITUGames::Console::PrintStr("FPS: " + std::to_string(1.0 / time_elapsed.count()) + "\n");
     ITUGames::Console::PrintStr("Compute time:" + std::to_string(time_compute.count() * 1000) + " ms\n");
     ITUGames::Console::PrintStr("Target FPS: " + std::to_string(TARGETFPS) + " (" + std::to_string(1000.0 / TARGETFPS) + " ms)\n");
+    ITUGames::Console::PrintStr("snake front: " + std::to_string(player->coordinates.front().x) + " " + std::to_string(player->coordinates.front().y));
 }
 
 void ProcessEvents()
@@ -119,12 +104,17 @@ void ProcessEvents()
 
 void Update()
 {
-    ITUGames::Console::GotoCoords(player->pos_x, player->pos_y);
+    //    ITUGames::Console::GotoCoords(player->pos_x, player->pos_y);
 }
 
 void Render()
 {
-    ITUGames::Console::PrintStr("0\n");
+    for (auto coord : player->coordinates)
+    {
+        ITUGames::Console::GotoCoords(coord.x, coord.y);
+        ITUGames::Console::PrintStr("O");
+    }
+    ITUGames::Console::PrintStr("\n");
     ITUGames::Console::HideCursor();
 }
 

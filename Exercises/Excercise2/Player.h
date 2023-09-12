@@ -1,3 +1,5 @@
+#include <deque>
+
 enum MoveDirection
 {
     UP,
@@ -5,6 +7,13 @@ enum MoveDirection
     LEFT,
     RIGHT
 };
+
+struct Coordinate
+{
+    int x;
+    int y;
+};
+
 class Player
 {
 public:
@@ -13,7 +22,8 @@ public:
     void MoveDown();
     void MoveRight();
     void MoveLeft();
-    int pos_x;
-    int pos_y;
+    void MoveStep();
+    std::deque<Coordinate> coordinates;
+
     MoveDirection currDir = RIGHT;
 };
