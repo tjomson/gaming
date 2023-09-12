@@ -96,6 +96,7 @@ void ProcessEvents()
 
 void Update()
 {
+    ITUGames::Console::GotoCoords(player->pos_x, player->pos_y);
 }
 
 void Render()

@@ -57,7 +57,7 @@
 #include <fcntl.h>
 #include <signal.h>
 
-int kbhit(void)
+inline int kbhit(void)
 {
 	struct termios oldt, newt;
 	int ch;
@@ -84,7 +84,7 @@ int kbhit(void)
 	return 0;
 }
 
-char getch()
+inline char getch()
 {
 	return getchar();
 }
@@ -314,7 +314,7 @@ namespace ITUGames
 
 		// leave a clean (ish) environment after execution
 #ifdef _WIN32
-		BOOL WINAPI CleanupHandler(DWORD fdwCtrlType)
+		inline BOOL WINAPI CleanupHandler(DWORD fdwCtrlType)
 		{
 			if (fdwCtrlType == CTRL_SHUTDOWN_EVENT)
 			{
@@ -325,7 +325,7 @@ namespace ITUGames
 			return false;
 		}
 #elif defined(__linux__) || defined(__APPLE__)
-		void CleanupHandler(int s)
+		inline void CleanupHandler(int s)
 		{
 			int h = GetTerminalHeight();
 			printf("\033[%dT", h);
