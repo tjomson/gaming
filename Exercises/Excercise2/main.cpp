@@ -36,7 +36,6 @@ int main()
     while (true)
     {
         ProcessEvents();
-        //        Update();
         Render();
         ITUGames::Console::InitScreenForRendering();
         engine->StepLoop();
@@ -100,11 +99,6 @@ void ProcessEvents()
     default:
         break;
     }
-}
-
-void Update()
-{
-    //    ITUGames::Console::GotoCoords(player->pos_x, player->pos_y);
 }
 
 void Render()

@@ -10,41 +10,45 @@ Player::Player()
 
 void Player::MoveUp()
 {
-    currDir = UP;
+    if (currDir != DOWN)
+        currDir = UP;
 }
 
 void Player::MoveDown()
 {
-    currDir = DOWN;
+    if (currDir != UP)
+        currDir = DOWN;
 }
 
 void Player::MoveRight()
 {
-    currDir = RIGHT;
+    if (currDir != LEFT)
+        currDir = RIGHT;
 }
 
 void Player::MoveLeft()
 {
-    currDir = LEFT;
+    if (currDir != RIGHT)
+        currDir = LEFT;
 }
 
 void Player::MoveStep()
 {
     auto prevFirst = coordinates.front();
     coordinates.pop_back();
-    switch (currDir) {
-        case UP:
-            coordinates.push_front({prevFirst.x, prevFirst.y-1});
-            break;
-        case DOWN:
-            coordinates.push_front({prevFirst.x, prevFirst.y+1});
-            break;
-        case LEFT:
-            coordinates.push_front({prevFirst.x-1, prevFirst.y});
-            break;
-        case RIGHT:
-            coordinates.push_front({prevFirst.x+1, prevFirst.y});
-            break;
-
+    switch (currDir)
+    {
+    case UP:
+        coordinates.push_front({prevFirst.x, prevFirst.y - 1});
+        break;
+    case DOWN:
+        coordinates.push_front({prevFirst.x, prevFirst.y + 1});
+        break;
+    case LEFT:
+        coordinates.push_front({prevFirst.x - 1, prevFirst.y});
+        break;
+    case RIGHT:
+        coordinates.push_front({prevFirst.x + 1, prevFirst.y});
+        break;
     }
 }
