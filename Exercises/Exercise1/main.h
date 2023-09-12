@@ -8,4 +8,4 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
 
 void ProcessEvents();
 
-std::tuple<std::chrono::duration<double>, std::chrono::duration<double>> GatherTimings();
+std::tuple<std::chrono::duration<double>, std::chrono::duration<double>> StepLoop();

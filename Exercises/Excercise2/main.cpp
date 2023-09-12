@@ -31,6 +31,7 @@ int main()
     std::srand(std::time(nullptr));
     ITUGames::Console::InitScreenForRendering();
     auto engine = new Engine();
+    int framesSinceStep = 0;
 
     while (true)
     {
@@ -38,7 +39,29 @@ int main()
         Update();
         Render();
         ITUGames::Console::InitScreenForRendering();
-        engine->GatherTimings();
+        engine->StepLoop();
+        framesSinceStep++;
+        if (framesSinceStep == FRAME_SKIPS_BETWEEN_STEPS)
+        {
+            framesSinceStep = 0;
+            switch (player->currDir)
+            {
+            case UP:
+                player->pos_y--;
+                break;
+            case DOWN:
+                player->pos_y++;
+                break;
+            case LEFT:
+                player->pos_x--;
+                break;
+            case RIGHT:
+                player->pos_x++;
+                break;
+            default:
+                break;
+            }
+        }
         PrintInfo(engine->time_elapsed, engine->time_compute);
     }
 

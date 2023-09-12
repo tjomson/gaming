@@ -1,3 +1,10 @@
+enum MoveDirection
+{
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT
+};
 class Player
 {
 public:
@@ -8,4 +15,5 @@ public:
     void MoveLeft();
     int pos_x;
     int pos_y;
+    MoveDirection currDir = RIGHT;
 };

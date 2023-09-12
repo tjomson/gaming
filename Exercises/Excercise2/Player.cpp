@@ -3,26 +3,26 @@
 
 Player::Player()
 {
-    pos_x = std::rand() % ITUGames::Console::GetTerminalWidth();
-    pos_y = std::rand() % ITUGames::Console::GetTerminalHeight();
+    pos_x = 20;
+    pos_y = 10;
 }
 
 void Player::MoveUp()
 {
-    pos_y--;
+    currDir = UP;
 }
 
 void Player::MoveDown()
 {
-    pos_y++;
+    currDir = DOWN;
 }
 
 void Player::MoveRight()
 {
-    pos_x++;
+    currDir = RIGHT;
 }
 
 void Player::MoveLeft()
 {
-    pos_x--;
+    currDir = LEFT;
 }

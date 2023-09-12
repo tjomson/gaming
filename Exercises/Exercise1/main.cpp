@@ -39,14 +39,14 @@ int main()
         Update();
         Render();
         ITUGames::Console::InitScreenForRendering();
-        auto timings = GatherTimings();
+        auto timings = StepLoop();
         PrintInfo(std::get<0>(timings), std::get<1>(timings));
     }
 
     return 0;
 }
 
-std::tuple<std::chrono::duration<double>, std::chrono::duration<double>> GatherTimings()
+std::tuple<std::chrono::duration<double>, std::chrono::duration<double>> StepLoop()
 {
     std::chrono::time_point<std::chrono::steady_clock> compute_end = std::chrono::steady_clock::now();
     std::chrono::duration<double> time_compute = compute_end - prevEnd;

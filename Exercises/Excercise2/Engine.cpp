@@ -7,7 +7,7 @@ Engine::Engine()
     compute_end = std::chrono::steady_clock::now();
 }
 
-void Engine::GatherTimings()
+void Engine::StepLoop()
 {
     compute_end = std::chrono::steady_clock::now();
     time_compute = compute_end - prevEnd;
