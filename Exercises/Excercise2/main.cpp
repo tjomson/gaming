@@ -35,13 +35,13 @@ int main()
 
     while (true)
     {
-        ProcessEvents();
         Render();
         ITUGames::Console::InitScreenForRendering();
         engine->StepLoop();
         framesSinceStep++;
         if (framesSinceStep == FRAME_SKIPS_BETWEEN_STEPS)
         {
+            ProcessEvents();
             framesSinceStep = 0;
             player->MoveStep();
         }
