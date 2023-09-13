@@ -40,7 +40,7 @@ int main()
         ITUGames::Console::InitScreenForRendering();
         engine->StepLoop();
         framesSinceStep++;
-        if (framesSinceStep == FRAME_SKIPS_BETWEEN_STEPS)
+        if (framesSinceStep >= player->frame_skips)
         {
             ProcessEvents();
             framesSinceStep = 0;

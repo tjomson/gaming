@@ -3,7 +3,6 @@
 #include <chrono>
 
 #define TARGETFPS 60
-#define FRAME_SKIPS_BETWEEN_STEPS 20
 
 class Engine
 {

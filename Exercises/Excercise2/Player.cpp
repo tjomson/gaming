@@ -77,6 +77,7 @@ void Player::MoveStep()
     else
     {
         SetNewFood();
+        frame_skips--;
     }
     ApplyBound();
 }
