@@ -6,6 +6,7 @@ Player::Player()
     coordinates.push_front({20, 10});
     coordinates.push_front({19, 10});
     coordinates.push_front({18, 10});
+    frame_skips = 15;
 }
 
 void Player::MoveUp()
@@ -49,7 +50,7 @@ void Player::ApplyBound()
 
 void Player::SetNewFood()
 {
-    int food_x = (std::rand() % GAMEWIDTH);
+    int food_x = (std::rand() % GAMEWIDTH - 1) + 1;
     int food_y = (std::rand() % GAMEHEIGHT) + ROWOFFSET;
     food_pos = {food_x, food_y};
 }
@@ -77,7 +78,7 @@ void Player::MoveStep()
     else
     {
         SetNewFood();
-        frame_skips--;
+        frame_skips *= 0.9;
     }
     ApplyBound();
 }

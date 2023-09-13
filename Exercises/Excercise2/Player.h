@@ -29,7 +29,7 @@ public:
     void MoveStep();
     void ApplyBound();
     void SetNewFood();
-    int frame_skips = 15;
+    double frame_skips;
     Coordinate food_pos;
     std::deque<Coordinate> coordinates;
     MoveDirection currDir = RIGHT;
