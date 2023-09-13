@@ -3,10 +3,10 @@
 
 Player::Player()
 {
+    coordinates.clear();
     coordinates.push_front({20, 10});
-    coordinates.push_front({19, 10});
-    coordinates.push_front({18, 10});
     frame_skips = 15;
+    SetNewFood();
 }
 
 void Player::MoveUp()
@@ -48,10 +48,27 @@ void Player::ApplyBound()
     coordinates.push_front({front.x, front.y});
 }
 
+bool Player::HasLost()
+{
+    auto front = coordinates.front();
+    std::deque<Coordinate>::iterator it = coordinates.begin();
+    if (it != coordinates.end())
+        ++it;
+
+    while (it != coordinates.end())
+    {
+        Coordinate coord = *it;
+        if (front.x == coord.x && front.y == coord.y)
+            return true;
+        ++it;
+    }
+    return false;
+}
+
 void Player::SetNewFood()
 {
-    int food_x = (std::rand() % GAMEWIDTH - 1) + 1;
-    int food_y = (std::rand() % GAMEHEIGHT) + ROWOFFSET;
+    int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
+    int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
     food_pos = {food_x, food_y};
 }
 

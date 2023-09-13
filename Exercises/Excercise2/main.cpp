@@ -29,7 +29,6 @@ auto player = new Player();
 int main()
 {
     std::srand(std::time(nullptr));
-    player->SetNewFood();
     ITUGames::Console::InitScreenForRendering();
     auto engine = new Engine();
     int framesSinceStep = 0;
@@ -47,6 +46,8 @@ int main()
             player->MoveStep();
         }
         PrintInfo(engine->time_elapsed, engine->time_compute);
+        if (player->HasLost())
+            player = new Player();
     }
 
     return 0;

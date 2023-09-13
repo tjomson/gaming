@@ -1,6 +1,6 @@
 #include <deque>
 
-#define GAMEWIDTH 80
+#define GAMEWIDTH 50
 #define GAMEHEIGHT 30
 #define ROWOFFSET 6
 
@@ -29,6 +29,7 @@ public:
     void MoveStep();
     void ApplyBound();
     void SetNewFood();
+    bool HasLost();
     double frame_skips;
     Coordinate food_pos;
     std::deque<Coordinate> coordinates;
