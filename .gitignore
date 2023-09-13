@@ -1,6 +1,7 @@
 ### cmake
 [Oo]ut/
-
+.idea
+.vscode
 ### misc
 CppProperties.json
 
