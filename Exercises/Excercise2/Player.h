@@ -1,5 +1,9 @@
 #include <deque>
 
+#define GAMEWIDTH 80
+#define GAMEHEIGHT 30
+#define ROWOFFSET 5
+
 enum MoveDirection
 {
     UP,
@@ -23,7 +27,7 @@ public:
     void MoveRight();
     void MoveLeft();
     void MoveStep();
+    void ApplyBound();
     std::deque<Coordinate> coordinates;
-
     MoveDirection currDir = RIGHT;
 };

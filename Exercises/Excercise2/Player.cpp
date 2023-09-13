@@ -32,6 +32,21 @@ void Player::MoveLeft()
         currDir = LEFT;
 }
 
+void Player::ApplyBound()
+{
+    auto front = coordinates.front();
+    coordinates.pop_front();
+    if (front.x >= GAMEWIDTH)
+        front.x = 2;
+    else if (front.x <= 1)
+        front.x = GAMEWIDTH - 1;
+    if (front.y >= GAMEHEIGHT + ROWOFFSET)
+        front.y = ROWOFFSET + 1;
+    else if (front.y < ROWOFFSET + 1)
+        front.y = GAMEHEIGHT + ROWOFFSET - 1;
+    coordinates.push_front({front.x, front.y});
+}
+
 void Player::MoveStep()
 {
     auto prevFirst = coordinates.front();
@@ -51,4 +66,5 @@ void Player::MoveStep()
         coordinates.push_front({prevFirst.x + 1, prevFirst.y});
         break;
     }
+    ApplyBound();
 }

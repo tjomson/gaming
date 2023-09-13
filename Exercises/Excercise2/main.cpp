@@ -58,7 +58,6 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
     ITUGames::Console::PrintStr("FPS: " + std::to_string(1.0 / time_elapsed.count()) + "\n");
     ITUGames::Console::PrintStr("Compute time:" + std::to_string(time_compute.count() * 1000) + " ms\n");
     ITUGames::Console::PrintStr("Target FPS: " + std::to_string(TARGETFPS) + " (" + std::to_string(1000.0 / TARGETFPS) + " ms)\n");
-    ITUGames::Console::PrintStr("snake front: " + std::to_string(player->coordinates.front().x) + " " + std::to_string(player->coordinates.front().y));
 }
 
 void ProcessEvents()
@@ -101,6 +100,18 @@ void ProcessEvents()
     }
 }
 
+void PrintBounds()
+{
+    ITUGames::Console::GotoCoords(0, ROWOFFSET);
+    ITUGames::Console::PrintStr("+");
+    ITUGames::Console::GotoCoords(GAMEWIDTH, ROWOFFSET);
+    ITUGames::Console::PrintStr("+");
+    ITUGames::Console::GotoCoords(0, ROWOFFSET + GAMEHEIGHT);
+    ITUGames::Console::PrintStr("+");
+    ITUGames::Console::GotoCoords(GAMEWIDTH, ROWOFFSET + GAMEHEIGHT);
+    ITUGames::Console::PrintStr("+");
+}
+
 void Render()
 {
     for (auto coord : player->coordinates)
@@ -108,6 +119,7 @@ void Render()
         ITUGames::Console::GotoCoords(coord.x, coord.y);
         ITUGames::Console::PrintStr("O");
     }
+    PrintBounds();
     ITUGames::Console::PrintStr("\n");
     ITUGames::Console::HideCursor();
 }
