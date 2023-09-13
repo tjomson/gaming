@@ -8,3 +8,4 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
 
 void ProcessEvents();
 
+void PrintBounds();

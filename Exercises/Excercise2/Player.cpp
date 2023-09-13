@@ -47,10 +47,16 @@ void Player::ApplyBound()
     coordinates.push_front({front.x, front.y});
 }
 
+void Player::SetNewFood()
+{
+    int food_x = (std::rand() % GAMEWIDTH);
+    int food_y = (std::rand() % GAMEHEIGHT) + ROWOFFSET;
+    food_pos = {food_x, food_y};
+}
+
 void Player::MoveStep()
 {
     auto prevFirst = coordinates.front();
-    coordinates.pop_back();
     switch (currDir)
     {
     case UP:
@@ -65,6 +71,12 @@ void Player::MoveStep()
     case RIGHT:
         coordinates.push_front({prevFirst.x + 1, prevFirst.y});
         break;
+    }
+    if (coordinates.front().x != food_pos.x || coordinates.front().y != food_pos.y)
+        coordinates.pop_back();
+    else
+    {
+        SetNewFood();
     }
     ApplyBound();
 }

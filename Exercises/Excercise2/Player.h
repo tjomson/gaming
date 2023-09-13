@@ -2,7 +2,7 @@
 
 #define GAMEWIDTH 80
 #define GAMEHEIGHT 30
-#define ROWOFFSET 5
+#define ROWOFFSET 6
 
 enum MoveDirection
 {
@@ -28,6 +28,8 @@ public:
     void MoveLeft();
     void MoveStep();
     void ApplyBound();
+    void SetNewFood();
+    Coordinate food_pos;
     std::deque<Coordinate> coordinates;
     MoveDirection currDir = RIGHT;
 };

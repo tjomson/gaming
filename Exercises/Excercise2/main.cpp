@@ -29,6 +29,7 @@ auto player = new Player();
 int main()
 {
     std::srand(std::time(nullptr));
+    player->SetNewFood();
     ITUGames::Console::InitScreenForRendering();
     auto engine = new Engine();
     int framesSinceStep = 0;
@@ -58,6 +59,7 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
     ITUGames::Console::PrintStr("FPS: " + std::to_string(1.0 / time_elapsed.count()) + "\n");
     ITUGames::Console::PrintStr("Compute time:" + std::to_string(time_compute.count() * 1000) + " ms\n");
     ITUGames::Console::PrintStr("Target FPS: " + std::to_string(TARGETFPS) + " (" + std::to_string(1000.0 / TARGETFPS) + " ms)\n");
+    ITUGames::Console::PrintStr("Snake length: " + std::to_string(player->coordinates.size()) + "\n");
 }
 
 void ProcessEvents()
@@ -120,6 +122,8 @@ void Render()
         ITUGames::Console::PrintStr("O");
     }
     PrintBounds();
+    ITUGames::Console::GotoCoords(player->food_pos.x, player->food_pos.y);
+    ITUGames::Console::PrintStr("X");
     ITUGames::Console::PrintStr("\n");
     ITUGames::Console::HideCursor();
 }
