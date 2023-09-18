@@ -5,6 +5,8 @@
 
 #include "Engine.h"
 #include "Player.h"
+#include "sre/SDLRenderer.hpp"
+#include "sre/SpriteAtlas.hpp"
 #pragma region Engine State
 
 #pragma endregion // Engine State
@@ -23,33 +25,42 @@
 
 #include "main.h"
 
-auto player = new Player();
+// auto player = new Player();
 
+glm::vec2 window_size = glm::vec2(800, 600);
+sre::SDLRenderer renderer;
+sre::Camera camera;
+std::shared_ptr<sre::SpriteAtlas> atlas;
+sre::Sprite sprite;
+int x = 0;
 int main()
 {
-    std::srand(std::time(nullptr));
-    // ITUGames::Console::InitScreenForRendering();
-    auto engine = new Engine();
-    int framesSinceStep = 0;
+    renderer.frameRender = Render;
+    renderer.frameUpdate = Update;
+    renderer.keyEvent = ProcessEvents;
+    renderer.setWindowSize(window_size);
+    renderer.init();
+    camera.setWindowCoordinates();
+    atlas = sre::SpriteAtlas::create("data/snake.json",
+                                     "data/snake.png");
+    sprite = atlas->get("berry.png");
+    sprite.setPosition(window_size / 2.0f);
+    renderer.startEventLoop();
+}
 
-    while (true)
-    {
-        Render();
-        // ITUGames::Console::InitScreenForRendering();
-        engine->StepLoop();
-        framesSinceStep++;
-        if (framesSinceStep >= player->frame_skips)
-        {
-            ProcessEvents();
-            framesSinceStep = 0;
-            player->MoveStep();
-        }
-        PrintInfo(engine->time_elapsed, engine->time_compute);
-        if (player->HasLost())
-            player = new Player();
-    }
+void ProcessEvents(SDL_Event &event) {}
+void Update(float deltaTime) {}
+void Render()
+{
+    sre::RenderPass renderPass = sre::RenderPass::create()
+                                     .withCamera(camera)
+                                     .withClearColor(true, {.3f, .3f, 1, 1})
+                                     .build();
+    sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
 
-    return 0;
+    spriteBatchBuilder.addSprite(sprite);
+    auto spriteBatch = spriteBatchBuilder.build();
+    renderPass.draw(spriteBatch);
 }
 
 void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration<double> time_compute)
@@ -62,45 +73,45 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
     // ITUGames::Console::PrintStr("Snake length: " + std::to_string(player->coordinates.size()) + "\n");
 }
 
-void ProcessEvents()
-{
-    // unsigned char buttonPressed = ITUGames::Console::GetCharacter(false);
-    // switch (buttonPressed)
-    // {
-    // case ITUGames::Console::KEY_W:
-    //     player->MoveUp();
-    //     break;
-    // case ITUGames::Console::KEY_S:
-    //     player->MoveDown();
-    //     break;
-    // case ITUGames::Console::KEY_D:
-    //     player->MoveRight();
-    //     break;
-    // case ITUGames::Console::KEY_A:
-    //     player->MoveLeft();
-    //     break;
-    // case '\033':
-    //     getch();
-    //     switch (getch())
-    //     {
-    //     case 65:
-    //         player->MoveUp();
-    //         break;
-    //     case 66:
-    //         player->MoveDown();
-    //         break;
-    //     case 67:
-    //         player->MoveRight();
-    //         break;
-    //     case 68:
-    //         player->MoveLeft();
-    //         break;
-    //     }
-    //     break;
-    // default:
-    //     break;
-    // }
-}
+// void ProcessEvents()
+// {
+// unsigned char buttonPressed = ITUGames::Console::GetCharacter(false);
+// switch (buttonPressed)
+// {
+// case ITUGames::Console::KEY_W:
+//     player->MoveUp();
+//     break;
+// case ITUGames::Console::KEY_S:
+//     player->MoveDown();
+//     break;
+// case ITUGames::Console::KEY_D:
+//     player->MoveRight();
+//     break;
+// case ITUGames::Console::KEY_A:
+//     player->MoveLeft();
+//     break;
+// case '\033':
+//     getch();
+//     switch (getch())
+//     {
+//     case 65:
+//         player->MoveUp();
+//         break;
+//     case 66:
+//         player->MoveDown();
+//         break;
+//     case 67:
+//         player->MoveRight();
+//         break;
+//     case 68:
+//         player->MoveLeft();
+//         break;
+//     }
+//     break;
+// default:
+//     break;
+// }
+// }
 
 void PrintBounds()
 {
@@ -114,19 +125,19 @@ void PrintBounds()
     // ITUGames::Console::PrintStr("+");
 }
 
-void Render()
-{
-    // for (auto coord : player->coordinates)
-    // {
-    //     ITUGames::Console::GotoCoords(coord.x, coord.y);
-    //     ITUGames::Console::PrintStr("O");
-    // }
-    // PrintBounds();
-    // ITUGames::Console::GotoCoords(player->food_pos.x, player->food_pos.y);
-    // ITUGames::Console::PrintStr("X");
-    // ITUGames::Console::PrintStr("\n");
-    // ITUGames::Console::HideCursor();
-}
+// void Render()
+// {
+// for (auto coord : player->coordinates)
+// {
+//     ITUGames::Console::GotoCoords(coord.x, coord.y);
+//     ITUGames::Console::PrintStr("O");
+// }
+// PrintBounds();
+// ITUGames::Console::GotoCoords(player->food_pos.x, player->food_pos.y);
+// ITUGames::Console::PrintStr("X");
+// ITUGames::Console::PrintStr("\n");
+// ITUGames::Console::HideCursor();
+// }
 
 void LongComputation()
 {

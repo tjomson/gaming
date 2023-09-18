@@ -1,11 +1,11 @@
 void LongComputation();
 
-void Update();
+void Update(float deltaTime);
 
 void Render();
 
 void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration<double> time_compute);
 
-void ProcessEvents();
+void ProcessEvents(SDL_Event &event);
 
 void PrintBounds();

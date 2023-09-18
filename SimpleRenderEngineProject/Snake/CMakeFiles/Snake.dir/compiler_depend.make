@@ -119,10 +119,181 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   Snake/Engine.h \
   Snake/Player.h \
   Snake/main.h \
+  submodules/SimpleRenderEngine/include/sre/BlendType.hpp \
+  submodules/SimpleRenderEngine/include/sre/Camera.hpp \
+  submodules/SimpleRenderEngine/include/sre/Color.hpp \
+  submodules/SimpleRenderEngine/include/sre/Framebuffer.hpp \
+  submodules/SimpleRenderEngine/include/sre/Light.hpp \
+  submodules/SimpleRenderEngine/include/sre/LightType.hpp \
+  submodules/SimpleRenderEngine/include/sre/Log.hpp \
+  submodules/SimpleRenderEngine/include/sre/Material.hpp \
+  submodules/SimpleRenderEngine/include/sre/Mesh.hpp \
+  submodules/SimpleRenderEngine/include/sre/MeshTopology.hpp \
+  submodules/SimpleRenderEngine/include/sre/RenderPass.hpp \
+  submodules/SimpleRenderEngine/include/sre/RenderStats.hpp \
+  submodules/SimpleRenderEngine/include/sre/Renderer.hpp \
+  submodules/SimpleRenderEngine/include/sre/SDLRenderer.hpp \
+  submodules/SimpleRenderEngine/include/sre/Shader.hpp \
+  submodules/SimpleRenderEngine/include/sre/Skybox.hpp \
+  submodules/SimpleRenderEngine/include/sre/Sprite.hpp \
+  submodules/SimpleRenderEngine/include/sre/SpriteAtlas.hpp \
+  submodules/SimpleRenderEngine/include/sre/SpriteBatch.hpp \
+  submodules/SimpleRenderEngine/include/sre/Texture.hpp \
+  submodules/SimpleRenderEngine/include/sre/WorldLights.hpp \
+  submodules/SimpleRenderEngine/include/sre/imgui_sre.hpp \
+  submodules/SimpleRenderEngine/include/sre/impl/CPPShim.hpp \
+  submodules/SimpleRenderEngine/include/sre/impl/Export.hpp \
+  submodules/SimpleRenderEngine/include/sre/impl/GL.hpp \
+  submodules/SimpleRenderEngine/include/sre/impl/UniformSet.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/common.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_vector_relational.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_vector_relational_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/setup.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/common.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/exponential.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/vector_relational.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/_fixes.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/_vectorize.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_common.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_common_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_exponential.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_exponential_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/setup.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec1.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/exponential.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/geometric.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_geometric.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_geometric_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/geometric.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/matrix.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_matrix.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_matrix_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/setup.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x3.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x4.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x2.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x3.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x4.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x2.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x3.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec1.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/ext/vec1.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat2x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat2x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat3x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat3x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat3x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat4x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat4x3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat4x4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/matrix.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/integer.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/simd/platform.h \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/_fixes.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/compute_vector_relational.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_integer.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_integer_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_packing.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_packing_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_trigonometric.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_trigonometric_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/qualifier.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/setup.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_float.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_half.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_half.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_int.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x2.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec2.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec3.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4_simd.inl \
+  submodules/SimpleRenderEngine/submodules/glm/glm/fwd.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/glm.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/integer.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/mat2x2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/packing.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/trigonometric.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/vec2.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/vec3.hpp \
+  submodules/SimpleRenderEngine/submodules/glm/glm/vec4.hpp \
+  submodules/SimpleRenderEngine/submodules/imgui/imconfig.h \
+  submodules/SimpleRenderEngine/submodules/imgui/imgui.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glew.h \
+  /usr/include/GL/glu.h \
+  /usr/include/SDL2/SDL.h \
+  /usr/include/SDL2/SDL_assert.h \
+  /usr/include/SDL2/SDL_atomic.h \
+  /usr/include/SDL2/SDL_audio.h \
+  /usr/include/SDL2/SDL_blendmode.h \
+  /usr/include/SDL2/SDL_clipboard.h \
+  /usr/include/SDL2/SDL_config-x86_64.h \
+  /usr/include/SDL2/SDL_config.h \
+  /usr/include/SDL2/SDL_cpuinfo.h \
+  /usr/include/SDL2/SDL_endian.h \
+  /usr/include/SDL2/SDL_error.h \
+  /usr/include/SDL2/SDL_events.h \
+  /usr/include/SDL2/SDL_filesystem.h \
+  /usr/include/SDL2/SDL_gamecontroller.h \
+  /usr/include/SDL2/SDL_gesture.h \
+  /usr/include/SDL2/SDL_guid.h \
+  /usr/include/SDL2/SDL_haptic.h \
+  /usr/include/SDL2/SDL_hidapi.h \
+  /usr/include/SDL2/SDL_hints.h \
+  /usr/include/SDL2/SDL_joystick.h \
+  /usr/include/SDL2/SDL_keyboard.h \
+  /usr/include/SDL2/SDL_keycode.h \
+  /usr/include/SDL2/SDL_loadso.h \
+  /usr/include/SDL2/SDL_locale.h \
+  /usr/include/SDL2/SDL_log.h \
+  /usr/include/SDL2/SDL_main.h \
+  /usr/include/SDL2/SDL_messagebox.h \
+  /usr/include/SDL2/SDL_metal.h \
+  /usr/include/SDL2/SDL_misc.h \
+  /usr/include/SDL2/SDL_mouse.h \
+  /usr/include/SDL2/SDL_mutex.h \
+  /usr/include/SDL2/SDL_pixels.h \
+  /usr/include/SDL2/SDL_platform.h \
+  /usr/include/SDL2/SDL_power.h \
+  /usr/include/SDL2/SDL_quit.h \
+  /usr/include/SDL2/SDL_rect.h \
+  /usr/include/SDL2/SDL_render.h \
+  /usr/include/SDL2/SDL_rwops.h \
+  /usr/include/SDL2/SDL_scancode.h \
+  /usr/include/SDL2/SDL_sensor.h \
+  /usr/include/SDL2/SDL_shape.h \
+  /usr/include/SDL2/SDL_stdinc.h \
+  /usr/include/SDL2/SDL_surface.h \
+  /usr/include/SDL2/SDL_system.h \
+  /usr/include/SDL2/SDL_thread.h \
+  /usr/include/SDL2/SDL_timer.h \
+  /usr/include/SDL2/SDL_touch.h \
+  /usr/include/SDL2/SDL_version.h \
+  /usr/include/SDL2/SDL_video.h \
+  /usr/include/SDL2/begin_code.h \
+  /usr/include/SDL2/close_code.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \
+  /usr/include/assert.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/cpu-set.h \
@@ -137,12 +308,15 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -187,15 +361,24 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/13/array \
+  /usr/include/c++/13/backward/auto_ptr.h \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/align.h \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -208,12 +391,16 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
   /usr/include/c++/13/bits/deque.tcc \
+  /usr/include/c++/13/bits/enable_special_members.h \
+  /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/hashtable.h \
+  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
@@ -227,6 +414,7 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/bits/move.h \
   /usr/include/c++/13/bits/nested_exception.h \
   /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
   /usr/include/c++/13/bits/parse_numbers.h \
@@ -238,18 +426,31 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
+  /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/13/bits/stl_set.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
   /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
@@ -257,19 +458,26 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
+  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
+  /usr/include/c++/13/cfloat \
   /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
+  /usr/include/c++/13/compare \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
   /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
@@ -277,26 +485,35 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/functional \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/map \
+  /usr/include/c++/13/math.h \
+  /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numeric \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/random \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/set \
   /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
@@ -316,6 +533,7 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/vector \
   /usr/include/c++/13/x86_64-redhat-linux/bits/atomic_word.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h \
@@ -336,7 +554,10 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/inttypes.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -345,6 +566,8 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -352,390 +575,619 @@ Snake/CMakeFiles/Snake.dir/main.cpp.o: Snake/main.cpp \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/cmpccxaddintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/float.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/immintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/keylockerintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/limits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/lzcntintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/smmintrin.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/syslimits.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/xtestintrin.h
 
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsavesintrin.h:
 
-/usr/include/sys/single_threaded.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveoptintrin.h:
 
-/usr/include/stdlib.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xmmintrin.h:
 
-/usr/include/stdio.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/x86gprintrin.h:
 
-/usr/include/sched.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/wmmintrin.h:
 
-/usr/include/pthread.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/wbnoinvdintrin.h:
 
-/usr/include/locale.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/waitpkgintrin.h:
 
-/usr/include/linux/errno.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/vpclmulqdqintrin.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/opt_random.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/vaesintrin.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/gthr-default.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/uintrintrin.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/ctype_inline.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tsxldtrkintrin.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/ctype_base.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
-/usr/include/c++/13/tr1/modified_bessel_func.tcc:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/clwbintrin.h:
 
-/usr/include/c++/13/tr1/legendre_function.tcc:
+/usr/include/SDL2/SDL_sensor.h:
 
-/usr/include/c++/13/tr1/exp_integral.tcc:
+/usr/include/c++/13/bits/stl_multiset.h:
 
-/usr/include/c++/13/tr1/ell_integral.tcc:
+/usr/include/SDL2/SDL_power.h:
 
-/usr/include/c++/13/stdexcept:
+/usr/include/SDL2/SDL_platform.h:
 
-/usr/include/c++/13/numeric:
-
-/usr/include/c++/13/istream:
-
-/usr/include/c++/13/iostream:
-
-/usr/include/c++/13/ios:
-
-/usr/include/c++/13/cwchar:
-
-/usr/include/c++/13/cmath:
-
-/usr/include/c++/13/clocale:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
-/usr/include/c++/13/bits/stringfwd.h:
-
-/usr/include/c++/13/bits/string_view.tcc:
-
-/usr/include/endian.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/c++/13/bits/stl_numeric.h:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/c++locale.h:
-
-/usr/include/c++/13/bits/random.tcc:
-
-/usr/include/c++/13/bits/random.h:
-
-/usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/c++/13/bits/nested_exception.h:
-
-/usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/c++/13/bits/locale_facets.h:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-/usr/include/c++/13/bits/locale_classes.h:
-
-/usr/include/c++/13/bits/ios_base.h:
-
-/usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/errno.h:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/c++/13/bits/istream.tcc:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/c++/13/typeinfo:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/c++/13/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/c++/13/pstl/execution_defs.h:
-
-/usr/include/c++/13/bits/basic_ios.tcc:
-
-/usr/include/c++/13/bits/basic_ios.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/atomic_word.h:
-
-/usr/include/bits/wctype-wchar.h:
-
-/usr/include/ctype.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/bits/uintn-identity.h:
+/usr/include/c++/13/bits/invoke.h:
 
 /usr/include/bits/types/struct_sched_param.h:
 
-/usr/include/bits/types/struct___jmp_buf_tag.h:
+/usr/include/c++/13/bits/parse_numbers.h:
 
-/usr/include/bits/types/struct_FILE.h:
+/usr/include/bits/stdlib-float.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/gthr.h:
+/usr/include/SDL2/SDL_messagebox.h:
 
-/usr/include/bits/types/mbstate_t.h:
+/usr/include/SDL2/SDL_log.h:
 
-/usr/include/bits/types/error_t.h:
+/usr/include/SDL2/SDL_locale.h:
 
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/SDL2/SDL_loadso.h:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/SDL2/SDL_joystick.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/include/assert.h:
 
-/usr/include/stdint.h:
+/usr/include/SDL2/SDL_hints.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4.hpp:
 
-/usr/include/c++/13/bits/locale_facets.tcc:
+/usr/include/pthread.h:
 
-/usr/include/c++/13/bits/requires_hosted.h:
+submodules/SimpleRenderEngine/include/sre/imgui_sre.hpp:
 
-/usr/include/c++/13/string_view:
+/usr/include/c++/13/bits/string_view.tcc:
 
-/usr/include/features-time64.h:
+/usr/include/SDL2/SDL_filesystem.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
+submodules/SimpleRenderEngine/include/sre/LightType.hpp:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/include/SDL2/SDL_events.h:
 
-/usr/include/c++/13/tr1/hypergeometric.tcc:
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h:
 
-/usr/include/c++/13/type_traits:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x2.hpp:
 
-/usr/include/c++/13/bits/basic_string.tcc:
-
-/usr/include/c++/13/bit:
-
-/usr/include/c++/13/cerrno:
-
-/usr/include/bits/types/struct_tm.h:
-
-/usr/include/c++/13/tr1/gamma.tcc:
-
-/usr/include/c++/13/ext/atomicity.h:
-
-/usr/include/c++/13/cctype:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/c++/13/cwctype:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/c++/13/ratio:
-
-/usr/include/c++/13/tr1/poly_hermite.tcc:
-
-Snake/Player.h:
+/usr/include/SDL2/SDL_endian.h:
 
 /usr/include/bits/types/time_t.h:
 
-/usr/include/bits/mathcalls-helper-functions.h:
+/usr/include/SDL2/SDL_audio.h:
 
-/usr/include/c++/13/limits:
+/usr/include/SDL2/SDL.h:
 
-/usr/include/c++/13/ext/type_traits.h:
+submodules/SimpleRenderEngine/submodules/imgui/imconfig.h:
 
-/usr/include/c++/13/bits/deque.tcc:
+/usr/include/c++/13/bits/basic_ios.h:
 
-/usr/include/c++/13/cstdlib:
+/usr/include/inttypes.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/vec3.hpp:
+
+submodules/SimpleRenderEngine/include/sre/Mesh.hpp:
+
+/usr/include/bits/locale.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4_simd.inl:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveintrin.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec2.inl:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/_fixes.hpp:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/SDL2/SDL_rect.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/ctype_base.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x2.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_vector_relational.inl:
+
+/usr/include/c++/13/bits/functional_hash.h:
+
+/usr/include/SDL2/SDL_mutex.h:
 
 /usr/include/c++/13/cstdint:
 
-/usr/include/sys/select.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h:
 
-/usr/include/c++/13/bits/stl_bvector.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_trigonometric.inl:
+
+/usr/include/SDL2/SDL_atomic.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/bits/waitstatus.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_packing.inl:
+
+/usr/include/c++/13/bits/exception_defines.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_integer_simd.inl:
+
+/usr/include/SDL2/SDL_assert.h:
+
+/usr/include/SDL2/SDL_guid.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_integer.inl:
+
+/usr/include/c++/13/tr1/bessel_function.tcc:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/platform.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xtestintrin.h:
+
+submodules/SimpleRenderEngine/include/sre/BlendType.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/matrix.hpp:
+
+/usr/include/bits/types.h:
+
+/usr/include/SDL2/SDL_config.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat4x2.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat3x3.hpp:
+
+/usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/SDL2/SDL_misc.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat3x2.hpp:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat2x3.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/prfchwintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/ext/vec1.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec1.inl:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/qualifier.hpp:
+
+/usr/include/bits/waitflags.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bwintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x3.hpp:
+
+submodules/SimpleRenderEngine/include/sre/Shader.hpp:
+
+/usr/include/c++/13/bits/stl_algo.h:
+
+/usr/include/SDL2/SDL_shape.h:
+
+/usr/include/SDL2/SDL_quit.h:
+
+Snake/main.cpp:
+
+/usr/include/SDL2/SDL_rwops.h:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x2.inl:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x2.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x2.inl:
+
+/usr/include/c++/13/functional:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/fwd.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x3.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x3.inl:
+
+/usr/include/stdc-predef.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x3.hpp:
+
+/usr/include/c++/13/bits/charconv.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_matrix_simd.inl:
+
+/usr/include/SDL2/SDL_config-x86_64.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_float.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/geometric.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_half.inl:
+
+/usr/include/c++/13/iosfwd:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/f16cintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x4.inl:
+
+/usr/include/SDL2/SDL_blendmode.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat2x2.hpp:
+
+/usr/include/c++/13/stdexcept:
+
+/usr/include/c++/13/clocale:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec1.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/adxintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_exponential.inl:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_common_simd.inl:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmivlintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_common.inl:
+
+/usr/include/SDL2/SDL_haptic.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x4.inl:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/_vectorize.hpp:
+
+submodules/SimpleRenderEngine/include/sre/Material.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/vector_relational.hpp:
+
+/usr/include/endian.h:
+
+submodules/SimpleRenderEngine/include/sre/impl/Export.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec4.inl:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/usr/include/c++/13/bits/node_handle.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/gthr-default.h:
+
+/usr/include/c++/13/bit:
+
+/usr/include/c++/13/bits/allocated_ptr.h:
+
+/usr/include/bits/types/struct_tm.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/trigonometric.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_packing_simd.inl:
+
+Snake/Player.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/c++/13/cstddef:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/13/limits:
+
+/usr/include/c++/13/bits/deque.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tbmintrin.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
+/usr/include/bits/timex.h:
+
+/usr/include/c++/13/bits/hash_bytes.h:
+
 Snake/Player.cpp:
 
-/usr/include/bits/stdint-intn.h:
+/usr/include/c++/13/new:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_matrix.inl:
+
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/types/timer_t.h:
 
-/usr/include/bits/mathcalls-narrow.h:
-
 /usr/include/sys/cdefs.h:
 
-/usr/include/c++/13/tr1/special_function_util.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec3.inl:
 
-/usr/include/stdc-predef.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_trigonometric_simd.inl:
 
-/usr/include/bits/waitstatus.h:
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/bits/timesize.h:
 
+/usr/include/c++/13/bits/stl_deque.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/limits.h:
+
 /usr/include/bits/endian.h:
 
-/usr/include/asm/errno.h:
+submodules/SimpleRenderEngine/include/sre/RenderStats.hpp:
 
-/usr/include/bits/stdlib-float.h:
+/usr/include/c++/13/bits/stl_function.h:
 
-/usr/include/bits/time64.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4_simd.inl:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/prfchiintrin.h:
+
+/usr/include/c++/13/string:
 
 /usr/include/features.h:
 
-/usr/include/bits/endianness.h:
-
-/usr/include/bits/types.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/error_constants.h:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/c++/13/bits/uses_allocator.h:
+/usr/include/bits/struct_rwlock.h:
 
 /usr/include/bits/sched.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h:
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/GL/glu.h:
+
+/usr/include/c++/13/bits/uses_allocator.h:
+
+submodules/SimpleRenderEngine/include/sre/WorldLights.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_half.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/common.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/float.h:
+
+/usr/include/GL/glew.h:
 
 /usr/include/c++/13/ext/numeric_traits.h:
 
-/usr/include/c++/13/random:
+Snake/Engine.h:
 
-/usr/include/c++/13/pstl/glue_numeric_defs.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/c++/13/cstddef:
-
-/usr/include/bits/iscanonical.h:
+/usr/include/c++/13/bits/stl_iterator.h:
 
 /usr/include/c++/13/chrono:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
-/usr/include/c++/13/iosfwd:
+/usr/include/c++/13/cassert:
 
 /usr/include/c++/13/bits/predefined_ops.h:
 
-/usr/include/bits/long-double.h:
-
-/usr/include/bits/libc-header-start.h:
-
 /usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/c++/13/ext/type_traits.h:
+
+submodules/SimpleRenderEngine/include/sre/Sprite.hpp:
 
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/13/bits/concept_check.h:
 
-/usr/include/c++/13/vector:
-
-Snake/Engine.h:
-
 /usr/include/c++/13/pstl/pstl_config.h:
 
-/usr/include/c++/13/bits/parse_numbers.h:
+/usr/include/SDL2/SDL_touch.h:
+
+/usr/include/c++/13/bits/std_function.h:
 
 /usr/include/bits/types/locale_t.h:
 
-/usr/include/c++/13/ext/alloc_traits.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/mm_malloc.h:
 
-/usr/include/c++/13/new:
+/usr/include/c++/13/bits/random.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
 
 Snake/Engine.cpp:
 
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/gnu/stubs.h:
-
-Snake/main.cpp:
-
-/usr/include/bits/struct_rwlock.h:
-
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/c++/13/ext/string_conversions.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
 
+/usr/include/bits/types/FILE.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h:
 
-/usr/include/bits/types/clockid_t.h:
+/usr/include/SDL2/SDL_timer.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat.hpp:
+
+submodules/SimpleRenderEngine/include/sre/SpriteAtlas.hpp:
 
 /usr/include/c++/13/debug/assertions.h:
 
+/usr/include/c++/13/x86_64-redhat-linux/bits/ctype_inline.h:
+
 /usr/include/c++/13/tuple:
 
-/usr/include/c++/13/bits/stl_deque.h:
+/usr/include/c++/13/bits/nested_exception.h:
 
-/usr/include/bits/atomic_wide_counter.h:
+/usr/include/ctype.h:
 
-/usr/include/bits/typesizes.h:
+/usr/include/c++/13/cfloat:
 
-/usr/include/c++/13/bits/stl_vector.h:
+/usr/include/SDL2/SDL_cpuinfo.h:
 
-/usr/include/bits/cpu-set.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/c++/13/tr1/riemann_zeta.tcc:
+/usr/include/c++/13/bits/stl_numeric.h:
 
-/usr/include/c++/13/ostream:
+/usr/include/c++/13/bits/locale_classes.tcc:
 
-/usr/include/c++/13/bits/streambuf_iterator.h:
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/SDL2/SDL_keycode.h:
 
 /usr/include/bits/wordsize.h:
 
-/usr/include/bits/types/sigset_t.h:
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/usr/include/stdio.h:
+
+/usr/include/SDL2/SDL_stdinc.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/clzerointrin.h:
 
 /usr/include/c++/13/bits/move.h:
 
-/usr/include/c++/13/bits/chrono.h:
+/usr/include/bits/long-double.h:
 
-/usr/include/c++/13/streambuf:
+/usr/include/c++/13/x86_64-redhat-linux/bits/opt_random.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/compute_vector_relational.hpp:
+
+/usr/include/bits/flt-eval-method.h:
 
 /usr/include/c++/13/bits/exception.h:
 
-/usr/include/c++/13/cstdio:
+/usr/include/SDL2/SDL_main.h:
 
-/usr/include/c++/13/bits/charconv.h:
+/usr/include/gnu/stubs.h:
 
 /usr/include/c++/13/bits/stl_pair.h:
 
-/usr/include/math.h:
+/usr/include/c++/13/initializer_list:
 
-/usr/include/c++/13/bits/exception_defines.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/mat2x4.hpp:
 
-/usr/include/bits/types/__fpos64_t.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2vlintrin.h:
 
-/usr/include/c++/13/bits/stl_iterator.h:
+submodules/SimpleRenderEngine/include/sre/impl/UniformSet.hpp:
 
-/usr/include/c++/13/bits/functexcept.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitxintrin.h:
 
-/usr/include/c++/13/bits/invoke.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/13/bits/memory_resource.h:
+/usr/include/bits/types/__fpos_t.h:
 
 /usr/include/time.h:
 
-/usr/include/c++/13/bits/memoryfwd.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/integer.h:
 
-/usr/include/c++/13/system_error:
+/usr/include/bits/time.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
 
 /usr/include/c++/13/bits/range_access.h:
 
@@ -743,100 +1195,600 @@ Snake/main.cpp:
 
 /usr/include/c++/13/debug/debug.h:
 
+/usr/lib/gcc/x86_64-redhat-linux/13/include/syslimits.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/common.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/linux/errno.h:
+
 /usr/include/bits/stdint-uintn.h:
 
+/usr/include/asm/errno.h:
+
 /usr/include/c++/13/bits/refwrap.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/cetintrin.h:
+
+/usr/include/SDL2/SDL_metal.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/ia32intrin.h:
+
+/usr/include/SDL2/SDL_render.h:
 
 /usr/include/c++/13/bits/stl_algobase.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
-/usr/include/bits/math-vector.h:
+/usr/include/SDL2/SDL_thread.h:
 
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
-/usr/include/c++/13/bits/uses_allocator_args.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/setup.hpp:
 
-Snake/main.h:
+/usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/13/tr1/beta_function.tcc:
+/usr/include/SDL2/SDL_hidapi.h:
 
-/usr/include/c++/13/bits/stl_function.h:
+/usr/include/c++/13/map:
 
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/c++/13/ctime:
-
-/usr/include/c++/13/deque:
-
-/usr/include/bits/floatn.h:
-
-/usr/include/c++/13/initializer_list:
-
-/usr/include/c++/13/ext/string_conversions.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
-
-/usr/include/alloca.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/bits/fp-logb.h:
+/usr/include/c++/13/string_view:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
-/usr/include/asm-generic/errno.h:
+/usr/include/asm-generic/errno-base.h:
 
-/usr/include/c++/13/string:
+/usr/include/SDL2/SDL_keyboard.h:
 
-/usr/include/bits/byteswap.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_vector_relational_simd.inl:
 
-/usr/include/wctype.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/packing.hpp:
 
-/usr/include/c++/13/exception:
+/usr/include/strings.h:
 
-/usr/include/bits/timex.h:
+Snake/main.h:
 
-/usr/include/bits/errno.h:
+/usr/include/c++/13/bits/hashtable_policy.h:
 
-/usr/include/c++/13/tr1/bessel_function.tcc:
+submodules/SimpleRenderEngine/submodules/glm/glm/integer.hpp:
 
-/usr/include/bits/floatn-common.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x4.inl:
 
-/usr/include/bits/fp-fast.h:
+submodules/SimpleRenderEngine/include/sre/Color.hpp:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/c++/13/bits/utility.h:
 
-/usr/include/c++/13/bits/vector.tcc:
+/usr/include/c++/13/tr1/hypergeometric.tcc:
 
-/usr/include/bits/locale.h:
+/usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/bits/types/__fpos_t.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec2.hpp:
 
-/usr/include/bits/types/clock_t.h:
+/usr/include/c++/13/ctime:
 
-/usr/include/bits/mathcalls.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat4x3.inl:
 
-/usr/include/bits/pthread_stack_min-dynamic.h:
+/usr/include/SDL2/SDL_system.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x2.inl:
+
+submodules/SimpleRenderEngine/include/sre/SDLRenderer.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat3x4.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/exponential.hpp:
+
+/usr/include/SDL2/SDL_pixels.h:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/features-time64.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h:
 
 /usr/include/bits/pthreadtypes.h:
 
-/usr/include/c++/13/backward/binders.h:
+submodules/SimpleRenderEngine/include/sre/Framebuffer.hpp:
 
-/usr/include/bits/select.h:
+/usr/include/SDL2/SDL_gamecontroller.h:
 
-/usr/include/bits/setjmp.h:
+/usr/include/c++/13/ratio:
+
+/usr/include/linux/limits.h:
+
+submodules/SimpleRenderEngine/include/sre/Log.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x4.hpp:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/error_constants.h:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/13/bits/uses_allocator_args.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bitalgintrin.h:
+
+submodules/SimpleRenderEngine/include/sre/MeshTopology.hpp:
+
+/usr/include/bits/posix2_lim.h:
+
+submodules/SimpleRenderEngine/include/sre/RenderPass.hpp:
+
+submodules/SimpleRenderEngine/include/sre/Renderer.hpp:
+
+/usr/include/bits/endianness.h:
+
+submodules/SimpleRenderEngine/include/sre/Skybox.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fp16vlintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat2x4.hpp:
+
+/usr/include/c++/13/bits/align.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/gthr.h:
+
+submodules/SimpleRenderEngine/include/sre/impl/CPPShim.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat4x3.hpp:
+
+/usr/include/c++/13/bits/hashtable.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+submodules/SimpleRenderEngine/include/sre/Camera.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vlbwintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/mmintrin.h:
+
+submodules/SimpleRenderEngine/include/sre/impl/GL.hpp:
+
+/usr/include/SDL2/SDL_mouse.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/exponential.h:
+
+/usr/include/SDL2/SDL_version.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/c++/13/cwctype:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2intrin.h:
+
+/usr/include/SDL2/SDL_video.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/SDL2/SDL_surface.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_exponential_simd.inl:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
+
+/usr/include/sched.h:
+
+/usr/include/wctype.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/local_lim.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/vec2.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/raointintrin.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/c++/13/unordered_map:
+
+/usr/include/bits/uio_lim.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_vec3.hpp:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/geometric.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/SDL2/begin_code.h:
+
+/usr/include/c++/13/bits/stl_bvector.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/SDL2/SDL_scancode.h:
+
+/usr/include/c++/13/bits/shared_ptr_base.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512ifmaintrin.h:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/rdseedintrin.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/c++/13/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/13/set:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqvlintrin.h:
 
 /usr/include/bits/struct_mutex.h:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/types/__mbstate_t.h:
 
-/usr/include/bits/flt-eval-method.h:
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_int.hpp:
 
-/usr/include/bits/types/FILE.h:
+/usr/include/c++/13/cwchar:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/types/error_t.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/bmi2intrin.h:
+
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/types/struct_FILE.h:
+
+/usr/include/bits/types/wint_t.h:
+
+/usr/include/stdint.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxcomplexintrin.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/wctype-wchar.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/keylockerintrin.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/c++/13/array:
+
+/usr/include/c++/13/bits/algorithmfwd.h:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/mat4x4.hpp:
+
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsavecintrin.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+submodules/SimpleRenderEngine/include/sre/Light.hpp:
+
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/c++/13/bits/erase_if.h:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/c++/13/bits/ios_base.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_geometric_simd.inl:
+
+/usr/include/c++/13/bits/locale_classes.h:
+
+/usr/include/c++/13/bits/locale_facets.tcc:
+
+/usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/SDL2/SDL_clipboard.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/c++/13/bits/stl_set.h:
+
+/usr/include/c++/13/bits/random.tcc:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/c++/13/random:
+
+/usr/include/c++/13/bits/shared_ptr.h:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxfp16intrin.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+submodules/SimpleRenderEngine/submodules/imgui/imgui.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/type_mat3x3.inl:
+
+/usr/include/c++/13/bits/stl_multimap.h:
+
+/usr/include/c++/13/bits/stl_raw_storage_iter.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
+
+/usr/include/c++/13/bits/stl_tempbuf.h:
+
+/usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/c++/13/cerrno:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/bits/unique_ptr.h:
+
+/usr/include/c++/13/bits/unordered_map.h:
+
+/usr/include/c++/13/cctype:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx2intrin.h:
+
+/usr/include/c++/13/climits:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/vec4.hpp:
+
+/usr/include/c++/13/cmath:
+
+/usr/include/c++/13/compare:
+
+/usr/include/limits.h:
+
+/usr/include/c++/13/cstdlib:
+
+/usr/include/c++/13/cstring:
+
+/usr/include/c++/13/exception:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/c++/13/ext/aligned_buffer.h:
+
+/usr/include/c++/13/ext/atomicity.h:
+
+/usr/include/c++/13/bits/char_traits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxtileintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/movdirintrin.h:
+
+/usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/c++/13/ios:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxintrin.h:
+
+/usr/include/sys/single_threaded.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/c++/13/iostream:
+
+/usr/include/c++/13/istream:
+
+/usr/include/c++/13/memory:
+
+/usr/include/c++/13/numeric:
+
+/usr/include/c++/13/ostream:
+
+/usr/include/c++/13/pstl/execution_defs.h:
+
+/usr/include/c++/13/stdlib.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512pfintrin.h:
+
+/usr/include/c++/13/math.h:
+
+/usr/include/c++/13/tr1/exp_integral.tcc:
+
+/usr/include/c++/13/tr1/gamma.tcc:
+
+submodules/SimpleRenderEngine/include/sre/SpriteBatch.hpp:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bf16intrin.h:
+
+/usr/include/c++/13/tr1/modified_bessel_func.tcc:
+
+submodules/SimpleRenderEngine/include/sre/Texture.hpp:
+
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/13/vector:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++locale.h:
+
+/usr/include/SDL2/close_code.h:
+
+/usr/include/errno.h:
+
+/usr/include/locale.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/string.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/c++/13/backward/auto_ptr.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxint8intrin.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/c++/13/streambuf:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxbf16intrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h:
+
+/usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/include/c++/13/system_error:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx5124fmapsintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx5124vnniwintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512ifmavlintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512bf16vlintrin.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512cdintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512dqintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512erintrin.h:
+
+/usr/include/bits/errno.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fintrin.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fp16intrin.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/atomic_word.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmiintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/simd/matrix.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vldqintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnniintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vlintrin.h:
+
+/usr/include/c++/13/cstdio:
+
+/usr/include/math.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectvlintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxifmaintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxneconvertintrin.h:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/glm.hpp:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniint8intrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/cldemoteintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/clflushoptintrin.h:
+
+/usr/include/c++/13/tr1/ell_integral.tcc:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/cmpccxaddintrin.h:
+
+/usr/include/c++/13/deque:
+
+submodules/SimpleRenderEngine/submodules/glm/glm/detail/func_geometric.inl:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/emmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/hresetintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/immintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/lwpintrin.h:
+
+/usr/include/c++/13/bits/chrono.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitintrin.h:
+
+/usr/include/SDL2/SDL_gesture.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/sgxintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/shaintrin.h:
