@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tjoms/Documents/GitHub/SimpleRenderEngineProject
+CMAKE_SOURCE_DIR = /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tjoms/Documents/GitHub/SimpleRenderEngineProject
+CMAKE_BINARY_DIR = /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/SimpleRenderEngineProject/Snake//CMakeFiles/progress.marks
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/SimpleRenderEngineProject/CMakeFiles 0
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake//CMakeFiles/progress.marks
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/clean
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/clean
 .PHONY : clean
 
 # The main clean target
@@ -151,22 +151,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Snake/CMakeFiles/Snake.dir/rule:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/CMakeFiles/Snake.dir/rule
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/CMakeFiles/Snake.dir/rule
 .PHONY : Snake/CMakeFiles/Snake.dir/rule
 
 # Convenience name for target.
@@ -175,7 +175,7 @@ Snake: Snake/CMakeFiles/Snake.dir/rule
 
 # fast build rule for target.
 Snake/fast:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/build
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/build
 .PHONY : Snake/fast
 
 Engine.o: Engine.cpp.o
@@ -183,7 +183,7 @@ Engine.o: Engine.cpp.o
 
 # target to build an object file
 Engine.cpp.o:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.o
 .PHONY : Engine.cpp.o
 
 Engine.i: Engine.cpp.i
@@ -191,7 +191,7 @@ Engine.i: Engine.cpp.i
 
 # target to preprocess a source file
 Engine.cpp.i:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.i
 .PHONY : Engine.cpp.i
 
 Engine.s: Engine.cpp.s
@@ -199,7 +199,7 @@ Engine.s: Engine.cpp.s
 
 # target to generate assembly for a file
 Engine.cpp.s:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Engine.cpp.s
 .PHONY : Engine.cpp.s
 
 Player.o: Player.cpp.o
@@ -207,7 +207,7 @@ Player.o: Player.cpp.o
 
 # target to build an object file
 Player.cpp.o:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -215,7 +215,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -223,7 +223,7 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
 main.o: main.cpp.o
@@ -231,7 +231,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -239,7 +239,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -247,7 +247,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -283,6 +283,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tjoms/Documents/GitHub/SimpleRenderEngineProject && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

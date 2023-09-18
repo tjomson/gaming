@@ -567,6 +567,19 @@ SRE-Gui/fast:
 	$(MAKE) $(MAKESILENT) -f project/gui/CMakeFiles/SRE-Gui.dir/build.make project/gui/CMakeFiles/SRE-Gui.dir/build
 .PHONY : SRE-Gui/fast
 
+#=============================================================================
+# Target rules for targets named Snake
+
+# Build rule for target.
+Snake: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake
+.PHONY : Snake
+
+# fast build rule for target.
+Snake/fast:
+	$(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/build
+.PHONY : Snake/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -610,6 +623,7 @@ help:
 	@echo "... SRE-project"
 	@echo "... SRE-scene-graph"
 	@echo "... SRE-sdl2_mixer-example"
+	@echo "... Snake"
 .PHONY : help
 
 

@@ -66,8 +66,10 @@ bool Player::HasLost()
 
 void Player::SetNewFood()
 {
-    int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
-    int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
+    // int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
+    // int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
+    int food_x = 15;
+    int food_y = 20;
     food_pos = {food_x, food_y};
 }
 

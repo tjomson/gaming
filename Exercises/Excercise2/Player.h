@@ -1,4 +1,5 @@
 #include <deque>
+#include <cstdlib>
 
 #define GAMEWIDTH 50
 #define GAMEHEIGHT 30

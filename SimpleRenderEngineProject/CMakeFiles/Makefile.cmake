@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.4/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "Snake/CMakeLists.txt"
   "cmake/FindGLEW.cmake"
   "cmake/FindSDL2.cmake"
   "cmake/FindSDL2_IMAGE.cmake"
@@ -67,6 +68,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "project/platformer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "project/particle_system/CMakeFiles/CMakeDirectoryInformation.cmake"
   "project/gui/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Snake/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -102,4 +104,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "project/platformer/CMakeFiles/SRE-Platformer.dir/DependInfo.cmake"
   "project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/DependInfo.cmake"
   "project/gui/CMakeFiles/SRE-Gui.dir/DependInfo.cmake"
+  "Snake/CMakeFiles/Snake.dir/DependInfo.cmake"
   )

@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/cmake_install.cmake")
   include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/project/cmake_install.cmake")
+  include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/cmake_install.cmake")
 
 endif()
 

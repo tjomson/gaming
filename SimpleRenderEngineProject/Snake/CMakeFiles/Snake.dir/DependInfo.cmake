@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tjoms/Documents/GitHub/SimpleRenderEngineProject/Snake/Engine.cpp" "Snake/CMakeFiles/Snake.dir/Engine.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/Engine.cpp.o.d"
-  "/home/tjoms/Documents/GitHub/SimpleRenderEngineProject/Snake/Player.cpp" "Snake/CMakeFiles/Snake.dir/Player.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/Player.cpp.o.d"
-  "/home/tjoms/Documents/GitHub/SimpleRenderEngineProject/Snake/main.cpp" "Snake/CMakeFiles/Snake.dir/main.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/main.cpp.o.d"
+  "/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/Engine.cpp" "Snake/CMakeFiles/Snake.dir/Engine.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/Engine.cpp.o.d"
+  "/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/Player.cpp" "Snake/CMakeFiles/Snake.dir/Player.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/Player.cpp.o.d"
+  "/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/main.cpp" "Snake/CMakeFiles/Snake.dir/main.cpp.o" "gcc" "Snake/CMakeFiles/Snake.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

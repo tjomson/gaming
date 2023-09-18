@@ -89,3 +89,10 @@
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/project/gui/CMakeFiles/install.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/project/gui/CMakeFiles/install/local.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/project/gui/CMakeFiles/install/strip.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/Snake.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/list_install_components.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install/local.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install/strip.dir
