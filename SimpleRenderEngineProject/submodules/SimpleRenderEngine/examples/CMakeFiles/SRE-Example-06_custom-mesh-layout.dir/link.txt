@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/06_custom-mesh-layout.cpp.o" -o SRE-Example-06_custom-mesh-layout  ../src/libSRE.a /usr/lib64/libGL.so /usr/lib64/libGLU.so /lib64/libGLEW.so /usr/lib64/libSDL2main.a /usr/lib64/libSDL2.so /usr/lib64/libSDL2_image.so 
