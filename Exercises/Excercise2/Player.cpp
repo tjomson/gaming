@@ -5,7 +5,7 @@ Player::Player()
 {
     coordinates.clear();
     coordinates.push_front({20, 10});
-    frame_skips = 15;
+    frame_skips = 8;
     SetNewFood();
 }
 
@@ -95,7 +95,7 @@ void Player::MoveStep()
     else
     {
         SetNewFood();
-        frame_skips *= 0.9;
+        // frame_skips *= 0.9;
     }
     ApplyBound();
 }
