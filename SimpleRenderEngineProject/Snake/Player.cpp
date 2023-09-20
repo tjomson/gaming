@@ -8,28 +8,27 @@ Player::Player()
     SetNewFood();
 }
 
-void Player::MoveUp()
+void Player::HandleKeyPress(SDL_Event &event)
 {
-    if (currDir != DOWN)
-        currDir = UP;
-}
-
-void Player::MoveDown()
-{
-    if (currDir != UP)
-        currDir = DOWN;
-}
-
-void Player::MoveRight()
-{
-    if (currDir != LEFT)
-        currDir = RIGHT;
-}
-
-void Player::MoveLeft()
-{
-    if (currDir != RIGHT)
-        currDir = LEFT;
+    switch (event.key.keysym.sym)
+    {
+    case SDLK_w:
+        if (event.type == SDL_KEYDOWN && currDir != DOWN)
+            currDir = UP;
+        break;
+    case SDLK_s:
+        if (event.type == SDL_KEYDOWN && currDir != UP)
+            currDir = DOWN;
+        break;
+    case SDLK_a:
+        if (event.type == SDL_KEYDOWN && currDir != RIGHT)
+            currDir = LEFT;
+        break;
+    case SDLK_d:
+        if (event.type == SDL_KEYDOWN && currDir != LEFT)
+            currDir = RIGHT;
+        break;
+    }
 }
 
 void Player::ApplyBound()

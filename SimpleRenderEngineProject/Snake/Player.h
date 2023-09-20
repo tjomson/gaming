@@ -18,10 +18,7 @@ class Player
 {
 public:
     Player();
-    void MoveUp();
-    void MoveDown();
-    void MoveRight();
-    void MoveLeft();
+    void HandleKeyPress(SDL_Event &event);
     void MoveStep();
     void ApplyBound();
     void SetNewFood();

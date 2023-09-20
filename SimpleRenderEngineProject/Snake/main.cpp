@@ -47,11 +47,16 @@ int main()
     renderer.startEventLoop();
 }
 
-void ProcessEvents(SDL_Event &event) {}
+void ProcessEvents(SDL_Event &event)
+{
+    player->HandleKeyPress(event);
+}
+
 void Update(float deltaTime)
 {
     player->MoveStep();
 }
+
 void Render()
 {
     sre::RenderPass renderPass = sre::RenderPass::create()
@@ -81,46 +86,6 @@ void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration
     // ITUGames::Console::PrintStr("Target FPS: " + std::to_string(TARGETFPS) + " (" + std::to_string(1000.0 / TARGETFPS) + " ms)\n");
     // ITUGames::Console::PrintStr("Snake length: " + std::to_string(player->coordinates.size()) + "\n");
 }
-
-// void ProcessEvents()
-// {
-// unsigned char buttonPressed = ITUGames::Console::GetCharacter(false);
-// switch (buttonPressed)
-// {
-// case ITUGames::Console::KEY_W:
-//     player->MoveUp();
-//     break;
-// case ITUGames::Console::KEY_S:
-//     player->MoveDown();
-//     break;
-// case ITUGames::Console::KEY_D:
-//     player->MoveRight();
-//     break;
-// case ITUGames::Console::KEY_A:
-//     player->MoveLeft();
-//     break;
-// case '\033':
-//     getch();
-//     switch (getch())
-//     {
-//     case 65:
-//         player->MoveUp();
-//         break;
-//     case 66:
-//         player->MoveDown();
-//         break;
-//     case 67:
-//         player->MoveRight();
-//         break;
-//     case 68:
-//         player->MoveLeft();
-//         break;
-//     }
-//     break;
-// default:
-//     break;
-// }
-// }
 
 void PrintBounds()
 {
