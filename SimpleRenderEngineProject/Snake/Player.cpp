@@ -50,13 +50,13 @@ void Player::ApplyBound()
 bool Player::HasLost()
 {
     auto front = coordinates.front();
-    std::deque<Coordinate>::iterator it = coordinates.begin();
+    std::deque<glm::vec2>::iterator it = coordinates.begin();
     if (it != coordinates.end())
         ++it;
 
     while (it != coordinates.end())
     {
-        Coordinate coord = *it;
+        glm::vec2 coord = *it;
         if (front.x == coord.x && front.y == coord.y)
             return true;
         ++it;
@@ -66,11 +66,9 @@ bool Player::HasLost()
 
 void Player::SetNewFood()
 {
-    // int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
-    // int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
-    int food_x = 15;
-    int food_y = 20;
-    food_pos = {food_x, food_y};
+    int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
+    int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
+    food_pos = glm::vec2(food_x, food_y);
 }
 
 void Player::MoveStep()

@@ -25,7 +25,7 @@
 
 #include "main.h"
 
-// auto player = new Player();
+auto player = new Player();
 
 glm::vec2 window_size = glm::vec2(800, 600);
 sre::SDLRenderer renderer;
@@ -41,15 +41,17 @@ int main()
     renderer.setWindowSize(window_size);
     renderer.init();
     camera.setWindowCoordinates();
-    atlas = sre::SpriteAtlas::create("data/snake.json",
-                                     "data/snake.png");
+    atlas = sre::SpriteAtlas::create("data/snake.json", "data/snake.png");
     sprite = atlas->get("berry.png");
     sprite.setPosition(window_size / 2.0f);
     renderer.startEventLoop();
 }
 
 void ProcessEvents(SDL_Event &event) {}
-void Update(float deltaTime) {}
+void Update(float deltaTime)
+{
+    player->MoveStep();
+}
 void Render()
 {
     sre::RenderPass renderPass = sre::RenderPass::create()
@@ -57,6 +59,13 @@ void Render()
                                      .withClearColor(true, {.3f, .3f, 1, 1})
                                      .build();
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
+
+    for (auto coord : player->coordinates)
+    {
+        sre::Sprite snakePart = atlas->get("snake-body.png");
+        snakePart.setPosition(coord);
+        spriteBatchBuilder.addSprite(snakePart);
+    }
 
     spriteBatchBuilder.addSprite(sprite);
     auto spriteBatch = spriteBatchBuilder.build();

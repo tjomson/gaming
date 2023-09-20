@@ -1,4 +1,6 @@
 #include <deque>
+#include <cstdlib>
+#include "sre/SDLRenderer.hpp"
 
 #define GAMEWIDTH 50
 #define GAMEHEIGHT 30
@@ -10,12 +12,6 @@ enum MoveDirection
     DOWN,
     LEFT,
     RIGHT
-};
-
-struct Coordinate
-{
-    int x;
-    int y;
 };
 
 class Player
@@ -31,7 +27,7 @@ public:
     void SetNewFood();
     bool HasLost();
     double frame_skips;
-    Coordinate food_pos;
-    std::deque<Coordinate> coordinates;
+    glm::vec2 food_pos;
+    std::deque<glm::vec2> coordinates;
     MoveDirection currDir = RIGHT;
 };
