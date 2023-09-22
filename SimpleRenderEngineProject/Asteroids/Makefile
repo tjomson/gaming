@@ -135,14 +135,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders//CMakeFiles/progress.marks
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/all
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Asteroids//CMakeFiles/progress.marks
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/clean
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/clean
 .PHONY : clean
 
 # The main clean target
@@ -151,12 +151,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -165,17 +165,17 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule
-.PHONY : SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule
+Asteroids/CMakeFiles/SpaceInvaders.dir/rule:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/CMakeFiles/SpaceInvaders.dir/rule
+.PHONY : Asteroids/CMakeFiles/SpaceInvaders.dir/rule
 
 # Convenience name for target.
-SpaceInvaders: SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule
+SpaceInvaders: Asteroids/CMakeFiles/SpaceInvaders.dir/rule
 .PHONY : SpaceInvaders
 
 # fast build rule for target.
 SpaceInvaders/fast:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/build
 .PHONY : SpaceInvaders/fast
 
 Player.o: Player.cpp.o
@@ -183,7 +183,7 @@ Player.o: Player.cpp.o
 
 # target to build an object file
 Player.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/Player.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -191,7 +191,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/Player.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -199,7 +199,7 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/Player.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
 main.o: main.cpp.o
@@ -207,7 +207,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/main.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -215,7 +215,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/main.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -223,7 +223,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/main.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders
+# Install script for directory: /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Asteroids
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

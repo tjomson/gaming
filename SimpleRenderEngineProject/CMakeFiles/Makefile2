@@ -69,22 +69,37 @@ CMAKE_BINARY_DIR = /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Simp
 all: submodules/SimpleRenderEngine/all
 all: project/all
 all: Snake/all
-all: SpaceInvaders/all
+all: Asteroids/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: submodules/SimpleRenderEngine/preinstall
 preinstall: project/preinstall
 preinstall: Snake/preinstall
-preinstall: SpaceInvaders/preinstall
+preinstall: Asteroids/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: submodules/SimpleRenderEngine/clean
 clean: project/clean
 clean: Snake/clean
-clean: SpaceInvaders/clean
+clean: Asteroids/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Asteroids
+
+# Recursive "all" directory target.
+Asteroids/all: Asteroids/CMakeFiles/SpaceInvaders.dir/all
+.PHONY : Asteroids/all
+
+# Recursive "preinstall" directory target.
+Asteroids/preinstall:
+.PHONY : Asteroids/preinstall
+
+# Recursive "clean" directory target.
+Asteroids/clean: Asteroids/CMakeFiles/SpaceInvaders.dir/clean
+.PHONY : Asteroids/clean
 
 #=============================================================================
 # Directory level rules for directory Snake
@@ -100,21 +115,6 @@ Snake/preinstall:
 # Recursive "clean" directory target.
 Snake/clean: Snake/CMakeFiles/Snake.dir/clean
 .PHONY : Snake/clean
-
-#=============================================================================
-# Directory level rules for directory SpaceInvaders
-
-# Recursive "all" directory target.
-SpaceInvaders/all: SpaceInvaders/CMakeFiles/SpaceInvaders.dir/all
-.PHONY : SpaceInvaders/all
-
-# Recursive "preinstall" directory target.
-SpaceInvaders/preinstall:
-.PHONY : SpaceInvaders/preinstall
-
-# Recursive "clean" directory target.
-SpaceInvaders/clean: SpaceInvaders/CMakeFiles/SpaceInvaders.dir/clean
-.PHONY : SpaceInvaders/clean
 
 #=============================================================================
 # Directory level rules for directory project
@@ -1149,30 +1149,30 @@ Snake/CMakeFiles/Snake.dir/clean:
 .PHONY : Snake/CMakeFiles/Snake.dir/clean
 
 #=============================================================================
-# Target rules for target SpaceInvaders/CMakeFiles/SpaceInvaders.dir
+# Target rules for target Asteroids/CMakeFiles/SpaceInvaders.dir
 
 # All Build rule for target.
-SpaceInvaders/CMakeFiles/SpaceInvaders.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
-	$(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/depend
-	$(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build
+Asteroids/CMakeFiles/SpaceInvaders.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
+	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/depend
+	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=98,99,100 "Built target SpaceInvaders"
-.PHONY : SpaceInvaders/CMakeFiles/SpaceInvaders.dir/all
+.PHONY : Asteroids/CMakeFiles/SpaceInvaders.dir/all
 
 # Build rule for subdir invocation for target.
-SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule: cmake_check_build_system
+Asteroids/CMakeFiles/SpaceInvaders.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 27
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders/CMakeFiles/SpaceInvaders.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/CMakeFiles/SpaceInvaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
-.PHONY : SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule
+.PHONY : Asteroids/CMakeFiles/SpaceInvaders.dir/rule
 
 # Convenience name for target.
-SpaceInvaders: SpaceInvaders/CMakeFiles/SpaceInvaders.dir/rule
+SpaceInvaders: Asteroids/CMakeFiles/SpaceInvaders.dir/rule
 .PHONY : SpaceInvaders
 
 # clean rule for target.
-SpaceInvaders/CMakeFiles/SpaceInvaders.dir/clean:
-	$(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/clean
-.PHONY : SpaceInvaders/CMakeFiles/SpaceInvaders.dir/clean
+Asteroids/CMakeFiles/SpaceInvaders.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/clean
+.PHONY : Asteroids/CMakeFiles/SpaceInvaders.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

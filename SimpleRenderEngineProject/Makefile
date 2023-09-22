@@ -590,7 +590,7 @@ SpaceInvaders: cmake_check_build_system
 
 # fast build rule for target.
 SpaceInvaders/fast:
-	$(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build
+	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/build
 .PHONY : SpaceInvaders/fast
 
 # Help Target

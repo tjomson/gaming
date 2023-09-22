@@ -22,8 +22,6 @@ public:
     void MoveStep(float deltaTime);
     void ApplyBound();
     bool HasLost();
-    double frame_skips;
-    glm::vec2 food_pos;
     std::deque<glm::vec2> coordinates;
     MoveDirection currDir = RIGHT;
 };

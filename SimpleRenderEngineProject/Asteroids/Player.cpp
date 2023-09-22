@@ -4,7 +4,6 @@ Player::Player()
 {
     coordinates.clear();
     coordinates.push_front({20, 10});
-    frame_skips = 8;
 }
 
 void Player::HandleKeyPress(SDL_Event &event)
@@ -82,7 +81,5 @@ void Player::MoveStep(float deltaTime)
         coordinates.push_front({prevFirst.x + stepLength, prevFirst.y});
         break;
     }
-    if (coordinates.front().x != food_pos.x || coordinates.front().y != food_pos.y)
-        coordinates.pop_back();
     ApplyBound();
 }

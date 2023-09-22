@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "Asteroids/CMakeLists.txt"
   "CMakeFiles/3.27.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.4/CMakeSystem.cmake"
   "CMakeLists.txt"
   "Snake/CMakeLists.txt"
-  "SpaceInvaders/CMakeLists.txt"
   "cmake/FindGLEW.cmake"
   "cmake/FindSDL2.cmake"
   "cmake/FindSDL2_IMAGE.cmake"
@@ -70,7 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "project/particle_system/CMakeFiles/CMakeDirectoryInformation.cmake"
   "project/gui/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Snake/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "SpaceInvaders/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Asteroids/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -107,5 +107,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/DependInfo.cmake"
   "project/gui/CMakeFiles/SRE-Gui.dir/DependInfo.cmake"
   "Snake/CMakeFiles/Snake.dir/DependInfo.cmake"
-  "SpaceInvaders/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake"
+  "Asteroids/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake"
   )
