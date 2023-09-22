@@ -42,24 +42,21 @@ void Player::HandleKeyPress(SDL_Event &event)
 
 void Player::ApplyBound()
 {
-    // auto front = coordinates.front();
-    // coordinates.pop_front();
-    // if (front.x >= GAMEWIDTH)
-    //     front.x = 2;
-    // else if (front.x <= 1)
-    //     front.x = GAMEWIDTH - 1;
-    // if (front.y >= GAMEHEIGHT + ROWOFFSET)
-    //     front.y = ROWOFFSET + 1;
-    // else if (front.y < ROWOFFSET + 1)
-    //     front.y = GAMEHEIGHT + ROWOFFSET - 1;
-    // coordinates.push_front({front.x, front.y});
+    if (position.x >= GAMEWIDTH)
+        position.x = 0;
+    else if (position.x <= 0)
+        position.x = GAMEWIDTH - 0;
+    if (position.y >= GAMEHEIGHT)
+        position.y = 0;
+    else if (position.y < 0)
+        position.y = GAMEHEIGHT;
 }
 
 void Player::MoveStep(float deltaTime)
 {
-    auto x = (sin(glm::radians(floatMod(currHeading, 360))) * 10) * -1;
-    auto y = (cos(glm::radians(floatMod(currHeading, 360))) * 10);
-    std::cout << x << " " << y << std::endl;
+    auto radians = glm::radians(floatMod(currHeading, 360));
+    auto x = (sin(radians) * deltaTime * 200) * -1;
+    auto y = (cos(radians) * deltaTime * 200);
 
     switch (currMovement)
     {
