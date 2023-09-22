@@ -27,12 +27,12 @@
 
 auto player = new Player();
 
-glm::vec2 window_size = glm::vec2(800, 600);
+glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
 std::shared_ptr<sre::SpriteAtlas> atlas;
 sre::Sprite sprite;
-int x = 0;
+
 int main()
 {
     renderer.frameRender = Render;
@@ -54,7 +54,7 @@ void ProcessEvents(SDL_Event &event)
 
 void Update(float deltaTime)
 {
-    player->MoveStep();
+    player->MoveStep(deltaTime);
 }
 
 void Render()

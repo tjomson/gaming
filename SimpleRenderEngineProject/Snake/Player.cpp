@@ -70,22 +70,24 @@ void Player::SetNewFood()
     food_pos = glm::vec2(food_x, food_y);
 }
 
-void Player::MoveStep()
+void Player::MoveStep(float deltaTime)
 {
     auto prevFirst = coordinates.front();
+    auto stepLength = deltaTime * 150;
+
     switch (currDir)
     {
     case UP:
-        coordinates.push_front({prevFirst.x, prevFirst.y - 1});
+        coordinates.push_front({prevFirst.x, prevFirst.y + stepLength});
         break;
     case DOWN:
-        coordinates.push_front({prevFirst.x, prevFirst.y + 1});
+        coordinates.push_front({prevFirst.x, prevFirst.y - stepLength});
         break;
     case LEFT:
-        coordinates.push_front({prevFirst.x - 1, prevFirst.y});
+        coordinates.push_front({prevFirst.x - stepLength, prevFirst.y});
         break;
     case RIGHT:
-        coordinates.push_front({prevFirst.x + 1, prevFirst.y});
+        coordinates.push_front({prevFirst.x + stepLength, prevFirst.y});
         break;
     }
     if (coordinates.front().x != food_pos.x || coordinates.front().y != food_pos.y)

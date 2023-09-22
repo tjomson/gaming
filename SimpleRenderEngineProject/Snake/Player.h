@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include "sre/SDLRenderer.hpp"
 
-#define GAMEWIDTH 50
-#define GAMEHEIGHT 30
+#define GAMEWIDTH 800
+#define GAMEHEIGHT 600
 #define ROWOFFSET 6
 
 enum MoveDirection
@@ -19,7 +19,7 @@ class Player
 public:
     Player();
     void HandleKeyPress(SDL_Event &event);
-    void MoveStep();
+    void MoveStep(float deltaTime);
     void ApplyBound();
     void SetNewFood();
     bool HasLost();
