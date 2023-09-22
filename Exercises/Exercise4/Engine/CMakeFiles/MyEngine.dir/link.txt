@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyEngine.a CMakeFiles/MyEngine.dir/Engine/Component.o CMakeFiles/MyEngine.dir/Engine/GameObject.o CMakeFiles/MyEngine.dir/Engine/MyEngine.o
+/usr/bin/ranlib libMyEngine.a

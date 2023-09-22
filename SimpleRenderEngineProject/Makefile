@@ -580,6 +580,19 @@ Snake/fast:
 	$(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/build
 .PHONY : Snake/fast
 
+#=============================================================================
+# Target rules for targets named SpaceInvaders
+
+# Build rule for target.
+SpaceInvaders: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders
+.PHONY : SpaceInvaders
+
+# fast build rule for target.
+SpaceInvaders/fast:
+	$(MAKE) $(MAKESILENT) -f SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build.make SpaceInvaders/CMakeFiles/SpaceInvaders.dir/build
+.PHONY : SpaceInvaders/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -624,6 +637,7 @@ help:
 	@echo "... SRE-scene-graph"
 	@echo "... SRE-sdl2_mixer-example"
 	@echo "... Snake"
+	@echo "... SpaceInvaders"
 .PHONY : help
 
 

@@ -96,3 +96,10 @@
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install/local.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/CMakeFiles/install/strip.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/SpaceInvaders.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/list_install_components.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/install.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/install/local.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/SpaceInvaders/CMakeFiles/install/strip.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/MyGame.dir/Game/ComponentController.o CMakeFiles/MyGame.dir/Game/ComponentRendererSprite.o CMakeFiles/MyGame.dir/main.o -o MyGame  ../Engine/libMyEngine.a 

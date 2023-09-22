@@ -1,0 +1,8 @@
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/Engine/CMakeFiles/MyEngine.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/Engine/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/Engine/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/ExampleGame/CMakeFiles/MyGame.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/ExampleGame/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/Exercises/Exercise4/ExampleGame/CMakeFiles/rebuild_cache.dir

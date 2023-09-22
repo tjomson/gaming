@@ -1,0 +1,14 @@
+{
+    "overrides": [
+        {
+            "files": [
+                "*.cpp",
+                "*.h",
+                "*.hpp"
+            ],
+            "options": {
+                "brace_style": "1tbs"
+            }
+        }
+    ]
+}
