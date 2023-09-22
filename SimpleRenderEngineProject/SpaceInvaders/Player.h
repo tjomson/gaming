@@ -21,7 +21,6 @@ public:
     void HandleKeyPress(SDL_Event &event);
     void MoveStep(float deltaTime);
     void ApplyBound();
-    void SetNewFood();
     bool HasLost();
     double frame_skips;
     glm::vec2 food_pos;

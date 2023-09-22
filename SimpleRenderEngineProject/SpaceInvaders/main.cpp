@@ -6,26 +6,14 @@
 #include "Player.h"
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
+
 #pragma region Engine State
-
-#pragma endregion // Engine State
-
+#pragma endregion
 #pragma region Game State
-
-/**
- * If you are unsure how to organize the additional variables you will need for the exercise, just dump them here.We will address this in future lectures
- * In the meantime, a good approach is to sort them and put the ones that relate to the same thing togheter
- * - is this variable part of the game? Of the engine? ...
- * - is it about input? Player state? Logging? ...
- * And so on. Are some of those questions conflicting with each other? Yep, architecturing code is hard, but we'll get a hang of it.
- */
-
-#pragma endregion // Game State
-
+#pragma endregion
 #include "main.h"
 
 auto player = new Player();
-
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -74,48 +62,4 @@ void Render()
     spriteBatchBuilder.addSprite(sprite);
     auto spriteBatch = spriteBatchBuilder.build();
     renderPass.draw(spriteBatch);
-}
-
-void PrintInfo(std::chrono::duration<double> time_elapsed, std::chrono::duration<double> time_compute)
-{
-    // ITUGames::Console::GotoTop();
-    // ITUGames::Console::PrintStr("Frame time: " + std::to_string(time_elapsed.count() * 1000) + " ms\n");
-    // ITUGames::Console::PrintStr("FPS: " + std::to_string(1.0 / time_elapsed.count()) + "\n");
-    // ITUGames::Console::PrintStr("Compute time:" + std::to_string(time_compute.count() * 1000) + " ms\n");
-    // ITUGames::Console::PrintStr("Target FPS: " + std::to_string(TARGETFPS) + " (" + std::to_string(1000.0 / TARGETFPS) + " ms)\n");
-    // ITUGames::Console::PrintStr("Snake length: " + std::to_string(player->coordinates.size()) + "\n");
-}
-
-void PrintBounds()
-{
-    // ITUGames::Console::GotoCoords(0, ROWOFFSET);
-    // ITUGames::Console::PrintStr("+");
-    // ITUGames::Console::GotoCoords(GAMEWIDTH, ROWOFFSET);
-    // ITUGames::Console::PrintStr("+");
-    // ITUGames::Console::GotoCoords(0, ROWOFFSET + GAMEHEIGHT);
-    // ITUGames::Console::PrintStr("+");
-    // ITUGames::Console::GotoCoords(GAMEWIDTH, ROWOFFSET + GAMEHEIGHT);
-    // ITUGames::Console::PrintStr("+");
-}
-
-// void Render()
-// {
-// for (auto coord : player->coordinates)
-// {
-//     ITUGames::Console::GotoCoords(coord.x, coord.y);
-//     ITUGames::Console::PrintStr("O");
-// }
-// PrintBounds();
-// ITUGames::Console::GotoCoords(player->food_pos.x, player->food_pos.y);
-// ITUGames::Console::PrintStr("X");
-// ITUGames::Console::PrintStr("\n");
-// ITUGames::Console::HideCursor();
-// }
-
-void LongComputation()
-{
-    // get a random number between 0.01 and 0.016
-    double sleep_time = (10 + std::rand() % 6) / 1000.0;
-
-    // ITUGames::Utils::PreciseSleep(std::chrono::duration<double>(sleep_time));
 }

@@ -5,7 +5,6 @@ Player::Player()
     coordinates.clear();
     coordinates.push_front({20, 10});
     frame_skips = 8;
-    SetNewFood();
 }
 
 void Player::HandleKeyPress(SDL_Event &event)
@@ -63,13 +62,6 @@ bool Player::HasLost()
     return false;
 }
 
-void Player::SetNewFood()
-{
-    int food_x = (std::rand() % (GAMEWIDTH - 1)) + 1;
-    int food_y = (std::rand() % (GAMEHEIGHT - 1) + 1) + ROWOFFSET;
-    food_pos = glm::vec2(food_x, food_y);
-}
-
 void Player::MoveStep(float deltaTime)
 {
     auto prevFirst = coordinates.front();
@@ -92,10 +84,5 @@ void Player::MoveStep(float deltaTime)
     }
     if (coordinates.front().x != food_pos.x || coordinates.front().y != food_pos.y)
         coordinates.pop_back();
-    else
-    {
-        SetNewFood();
-        // frame_skips *= 0.9;
-    }
     ApplyBound();
 }
