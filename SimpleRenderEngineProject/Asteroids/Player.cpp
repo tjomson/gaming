@@ -1,8 +1,9 @@
 #include "Player.h"
 #include <cmath>
 
-Player::Player()
+Player::Player(int x, int y)
 {
+    position = {x, y};
 }
 
 float floatMod(float a, float b)
