@@ -1,7 +1,7 @@
 file(GLOB_RECURSE Sources "*.h" "*.cpp") # will get all the .cpp and all the .h files in directory and subdirectories
-add_executable(SpaceInvaders ${Sources})
+add_executable(Asteroids ${Sources})
 
-target_link_libraries(SpaceInvaders ${all_libs})
+target_link_libraries(Asteroids ${all_libs})
 
 # Copy project data to output path
 file(COPY data DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug)

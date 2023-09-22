@@ -165,25 +165,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Asteroids/CMakeFiles/SpaceInvaders.dir/rule:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/CMakeFiles/SpaceInvaders.dir/rule
-.PHONY : Asteroids/CMakeFiles/SpaceInvaders.dir/rule
+Asteroids/CMakeFiles/Asteroids.dir/rule:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/CMakeFiles/Asteroids.dir/rule
+.PHONY : Asteroids/CMakeFiles/Asteroids.dir/rule
 
 # Convenience name for target.
-SpaceInvaders: Asteroids/CMakeFiles/SpaceInvaders.dir/rule
-.PHONY : SpaceInvaders
+Asteroids: Asteroids/CMakeFiles/Asteroids.dir/rule
+.PHONY : Asteroids
 
 # fast build rule for target.
-SpaceInvaders/fast:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/build
-.PHONY : SpaceInvaders/fast
+Asteroids/fast:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/build
+.PHONY : Asteroids/fast
 
 Player.o: Player.cpp.o
 .PHONY : Player.o
 
 # target to build an object file
 Player.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -191,7 +191,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -199,7 +199,7 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/Player.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
 main.o: main.cpp.o
@@ -207,7 +207,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -215,7 +215,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -223,7 +223,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/main.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -238,7 +238,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... SpaceInvaders"
+	@echo "... Asteroids"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"

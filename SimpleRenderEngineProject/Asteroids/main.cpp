@@ -52,12 +52,10 @@ void Render()
                                      .build();
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
 
-    for (auto coord : player->coordinates)
-    {
-        sre::Sprite snakePart = atlas->get("playerShip1_green.png");
-        snakePart.setPosition(coord);
-        spriteBatchBuilder.addSprite(snakePart);
-    }
+    sre::Sprite playerShip = atlas->get("playerShip1_green.png");
+    playerShip.setPosition(player->position);
+    playerShip.setRotation(player->currHeading);
+    spriteBatchBuilder.addSprite(playerShip);
 
     spriteBatchBuilder.addSprite(sprite);
     auto spriteBatch = spriteBatchBuilder.build();

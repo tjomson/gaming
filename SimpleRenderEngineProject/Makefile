@@ -581,17 +581,17 @@ Snake/fast:
 .PHONY : Snake/fast
 
 #=============================================================================
-# Target rules for targets named SpaceInvaders
+# Target rules for targets named Asteroids
 
 # Build rule for target.
-SpaceInvaders: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpaceInvaders
-.PHONY : SpaceInvaders
+Asteroids: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids
+.PHONY : Asteroids
 
 # fast build rule for target.
-SpaceInvaders/fast:
-	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/SpaceInvaders.dir/build.make Asteroids/CMakeFiles/SpaceInvaders.dir/build
-.PHONY : SpaceInvaders/fast
+Asteroids/fast:
+	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/build
+.PHONY : Asteroids/fast
 
 # Help Target
 help:
@@ -605,6 +605,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... Asteroids"
 	@echo "... SRE"
 	@echo "... SRE-Example-00_hello-engine"
 	@echo "... SRE-Example-01_hello-engine-raw"
@@ -637,7 +638,6 @@ help:
 	@echo "... SRE-scene-graph"
 	@echo "... SRE-sdl2_mixer-example"
 	@echo "... Snake"
-	@echo "... SpaceInvaders"
 .PHONY : help
 
 

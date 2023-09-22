@@ -2,6 +2,9 @@
 [Oo]ut/
 .idea
 .vscode
+progress.
+**/Progress
+**/*.dir
 ### misc
 CppProperties.json
 

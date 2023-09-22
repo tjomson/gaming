@@ -6,12 +6,13 @@
 #define GAMEHEIGHT 600
 #define ROWOFFSET 6
 
-enum MoveDirection
+enum MovementType
 {
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
+    CLOCKWISE,
+    COUNTERCLOCKWISE,
+    FORWARD,
+    BACKWARD,
+    NONE
 };
 
 class Player
@@ -22,6 +23,7 @@ public:
     void MoveStep(float deltaTime);
     void ApplyBound();
     bool HasLost();
-    std::deque<glm::vec2> coordinates;
-    MoveDirection currDir = RIGHT;
+    float currHeading = 0;
+    MovementType currMovement = NONE;
+    glm::vec2 position = {80, 50};
 };

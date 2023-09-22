@@ -107,5 +107,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/DependInfo.cmake"
   "project/gui/CMakeFiles/SRE-Gui.dir/DependInfo.cmake"
   "Snake/CMakeFiles/Snake.dir/DependInfo.cmake"
-  "Asteroids/CMakeFiles/SpaceInvaders.dir/DependInfo.cmake"
+  "Asteroids/CMakeFiles/Asteroids.dir/DependInfo.cmake"
   )
