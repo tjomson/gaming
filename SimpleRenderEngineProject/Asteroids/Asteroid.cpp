@@ -10,6 +10,14 @@ Asteroid::Asteroid()
     rotation = 0;
 }
 
+void Asteroid::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
+{
+    sre::Sprite astSprite = atlas->get("meteorGrey_big4.png");
+    astSprite.setPosition(position);
+    astSprite.setRotation(rotation);
+    builder.addSprite(astSprite);
+}
+
 void Asteroid::Update(float deltaTime)
 {
     auto radians = glm::radians(floatMod(direction, 360));

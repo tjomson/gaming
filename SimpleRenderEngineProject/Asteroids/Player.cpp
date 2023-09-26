@@ -6,6 +6,14 @@ Player::Player(int x, int y)
     position = {x, y};
 }
 
+void Player::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
+{
+    sre::Sprite playerShip = atlas->get("playerShip1_green.png");
+    playerShip.setPosition(position);
+    playerShip.setRotation(currHeading);
+    builder.addSprite(playerShip);
+}
+
 void Player::HandleKeyPress(SDL_Event &event)
 {
     if (event.type == SDL_KEYDOWN)

@@ -1,4 +1,5 @@
 #include "sre/SDLRenderer.hpp"
+#include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 
 class Asteroid
@@ -6,6 +7,7 @@ class Asteroid
 public:
     Asteroid();
     void Update(float deltaTime);
+    void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     float angularVelocity;
     float velocity;
     float rotation;

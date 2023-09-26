@@ -18,6 +18,7 @@ public:
     Player(int x, int y);
     void HandleKeyPress(SDL_Event &event);
     void MoveStep(float deltaTime);
+    void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void ApplyBound();
     float currHeading = 0;
     MovementType currMovement = NONE;

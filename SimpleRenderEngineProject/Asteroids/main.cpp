@@ -63,16 +63,10 @@ void Render()
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
     for (auto asteroid : asteroids)
     {
-        // TODO add spinning
-        sre::Sprite astSprite = atlas->get("meteorGrey_big4.png");
-        astSprite.setPosition(asteroid->position);
-        astSprite.setRotation(asteroid->rotation);
-        spriteBatchBuilder.addSprite(astSprite);
+        asteroid->Render(atlas, spriteBatchBuilder);
     }
-    sre::Sprite playerShip = atlas->get("playerShip1_green.png");
-    playerShip.setPosition(player->position);
-    playerShip.setRotation(player->currHeading);
-    spriteBatchBuilder.addSprite(playerShip);
+
+    player.Render(atlas, spriteBatchBuilder);
 
     auto spriteBatch = spriteBatchBuilder.build();
     renderPass.draw(spriteBatch);
