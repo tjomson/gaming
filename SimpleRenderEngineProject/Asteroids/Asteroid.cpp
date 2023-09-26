@@ -8,6 +8,12 @@ Asteroid::Asteroid()
     direction = randomFraction() * 360;
     position = generatePosition();
     rotation = 0;
+    lifetime = 0;
+}
+
+bool Asteroid::IsOutOfBounds()
+{
+    return position.x > GAMEWIDTH + 100 || position.x < -100 || position.y > GAMEHEIGHT + 100 || position.y < -100;
 }
 
 void Asteroid::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
@@ -25,6 +31,7 @@ void Asteroid::Update(float deltaTime)
     auto y = (cos(radians) * deltaTime);
     position += glm::vec2(x, y) * velocity;
     rotation += clockwiseRotation ? angularVelocity : angularVelocity * -1;
+    lifetime += deltaTime;
 }
 
 int Asteroid::randInRange(int a, int b)

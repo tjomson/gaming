@@ -5,6 +5,7 @@
 
 #include "Player.h"
 #include "Asteroid.h"
+#include "AsteroidsManager.h"
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 
@@ -15,7 +16,7 @@
 #include "main.h"
 
 auto player = new Player(100, 80);
-std::vector<Asteroid *> asteroids;
+auto astManager = new AsteroidsManager(5);
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -23,12 +24,6 @@ std::shared_ptr<sre::SpriteAtlas> atlas;
 
 int main()
 {
-    for (int i = 0; i < 5; i++)
-    {
-        auto asteroid1 = new Asteroid();
-        asteroids.push_back(asteroid1);
-    }
-
     std::srand(std::time(nullptr));
     renderer.frameRender = Render;
     renderer.frameUpdate = Update;
@@ -47,10 +42,7 @@ void ProcessEvents(SDL_Event &event)
 
 void Update(float deltaTime)
 {
-    for (auto asteroid : asteroids)
-    {
-        asteroid->Update(deltaTime);
-    }
+    astManager->UpdateAsteroids(deltaTime);
     player->MoveStep(deltaTime);
 }
 
@@ -61,10 +53,7 @@ void Render()
                                      .withClearColor(true, {.3f, .3f, 1, 1})
                                      .build();
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
-    for (auto asteroid : asteroids)
-    {
-        asteroid->Render(atlas, spriteBatchBuilder);
-    }
+    astManager->RenderAsteroids(atlas, spriteBatchBuilder);
 
     player->Render(atlas, spriteBatchBuilder);
 
