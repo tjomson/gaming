@@ -6,13 +6,6 @@ Player::Player(int x, int y)
     position = {x, y};
 }
 
-float floatMod(float a, float b)
-{
-    if (a >= b)
-        return a - b;
-    return a;
-}
-
 void Player::HandleKeyPress(SDL_Event &event)
 {
     if (event.type == SDL_KEYDOWN)

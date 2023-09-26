@@ -1,9 +1,7 @@
 #include <deque>
 #include <cstdlib>
 #include "sre/SDLRenderer.hpp"
-
-#define GAMEWIDTH 800
-#define GAMEHEIGHT 600
+#include "utils.h"
 
 enum MovementType
 {
