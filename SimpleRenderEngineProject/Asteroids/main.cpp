@@ -16,7 +16,7 @@
 #include "main.h"
 
 auto player = new Player(100, 80);
-auto astManager = new AsteroidsManager(5);
+auto astManager = new AsteroidsManager(5, 5);
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;

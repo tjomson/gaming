@@ -1,7 +1,9 @@
 #include "AsteroidsManager.h"
 
-AsteroidsManager::AsteroidsManager(int initialAsteroidCount)
+AsteroidsManager::AsteroidsManager(int initialAsteroidCount, float interval)
 {
+    this->spawnInterval = interval;
+    lastSpawnTime = std::chrono::system_clock::now();
     for (int i = 0; i < initialAsteroidCount; i++)
     {
         auto asteroid1 = new Asteroid();
@@ -16,6 +18,15 @@ void AsteroidsManager::UpdateAsteroids(float deltaTime)
         asteroid->Update(deltaTime);
     }
     RemoveOutOfBoundsAsteroids();
+
+    auto currentTime = std::chrono::system_clock::now();
+    std::chrono::duration<double> diff = currentTime - lastSpawnTime;
+
+    if (diff.count() >= spawnInterval)
+    {
+        lastSpawnTime = currentTime;
+        SpawnAsteroid();
+    }
 }
 
 void AsteroidsManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
@@ -43,4 +54,8 @@ void AsteroidsManager::RemoveOutOfBoundsAsteroids()
     std::cout << asteroids.size() << std::endl;
 }
 
-void AsteroidsManager::SpawnAsteroid() {}
+void AsteroidsManager::SpawnAsteroid()
+{
+    auto asteroid1 = new Asteroid();
+    asteroids.push_back(asteroid1);
+}
