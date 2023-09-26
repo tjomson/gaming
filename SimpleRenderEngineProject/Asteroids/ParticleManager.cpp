@@ -53,6 +53,19 @@ void ParticleManager::RemoveOutOfBoundsAsteroids()
     }
 }
 
+void ParticleManager::RemoveOldLasers()
+{
+    for (auto it = lasers.begin(); it != lasers.end();)
+    {
+        auto currentLaser = *it;
+        if (currentLaser->lifetime > 1)
+            it = lasers.erase(it);
+        else
+            ++it;
+    }
+    std::cout << lasers.size() << std::endl;
+}
+
 void ParticleManager::SpawnAsteroid()
 {
     auto asteroid1 = new Asteroid();
@@ -65,6 +78,7 @@ void ParticleManager::UpdateLasers(float deltaTime)
     {
         laser->Update(deltaTime);
     }
+    RemoveOldLasers();
 }
 
 void ParticleManager::RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)

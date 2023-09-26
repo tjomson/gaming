@@ -15,6 +15,7 @@ void LaserShot::Update(float deltaTime)
     auto x = (sin(radians) * deltaTime * 1000) * -1;
     auto y = (cos(radians) * deltaTime * 1000);
     position += glm::vec2(x, y);
+    lifetime += deltaTime;
 }
 
 void LaserShot::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
