@@ -51,7 +51,6 @@ void AsteroidsManager::RemoveOutOfBoundsAsteroids()
             ++it;
         }
     }
-    std::cout << asteroids.size() << std::endl;
 }
 
 void AsteroidsManager::SpawnAsteroid()

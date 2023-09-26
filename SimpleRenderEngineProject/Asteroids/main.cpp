@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "Asteroid.h"
 #include "AsteroidsManager.h"
+#include "LaserShot.h"
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 
@@ -21,6 +22,7 @@ glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
 std::shared_ptr<sre::SpriteAtlas> atlas;
+LaserShot *laser;
 
 int main()
 {
@@ -38,12 +40,20 @@ int main()
 void ProcessEvents(SDL_Event &event)
 {
     player->HandleKeyPress(event);
+    if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE)
+    {
+        laser = new LaserShot(player->position, player->currHeading);
+    }
 }
 
 void Update(float deltaTime)
 {
     astManager->UpdateAsteroids(deltaTime);
     player->MoveStep(deltaTime);
+    if (laser)
+    {
+        laser->Update(deltaTime);
+    }
 }
 
 void Render()
@@ -55,6 +65,10 @@ void Render()
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
     astManager->RenderAsteroids(atlas, spriteBatchBuilder);
 
+    if (laser)
+    {
+        laser->Render(atlas, spriteBatchBuilder);
+    }
     player->Render(atlas, spriteBatchBuilder);
 
     auto spriteBatch = spriteBatchBuilder.build();
