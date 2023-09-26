@@ -66,7 +66,7 @@ void Render()
         asteroid->Render(atlas, spriteBatchBuilder);
     }
 
-    player.Render(atlas, spriteBatchBuilder);
+    player->Render(atlas, spriteBatchBuilder);
 
     auto spriteBatch = spriteBatchBuilder.build();
     renderPass.draw(spriteBatch);

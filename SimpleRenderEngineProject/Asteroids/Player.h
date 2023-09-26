@@ -1,6 +1,7 @@
 #include <deque>
 #include <cstdlib>
 #include "sre/SDLRenderer.hpp"
+#include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 
 enum MovementType
