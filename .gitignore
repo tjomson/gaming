@@ -5,6 +5,8 @@
 progress.
 **/Progress
 **/*.dir
+progress.marks
+progress.make
 ### misc
 CppProperties.json
 

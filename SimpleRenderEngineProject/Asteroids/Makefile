@@ -178,6 +178,30 @@ Asteroids/fast:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/build
 .PHONY : Asteroids/fast
 
+Asteroid.o: Asteroid.cpp.o
+.PHONY : Asteroid.o
+
+# target to build an object file
+Asteroid.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Asteroid.cpp.o
+.PHONY : Asteroid.cpp.o
+
+Asteroid.i: Asteroid.cpp.i
+.PHONY : Asteroid.i
+
+# target to preprocess a source file
+Asteroid.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Asteroid.cpp.i
+.PHONY : Asteroid.cpp.i
+
+Asteroid.s: Asteroid.cpp.s
+.PHONY : Asteroid.s
+
+# target to generate assembly for a file
+Asteroid.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Asteroid.cpp.s
+.PHONY : Asteroid.cpp.s
+
 Player.o: Player.cpp.o
 .PHONY : Player.o
 
@@ -226,6 +250,30 @@ main.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+utils.o: utils.cpp.o
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,12 +287,18 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Asteroids"
+	@echo "... Asteroid.o"
+	@echo "... Asteroid.i"
+	@echo "... Asteroid.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 
