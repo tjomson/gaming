@@ -6,8 +6,9 @@ class Asteroid
 public:
     Asteroid();
     void Update(float deltaTime);
-    float angularVelocityFactor;
-    float velocityFactor;
+    float angularVelocity;
+    float velocity;
+    float rotation;
     glm::vec2 position;
     int direction;
     bool clockwiseRotation;
@@ -15,4 +16,5 @@ public:
 private:
     int randInRange(int a, int b);
     glm::vec2 generatePosition();
+    float randomFraction();
 };

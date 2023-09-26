@@ -2,11 +2,12 @@
 
 Asteroid::Asteroid()
 {
-    velocityFactor = (static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX)) * 200;
-    angularVelocityFactor = static_cast<float>(std::rand() / RAND_MAX);
-    clockwiseRotation = std::rand() < (RAND_MAX / 2);
-    direction = 360.0 * (static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX));
+    velocity = randomFraction() * 200;
+    angularVelocity = randomFraction() * 2;
+    clockwiseRotation = randomFraction() < 0.5;
+    direction = randomFraction() * 360;
     position = generatePosition();
+    rotation = 0;
 }
 
 void Asteroid::Update(float deltaTime)
@@ -14,12 +15,18 @@ void Asteroid::Update(float deltaTime)
     auto radians = glm::radians(floatMod(direction, 360));
     auto x = (sin(radians) * deltaTime);
     auto y = (cos(radians) * deltaTime);
-    position += glm::vec2(x, y) * velocityFactor;
+    position += glm::vec2(x, y) * velocity;
+    rotation += clockwiseRotation ? angularVelocity : angularVelocity * -1;
 }
 
 int Asteroid::randInRange(int a, int b)
 {
     return a + std::rand() % (b - a + 1);
+}
+
+float Asteroid::randomFraction()
+{
+    return static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
 }
 
 glm::vec2 Asteroid::generatePosition()

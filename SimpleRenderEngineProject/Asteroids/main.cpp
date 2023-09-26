@@ -15,7 +15,7 @@
 #include "main.h"
 
 auto player = new Player(100, 80);
-std::vector<Asteroid*> asteroids;
+std::vector<Asteroid *> asteroids;
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -23,7 +23,8 @@ std::shared_ptr<sre::SpriteAtlas> atlas;
 
 int main()
 {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         auto asteroid1 = new Asteroid();
         asteroids.push_back(asteroid1);
     }
@@ -46,7 +47,8 @@ void ProcessEvents(SDL_Event &event)
 
 void Update(float deltaTime)
 {
-    for (auto asteroid : asteroids) {
+    for (auto asteroid : asteroids)
+    {
         asteroid->Update(deltaTime);
     }
     player->MoveStep(deltaTime);
@@ -64,6 +66,7 @@ void Render()
         // TODO add spinning
         sre::Sprite astSprite = atlas->get("meteorGrey_big4.png");
         astSprite.setPosition(asteroid->position);
+        astSprite.setRotation(asteroid->rotation);
         spriteBatchBuilder.addSprite(astSprite);
     }
     sre::Sprite playerShip = atlas->get("playerShip1_green.png");
