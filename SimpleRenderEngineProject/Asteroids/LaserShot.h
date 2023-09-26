@@ -1,3 +1,5 @@
+#pragma once
+
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"

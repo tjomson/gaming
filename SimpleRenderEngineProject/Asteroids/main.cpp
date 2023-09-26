@@ -5,7 +5,7 @@
 
 #include "Player.h"
 #include "Asteroid.h"
-#include "AsteroidsManager.h"
+#include "ParticleManager.h"
 #include "LaserShot.h"
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
@@ -17,7 +17,7 @@
 #include "main.h"
 
 auto player = new Player(100, 80);
-auto astManager = new AsteroidsManager(5, 5);
+auto particleManager = new ParticleManager(5, 5);
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -42,18 +42,15 @@ void ProcessEvents(SDL_Event &event)
     player->HandleKeyPress(event);
     if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE)
     {
-        laser = new LaserShot(player->position, player->currHeading);
+        particleManager->ShootLaser(player->position, player->currHeading);
     }
 }
 
 void Update(float deltaTime)
 {
-    astManager->UpdateAsteroids(deltaTime);
+    particleManager->UpdateAsteroids(deltaTime);
+    particleManager->UpdateLasers(deltaTime);
     player->MoveStep(deltaTime);
-    if (laser)
-    {
-        laser->Update(deltaTime);
-    }
 }
 
 void Render()
@@ -63,12 +60,9 @@ void Render()
                                      .withClearColor(true, {.3f, .3f, 1, 1})
                                      .build();
     sre::SpriteBatch::SpriteBatchBuilder spriteBatchBuilder = sre::SpriteBatch::create();
-    astManager->RenderAsteroids(atlas, spriteBatchBuilder);
+    particleManager->RenderAsteroids(atlas, spriteBatchBuilder);
+    particleManager->RenderLasers(atlas, spriteBatchBuilder);
 
-    if (laser)
-    {
-        laser->Render(atlas, spriteBatchBuilder);
-    }
     player->Render(atlas, spriteBatchBuilder);
 
     auto spriteBatch = spriteBatchBuilder.build();

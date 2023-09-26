@@ -3,18 +3,23 @@
 #include <chrono>
 #include <ctime>
 #include "Asteroid.h"
+#include "LaserShot.h"
 
-class AsteroidsManager
+class ParticleManager
 {
 public:
-    AsteroidsManager(int initialAsteroidCount, float spawnInterval);
+    ParticleManager(int initialAsteroidCount, float spawnInterval);
     void UpdateAsteroids(float deltaTime);
-    void SpawnAsteroid();
     void RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
+    void UpdateLasers(float deltaTime);
+    void RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
+    void ShootLaser(glm::vec2 pos, float heading);
 
 private:
+    void SpawnAsteroid();
     void RemoveOutOfBoundsAsteroids();
     std::vector<Asteroid *> asteroids;
+    std::vector<LaserShot *> lasers;
     float spawnInterval;
     std::chrono::system_clock::time_point lastSpawnTime;
 };

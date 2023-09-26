@@ -1,6 +1,6 @@
-#include "AsteroidsManager.h"
+#include "ParticleManager.h"
 
-AsteroidsManager::AsteroidsManager(int initialAsteroidCount, float interval)
+ParticleManager::ParticleManager(int initialAsteroidCount, float interval)
 {
     this->spawnInterval = interval;
     lastSpawnTime = std::chrono::system_clock::now();
@@ -11,7 +11,7 @@ AsteroidsManager::AsteroidsManager(int initialAsteroidCount, float interval)
     }
 }
 
-void AsteroidsManager::UpdateAsteroids(float deltaTime)
+void ParticleManager::UpdateAsteroids(float deltaTime)
 {
     for (auto asteroid : asteroids)
     {
@@ -29,7 +29,7 @@ void AsteroidsManager::UpdateAsteroids(float deltaTime)
     }
 }
 
-void AsteroidsManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
+void ParticleManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
 {
     for (auto asteroid : asteroids)
     {
@@ -37,7 +37,7 @@ void AsteroidsManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, 
     }
 }
 
-void AsteroidsManager::RemoveOutOfBoundsAsteroids()
+void ParticleManager::RemoveOutOfBoundsAsteroids()
 {
     for (auto it = asteroids.begin(); it != asteroids.end();)
     {
@@ -53,8 +53,30 @@ void AsteroidsManager::RemoveOutOfBoundsAsteroids()
     }
 }
 
-void AsteroidsManager::SpawnAsteroid()
+void ParticleManager::SpawnAsteroid()
 {
     auto asteroid1 = new Asteroid();
     asteroids.push_back(asteroid1);
+}
+
+void ParticleManager::UpdateLasers(float deltaTime)
+{
+    for (auto laser : lasers)
+    {
+        laser->Update(deltaTime);
+    }
+}
+
+void ParticleManager::RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
+{
+    for (auto laser : lasers)
+    {
+        laser->Render(atlas, builder);
+    }
+}
+
+void ParticleManager::ShootLaser(glm::vec2 pos, float heading)
+{
+    auto laser = new LaserShot(pos, heading);
+    lasers.push_back(laser);
 }
