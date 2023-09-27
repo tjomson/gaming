@@ -16,8 +16,8 @@
 #pragma endregion
 #include "main.h"
 
-auto player = new Player(100, 80);
-auto particleManager = new ParticleManager(5, 2);
+Player *player;
+ParticleManager *particleManager;
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -27,6 +27,7 @@ LaserShot *laser;
 int main()
 {
     std::srand(std::time(nullptr));
+    ResetGame();
     renderer.frameRender = Render;
     renderer.frameUpdate = Update;
     renderer.keyEvent = ProcessEvents;
@@ -35,6 +36,12 @@ int main()
     camera.setWindowCoordinates();
     atlas = sre::SpriteAtlas::create("data/asteroids.json", "data/asteroids.png");
     renderer.startEventLoop();
+}
+
+void ResetGame()
+{
+    player = new Player(100, 80);
+    particleManager = new ParticleManager(5, 2);
 }
 
 void ProcessEvents(SDL_Event &event)
