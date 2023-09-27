@@ -113,12 +113,12 @@ void ParticleManager::DetectCollisions()
                 //     auto newAst = ExplodeAsteroid(currAsteroid);
                 //     asteroidsToAdd.insert(asteroidsToAdd.end(), newAst.begin(), newAst.end());
                 // }
-                // asteroidIt = asteroids.erase(asteroidIt);
+                asteroidIt = asteroids.erase(asteroidIt);
             }
-            // else
-            // {
-            ++asteroidIt;
-            // }
+            else
+            {
+                ++asteroidIt;
+            }
         }
 
         if (!laserRemoved)
