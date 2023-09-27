@@ -114,6 +114,7 @@ void ParticleManager::DetectShotCollisions()
                     asteroidsToAdd.insert(asteroidsToAdd.end(), newAst.begin(), newAst.end());
                 }
                 asteroidIt = asteroids.erase(asteroidIt);
+                break;
             }
             else
             {
