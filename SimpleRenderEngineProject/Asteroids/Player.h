@@ -4,6 +4,9 @@
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 
+#define TURNINGSPEED 200
+#define MOVESPEED 300
+
 enum MovementType
 {
     CLOCKWISE,

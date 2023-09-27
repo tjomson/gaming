@@ -57,16 +57,16 @@ void Player::ApplyBound()
 void Player::MoveStep(float deltaTime)
 {
     auto radians = glm::radians(floatMod(currHeading, 360));
-    auto x = (sin(radians) * deltaTime * 200) * -1;
-    auto y = (cos(radians) * deltaTime * 200);
+    auto x = (sin(radians) * deltaTime * MOVESPEED) * -1;
+    auto y = (cos(radians) * deltaTime * MOVESPEED);
 
     switch (currMovement)
     {
     case CLOCKWISE:
-        currHeading = floatMod((currHeading - deltaTime * 100), 360.0);
+        currHeading = floatMod((currHeading - deltaTime * TURNINGSPEED), 360.0);
         break;
     case COUNTERCLOCKWISE:
-        currHeading = floatMod((currHeading + deltaTime * 100), 360.0);
+        currHeading = floatMod((currHeading + deltaTime * TURNINGSPEED), 360.0);
         break;
     case FORWARD:
         position += glm::vec2(x, y);

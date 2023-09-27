@@ -17,7 +17,7 @@
 #include "main.h"
 
 auto player = new Player(100, 80);
-auto particleManager = new ParticleManager(5, 5);
+auto particleManager = new ParticleManager(5, 2);
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
