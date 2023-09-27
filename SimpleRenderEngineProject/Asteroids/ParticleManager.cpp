@@ -133,11 +133,11 @@ std::vector<Asteroid *> ParticleManager::ExplodeAsteroid(Asteroid *asteroid)
 {
     auto copy1 = new Asteroid(asteroid);
     copy1->size--;
-    copy1->direction = floatMod(copy1->direction + 45, 360);
+    copy1->direction = floatMod(copy1->direction + randInRange(10, 70), 360);
 
     auto copy2 = new Asteroid(asteroid);
     copy2->size--;
-    copy2->direction = floatMod(copy2->direction - 45, 360);
+    copy2->direction = floatMod(copy2->direction - randInRange(10, 70), 360);
 
     std::vector<Asteroid *> newAsteroids = {copy1, copy2};
     return newAsteroids;
