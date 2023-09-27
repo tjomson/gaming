@@ -1,6 +1,7 @@
 #include "Asteroid.h"
+#include <string>
 
-Asteroid::Asteroid()
+Asteroid::Asteroid(int astSize)
 {
     velocity = randomFraction() * 200;
     angularVelocity = randomFraction() * 2;
@@ -9,6 +10,7 @@ Asteroid::Asteroid()
     position = generatePosition();
     rotation = 0;
     lifetime = 0;
+    size = astSize;
 }
 
 bool Asteroid::IsOutOfBounds()
@@ -18,7 +20,20 @@ bool Asteroid::IsOutOfBounds()
 
 void Asteroid::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
 {
-    sre::Sprite astSprite = atlas->get("meteorGrey_big4.png");
+    std::string fileName;
+    switch (size)
+    {
+    case BIG:
+        fileName = "meteorGrey_big4.png";
+        break;
+    case MEDIUM:
+        fileName = "meteorGrey_med2.png";
+        break;
+    case SMALL:
+        fileName = "meteorGrey_small2.png";
+        break;
+    }
+    sre::Sprite astSprite = atlas->get(fileName);
     astSprite.setPosition(position);
     astSprite.setRotation(rotation);
     builder.addSprite(astSprite);
@@ -32,11 +47,6 @@ void Asteroid::Update(float deltaTime)
     position += glm::vec2(x, y) * velocity;
     rotation += clockwiseRotation ? angularVelocity : angularVelocity * -1;
     lifetime += deltaTime;
-}
-
-int Asteroid::randInRange(int a, int b)
-{
-    return a + std::rand() % (b - a + 1);
 }
 
 float Asteroid::randomFraction()

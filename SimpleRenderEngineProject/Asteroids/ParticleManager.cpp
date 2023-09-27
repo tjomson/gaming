@@ -6,8 +6,7 @@ ParticleManager::ParticleManager(int initialAsteroidCount, float interval)
     lastSpawnTime = std::chrono::system_clock::now();
     for (int i = 0; i < initialAsteroidCount; i++)
     {
-        auto asteroid1 = new Asteroid();
-        asteroids.push_back(asteroid1);
+        SpawnAsteroid(BIG);
     }
 }
 
@@ -25,7 +24,7 @@ void ParticleManager::UpdateAsteroids(float deltaTime)
     if (diff.count() >= spawnInterval)
     {
         lastSpawnTime = currentTime;
-        SpawnAsteroid();
+        SpawnAsteroid(randInRange(0, 2));
     }
 }
 
@@ -66,9 +65,9 @@ void ParticleManager::RemoveOldLasers()
     std::cout << lasers.size() << std::endl;
 }
 
-void ParticleManager::SpawnAsteroid()
+void ParticleManager::SpawnAsteroid(int size)
 {
-    auto asteroid1 = new Asteroid();
+    auto asteroid1 = new Asteroid(size);
     asteroids.push_back(asteroid1);
 }
 

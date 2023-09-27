@@ -4,10 +4,17 @@
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 
+enum AsteroidSize
+{
+    SMALL = 0,
+    MEDIUM = 1,
+    BIG = 2
+};
+
 class Asteroid
 {
 public:
-    Asteroid();
+    Asteroid(int astSize);
     void Update(float deltaTime);
     void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     float angularVelocity;
@@ -18,9 +25,9 @@ public:
     bool clockwiseRotation;
     bool IsOutOfBounds();
     float lifetime;
+    int size;
 
 private:
-    int randInRange(int a, int b);
     glm::vec2 generatePosition();
     float randomFraction();
 };

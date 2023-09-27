@@ -4,6 +4,7 @@
 #include <ctime>
 #include "Asteroid.h"
 #include "LaserShot.h"
+#include "utils.h"
 
 class ParticleManager
 {
@@ -16,7 +17,7 @@ public:
     void ShootLaser(glm::vec2 pos, float heading);
 
 private:
-    void SpawnAsteroid();
+    void SpawnAsteroid(int size);
     void RemoveOutOfBoundsAsteroids();
     void RemoveOldLasers();
     std::vector<Asteroid *> asteroids;

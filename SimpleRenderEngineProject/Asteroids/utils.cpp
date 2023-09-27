@@ -8,3 +8,8 @@ float floatMod(float a, float b)
         return b - a;
     return a;
 }
+
+int randInRange(int a, int b)
+{
+    return a + std::rand() % (b - a + 1);
+}
