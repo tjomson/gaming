@@ -15,6 +15,7 @@ public:
     void UpdateLasers(float deltaTime);
     void RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void ShootLaser(glm::vec2 pos, float heading);
+    void DetectCollisions();
 
 private:
     void SpawnAsteroid(int size);

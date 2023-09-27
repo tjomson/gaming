@@ -26,6 +26,7 @@ public:
     bool IsOutOfBounds();
     float lifetime;
     int size;
+    int GetRadius();
 
 private:
     glm::vec2 generatePosition();

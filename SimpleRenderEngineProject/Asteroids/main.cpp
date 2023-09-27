@@ -51,6 +51,7 @@ void Update(float deltaTime)
     particleManager->UpdateAsteroids(deltaTime);
     particleManager->UpdateLasers(deltaTime);
     player->MoveStep(deltaTime);
+    particleManager->DetectCollisions();
 }
 
 void Render()

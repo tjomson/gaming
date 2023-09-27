@@ -13,6 +13,19 @@ Asteroid::Asteroid(int astSize)
     size = astSize;
 }
 
+int Asteroid::GetRadius()
+{
+    switch (size)
+    {
+    case 0:
+        return 13;
+    case 1:
+        return 20;
+    case 2:
+        return 42;
+    }
+}
+
 bool Asteroid::IsOutOfBounds()
 {
     return position.x > GAMEWIDTH + 100 || position.x < -100 || position.y > GAMEHEIGHT + 100 || position.y < -100;

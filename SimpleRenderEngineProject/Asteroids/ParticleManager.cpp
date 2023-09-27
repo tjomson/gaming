@@ -62,7 +62,6 @@ void ParticleManager::RemoveOldLasers()
         else
             ++it;
     }
-    std::cout << lasers.size() << std::endl;
 }
 
 void ParticleManager::SpawnAsteroid(int size)
@@ -92,4 +91,31 @@ void ParticleManager::ShootLaser(glm::vec2 pos, float heading)
 {
     auto laser = new LaserShot(pos, heading);
     lasers.push_back(laser);
+}
+
+void ParticleManager::DetectCollisions()
+{
+    for (auto laserIt = lasers.begin(); laserIt != lasers.end();)
+    {
+        bool laserRemoved = false;
+        auto currLaser = *laserIt;
+        for (auto asteroidIt = asteroids.begin(); asteroidIt != asteroids.end();)
+        {
+            auto currAsteroid = *asteroidIt;
+            auto dist = glm::length(currLaser->position - currAsteroid->position);
+            if (dist <= currAsteroid->GetRadius())
+            {
+                laserIt = lasers.erase(laserIt);
+                asteroidIt = asteroids.erase(asteroidIt);
+                laserRemoved = true;
+            }
+            else
+            {
+                ++asteroidIt;
+            }
+        }
+
+        if (!laserRemoved)
+            ++laserIt;
+    }
 }
