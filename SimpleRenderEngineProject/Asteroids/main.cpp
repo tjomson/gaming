@@ -9,6 +9,7 @@
 #include "LaserShot.h"
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
+#include "Score.h"
 
 #pragma region Engine State
 #pragma endregion
@@ -18,6 +19,7 @@
 
 Player *player;
 ParticleManager *particleManager;
+
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
@@ -40,6 +42,7 @@ int main()
 
 void ResetGame()
 {
+    Score::score = 0;
     player = new Player(100, 80);
     particleManager = new ParticleManager(5, 2);
 }
@@ -77,7 +80,7 @@ void Render()
     particleManager->RenderLasers(atlas, spriteBatchBuilder);
 
     player->Render(atlas, spriteBatchBuilder);
-
+    Score::Render();
     auto spriteBatch = spriteBatchBuilder.build();
     renderPass.draw(spriteBatch);
 }

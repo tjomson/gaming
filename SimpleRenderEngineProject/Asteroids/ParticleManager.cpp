@@ -106,6 +106,7 @@ void ParticleManager::DetectShotCollisions()
             auto dist = glm::length(currLaser->position - currAsteroid->position);
             if (dist <= currAsteroid->GetRadius())
             {
+                Score::score++;
                 laserIt = lasers.erase(laserIt);
                 laserRemoved = true;
                 if (currAsteroid->size != SMALL)

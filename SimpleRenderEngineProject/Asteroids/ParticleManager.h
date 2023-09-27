@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "LaserShot.h"
 #include "utils.h"
+#include "Score.h"
 
 class ParticleManager
 {
