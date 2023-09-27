@@ -49,7 +49,10 @@ void ProcessEvents(SDL_Event &event)
     player->HandleKeyPress(event);
     if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE)
     {
-        particleManager->ShootLaser(player->position, player->currHeading);
+        if (player->isDead)
+            ResetGame();
+        else
+            particleManager->ShootLaser(player->position, player->currHeading);
     }
 }
 
@@ -60,7 +63,7 @@ void Update(float deltaTime)
     player->MoveStep(deltaTime);
     particleManager->DetectShotCollisions();
     if (particleManager->PlayerIsHit(player->position))
-        std::cout << "hit!" << std::endl;
+        player->Die();
 }
 
 void Render()

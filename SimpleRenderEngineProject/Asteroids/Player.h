@@ -5,6 +5,7 @@
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
+#include <cstdlib>
 
 #define TURNINGSPEED 200
 #define MOVESPEED 300
@@ -27,7 +28,12 @@ public:
     void MoveStep(float deltaTime);
     void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void ApplyBound();
+    bool isDead = false;
     float currHeading = 0;
     MovementType currMovement = NONE;
     glm::vec2 position;
+    void Die();
+
+private:
+    std::string GetSpriteName();
 };

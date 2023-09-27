@@ -4,11 +4,25 @@
 Player::Player(int x, int y)
 {
     position = {x, y};
+    isDead = false;
+}
+
+std::string Player::GetSpriteName()
+{
+    if (isDead)
+        return "bang.png";
+    return "playerShip1_green.png";
+}
+
+void Player::Die()
+{
+    currMovement = NONE;
+    isDead = true;
 }
 
 void Player::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
 {
-    sre::Sprite playerShip = atlas->get("playerShip1_green.png");
+    sre::Sprite playerShip = atlas->get(GetSpriteName());
     playerShip.setPosition(position);
     playerShip.setRotation(currHeading);
     builder.addSprite(playerShip);
@@ -16,6 +30,11 @@ void Player::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::S
 
 void Player::HandleKeyPress(SDL_Event &event)
 {
+    if (isDead)
+    {
+        currMovement = NONE;
+        return;
+    }
     if (event.type == SDL_KEYDOWN)
     {
         switch (event.key.keysym.sym)
