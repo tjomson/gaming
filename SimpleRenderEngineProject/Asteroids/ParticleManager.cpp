@@ -108,11 +108,11 @@ void ParticleManager::DetectCollisions()
             {
                 laserIt = lasers.erase(laserIt);
                 laserRemoved = true;
-                // if (currAsteroid->size != SMALL)
-                // {
-                //     auto newAst = ExplodeAsteroid(currAsteroid);
-                //     asteroidsToAdd.insert(asteroidsToAdd.end(), newAst.begin(), newAst.end());
-                // }
+                if (currAsteroid->size != SMALL)
+                {
+                    auto newAst = ExplodeAsteroid(currAsteroid);
+                    asteroidsToAdd.insert(asteroidsToAdd.end(), newAst.begin(), newAst.end());
+                }
                 asteroidIt = asteroids.erase(asteroidIt);
             }
             else
@@ -134,8 +134,8 @@ std::vector<Asteroid *> ParticleManager::ExplodeAsteroid(Asteroid *asteroid)
     copy1->direction = floatMod(copy1->direction + 45, 360);
 
     auto copy2 = new Asteroid(asteroid);
-    copy2->direction = floatMod(copy2->direction - 90, 360);
-    asteroids.push_back(copy2);
+    copy2->size--;
+    copy2->direction = floatMod(copy2->direction - 45, 360);
 
     std::vector<Asteroid *> newAsteroids = {copy1, copy2};
     return newAsteroids;
