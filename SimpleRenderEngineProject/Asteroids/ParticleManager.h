@@ -3,6 +3,7 @@
 #include <chrono>
 #include <ctime>
 #include "Asteroid.h"
+#include "Player.h"
 #include "LaserShot.h"
 #include "utils.h"
 
@@ -15,7 +16,8 @@ public:
     void UpdateLasers(float deltaTime);
     void RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void ShootLaser(glm::vec2 pos, float heading);
-    void DetectCollisions();
+    void DetectShotCollisions();
+    bool PlayerIsHit(glm::vec2 &playerPos);
 
 private:
     void SpawnAsteroid(int size);

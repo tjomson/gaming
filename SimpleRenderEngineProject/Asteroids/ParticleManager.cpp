@@ -93,7 +93,7 @@ void ParticleManager::ShootLaser(glm::vec2 pos, float heading)
     lasers.push_back(laser);
 }
 
-void ParticleManager::DetectCollisions()
+void ParticleManager::DetectShotCollisions()
 {
     std::vector<Asteroid *> asteroidsToAdd;
     for (auto laserIt = lasers.begin(); laserIt != lasers.end();)
@@ -139,4 +139,12 @@ std::vector<Asteroid *> ParticleManager::ExplodeAsteroid(Asteroid *asteroid)
 
     std::vector<Asteroid *> newAsteroids = {copy1, copy2};
     return newAsteroids;
+}
+
+bool ParticleManager::PlayerIsHit(glm::vec2 &playerPos)
+{
+    return std::any_of(asteroids.begin(), asteroids.end(), [&playerPos](Asteroid *a)
+                       {
+        auto dist = glm::length(playerPos - a->position);
+        return PLAYERRADIUS + a->GetRadius() >= dist; });
 }

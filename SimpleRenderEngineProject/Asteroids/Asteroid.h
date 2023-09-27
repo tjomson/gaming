@@ -4,6 +4,10 @@
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 
+#define BIGASTEROIDRADIUS 42
+#define MEDIUMASTEROIDRADIUS 20
+#define SMALLASTEROIDRADIUS 13
+
 enum AsteroidSize
 {
     SMALL = 0,

@@ -1,3 +1,5 @@
+#pragma once
+
 #include <deque>
 #include <cstdlib>
 #include "sre/SDLRenderer.hpp"
@@ -6,6 +8,8 @@
 
 #define TURNINGSPEED 200
 #define MOVESPEED 300
+#define HEALTHPOINTS 5
+#define PLAYERRADIUS 35
 
 enum MovementType
 {
@@ -27,4 +31,5 @@ public:
     float currHeading = 0;
     MovementType currMovement = NONE;
     glm::vec2 position;
+    int hp = HEALTHPOINTS;
 };

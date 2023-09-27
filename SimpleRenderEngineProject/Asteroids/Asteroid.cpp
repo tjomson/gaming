@@ -30,11 +30,11 @@ int Asteroid::GetRadius()
     switch (size)
     {
     case 0:
-        return 13;
+        return SMALLASTEROIDRADIUS;
     case 1:
-        return 20;
+        return MEDIUMASTEROIDRADIUS;
     case 2:
-        return 42;
+        return BIGASTEROIDRADIUS;
     }
 }
 
