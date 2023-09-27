@@ -95,6 +95,7 @@ void ParticleManager::ShootLaser(glm::vec2 pos, float heading)
 
 void ParticleManager::DetectCollisions()
 {
+    std::vector<Asteroid *> asteroidsToAdd;
     for (auto laserIt = lasers.begin(); laserIt != lasers.end();)
     {
         bool laserRemoved = false;
@@ -106,16 +107,36 @@ void ParticleManager::DetectCollisions()
             if (dist <= currAsteroid->GetRadius())
             {
                 laserIt = lasers.erase(laserIt);
-                asteroidIt = asteroids.erase(asteroidIt);
                 laserRemoved = true;
+                // if (currAsteroid->size != SMALL)
+                // {
+                //     auto newAst = ExplodeAsteroid(currAsteroid);
+                //     asteroidsToAdd.insert(asteroidsToAdd.end(), newAst.begin(), newAst.end());
+                // }
+                // asteroidIt = asteroids.erase(asteroidIt);
             }
-            else
-            {
-                ++asteroidIt;
-            }
+            // else
+            // {
+            ++asteroidIt;
+            // }
         }
 
         if (!laserRemoved)
             ++laserIt;
     }
+    asteroids.insert(asteroids.end(), asteroidsToAdd.begin(), asteroidsToAdd.end());
+}
+
+std::vector<Asteroid *> ParticleManager::ExplodeAsteroid(Asteroid *asteroid)
+{
+    auto copy1 = new Asteroid(asteroid);
+    copy1->size--;
+    copy1->direction = floatMod(copy1->direction + 45, 360);
+
+    auto copy2 = new Asteroid(asteroid);
+    copy2->direction = floatMod(copy2->direction - 90, 360);
+    asteroids.push_back(copy2);
+
+    std::vector<Asteroid *> newAsteroids = {copy1, copy2};
+    return newAsteroids;
 }

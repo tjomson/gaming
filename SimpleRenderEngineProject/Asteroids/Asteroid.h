@@ -15,13 +15,14 @@ class Asteroid
 {
 public:
     Asteroid(int astSize);
+    Asteroid(Asteroid *toCopy);
     void Update(float deltaTime);
     void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     float angularVelocity;
     float velocity;
     float rotation;
     glm::vec2 position;
-    int direction;
+    float direction;
     bool clockwiseRotation;
     bool IsOutOfBounds();
     float lifetime;

@@ -21,6 +21,7 @@ private:
     void SpawnAsteroid(int size);
     void RemoveOutOfBoundsAsteroids();
     void RemoveOldLasers();
+    std::vector<Asteroid *> ExplodeAsteroid(Asteroid *asteroid);
     std::vector<Asteroid *> asteroids;
     std::vector<LaserShot *> lasers;
     float spawnInterval;

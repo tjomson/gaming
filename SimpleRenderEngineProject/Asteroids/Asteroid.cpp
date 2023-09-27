@@ -13,6 +13,18 @@ Asteroid::Asteroid(int astSize)
     size = astSize;
 }
 
+Asteroid::Asteroid(Asteroid *toCopy)
+{
+    velocity = toCopy->velocity;
+    angularVelocity = toCopy->angularVelocity;
+    clockwiseRotation = toCopy->clockwiseRotation;
+    direction = toCopy->direction;
+    position = toCopy->position;
+    rotation = toCopy->rotation;
+    lifetime = toCopy->lifetime;
+    size = toCopy->size;
+}
+
 int Asteroid::GetRadius()
 {
     switch (size)
