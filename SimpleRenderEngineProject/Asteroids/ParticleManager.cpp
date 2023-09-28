@@ -38,30 +38,16 @@ void ParticleManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, s
 
 void ParticleManager::RemoveOutOfBoundsAsteroids()
 {
-    for (auto it = asteroids.begin(); it != asteroids.end();)
-    {
-        auto currentAsteroid = *it;
-        if (currentAsteroid->lifetime > 5 && currentAsteroid->IsOutOfBounds())
-        {
-            it = asteroids.erase(it);
-        }
-        else
-        {
-            ++it;
-        }
-    }
+    auto newEnd = std::remove_if(asteroids.begin(), asteroids.end(), [](Asteroid *a)
+                                 { return a->lifetime > 5 && a->IsOutOfBounds(); });
+    asteroids.erase(newEnd, asteroids.end());
 }
 
 void ParticleManager::RemoveOldLasers()
 {
-    for (auto it = lasers.begin(); it != lasers.end();)
-    {
-        auto currentLaser = *it;
-        if (currentLaser->lifetime > 1)
-            it = lasers.erase(it);
-        else
-            ++it;
-    }
+    auto newEnd = std::remove_if(lasers.begin(), lasers.end(), [](LaserShot *l)
+                                 { return l->lifetime > 1; });
+    lasers.erase(newEnd, lasers.end());
 }
 
 void ParticleManager::SpawnAsteroid(int size)
