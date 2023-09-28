@@ -4,7 +4,7 @@
 Asteroid::Asteroid(int astSize)
 {
     velocity = randomFraction() * 200;
-    angularVelocity = randomFraction() * 2;
+    angularVelocity = randomFraction() * 100;
     clockwiseRotation = randomFraction() < 0.5;
     direction = randomFraction() * 360;
     position = generatePosition();
@@ -70,7 +70,7 @@ void Asteroid::Update(float deltaTime)
     auto x = (sin(radians) * deltaTime);
     auto y = (cos(radians) * deltaTime);
     position += glm::vec2(x, y) * velocity;
-    rotation += clockwiseRotation ? angularVelocity : angularVelocity * -1;
+    rotation += clockwiseRotation ? angularVelocity * deltaTime : angularVelocity * deltaTime * -1;
     lifetime += deltaTime;
 }
 
