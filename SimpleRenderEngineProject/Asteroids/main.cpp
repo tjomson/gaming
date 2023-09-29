@@ -60,15 +60,15 @@ void Update(float deltaTime)
     player->MoveStep(deltaTime);
     particleManager->DetectShotCollisions();
     if (particleManager->PlayerIsHit(player->position))
-        player->Die();
+        player->isDead = true;
     if (KeyboardCache::space_clicked)
     {
+        KeyboardCache::space_clicked = false;
         if (player->isDead)
             ResetGame();
         else
         {
             particleManager->ShootLaser(player->position, player->currHeading);
-            KeyboardCache::space_clicked = false;
         }
     }
 }

@@ -14,21 +14,12 @@ std::string Player::GetSpriteName()
     return "playerShip1_green.png";
 }
 
-void Player::Die()
-{
-    isDead = true;
-}
-
 void Player::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder)
 {
     sre::Sprite playerShip = atlas->get(GetSpriteName());
     playerShip.setPosition(position);
     playerShip.setRotation(currHeading);
     builder.addSprite(playerShip);
-}
-
-void Player::HandleKeyPress(SDL_Event &event)
-{
 }
 
 void Player::ApplyBound()
