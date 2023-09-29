@@ -86,7 +86,7 @@ void ParticleManager::DetectShotCollisions()
     {
         bool laserRemoved = false;
         auto currLaser = *laserIt;
-        for (auto asteroidIt = asteroids.begin(); asteroidIt != asteroids.end();)
+        for (auto asteroidIt = asteroids.begin(); asteroidIt != asteroids.end(); asteroidIt++)
         {
             auto currAsteroid = *asteroidIt;
             auto dist = glm::length(currLaser->position - currAsteroid->position);
@@ -102,10 +102,6 @@ void ParticleManager::DetectShotCollisions()
                 }
                 asteroidIt = asteroids.erase(asteroidIt);
                 break;
-            }
-            else
-            {
-                ++asteroidIt;
             }
         }
 
