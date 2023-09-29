@@ -43,8 +43,8 @@ int main()
 void ResetGame()
 {
     Score::score = 0;
-    player = new Player(100, 80);
-    particleManager = new ParticleManager(5, 2);
+    player = new Player(GAMEWIDTH / 2, GAMEHEIGHT / 2);
+    particleManager = new ParticleManager(5, 0.5);
 }
 
 void ProcessEvents(SDL_Event &event)

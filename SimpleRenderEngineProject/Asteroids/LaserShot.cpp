@@ -12,8 +12,8 @@ void LaserShot::Update(float deltaTime)
     lifetime += deltaTime;
 
     auto radians = glm::radians(floatMod(heading, 360));
-    auto x = (sin(radians) * deltaTime * 1000) * -1;
-    auto y = (cos(radians) * deltaTime * 1000);
+    auto x = (sin(radians) * deltaTime * velocity) * -1;
+    auto y = (cos(radians) * deltaTime * velocity);
     position += glm::vec2(x, y);
     lifetime += deltaTime;
 }
