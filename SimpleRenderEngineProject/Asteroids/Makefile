@@ -202,6 +202,54 @@ Asteroid.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Asteroid.cpp.s
 .PHONY : Asteroid.cpp.s
 
+LaserShot.o: LaserShot.cpp.o
+.PHONY : LaserShot.o
+
+# target to build an object file
+LaserShot.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/LaserShot.cpp.o
+.PHONY : LaserShot.cpp.o
+
+LaserShot.i: LaserShot.cpp.i
+.PHONY : LaserShot.i
+
+# target to preprocess a source file
+LaserShot.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/LaserShot.cpp.i
+.PHONY : LaserShot.cpp.i
+
+LaserShot.s: LaserShot.cpp.s
+.PHONY : LaserShot.s
+
+# target to generate assembly for a file
+LaserShot.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/LaserShot.cpp.s
+.PHONY : LaserShot.cpp.s
+
+ParticleManager.o: ParticleManager.cpp.o
+.PHONY : ParticleManager.o
+
+# target to build an object file
+ParticleManager.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/ParticleManager.cpp.o
+.PHONY : ParticleManager.cpp.o
+
+ParticleManager.i: ParticleManager.cpp.i
+.PHONY : ParticleManager.i
+
+# target to preprocess a source file
+ParticleManager.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/ParticleManager.cpp.i
+.PHONY : ParticleManager.cpp.i
+
+ParticleManager.s: ParticleManager.cpp.s
+.PHONY : ParticleManager.s
+
+# target to generate assembly for a file
+ParticleManager.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/ParticleManager.cpp.s
+.PHONY : ParticleManager.cpp.s
+
 Player.o: Player.cpp.o
 .PHONY : Player.o
 
@@ -225,6 +273,30 @@ Player.s: Player.cpp.s
 Player.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Player.cpp.s
 .PHONY : Player.cpp.s
+
+Score.o: Score.cpp.o
+.PHONY : Score.o
+
+# target to build an object file
+Score.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Score.cpp.o
+.PHONY : Score.cpp.o
+
+Score.i: Score.cpp.i
+.PHONY : Score.i
+
+# target to preprocess a source file
+Score.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Score.cpp.i
+.PHONY : Score.cpp.i
+
+Score.s: Score.cpp.s
+.PHONY : Score.s
+
+# target to generate assembly for a file
+Score.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Score.cpp.s
+.PHONY : Score.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -290,9 +362,18 @@ help:
 	@echo "... Asteroid.o"
 	@echo "... Asteroid.i"
 	@echo "... Asteroid.s"
+	@echo "... LaserShot.o"
+	@echo "... LaserShot.i"
+	@echo "... LaserShot.s"
+	@echo "... ParticleManager.o"
+	@echo "... ParticleManager.i"
+	@echo "... ParticleManager.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... Score.o"
+	@echo "... Score.i"
+	@echo "... Score.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
