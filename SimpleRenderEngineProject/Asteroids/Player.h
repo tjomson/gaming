@@ -6,19 +6,11 @@
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
 #include <cstdlib>
+#include "KeyboardCache.h"
 
 #define TURNINGSPEED 200
 #define MOVESPEED 300
 #define PLAYERRADIUS 35
-
-enum MovementType
-{
-    CLOCKWISE,
-    COUNTERCLOCKWISE,
-    FORWARD,
-    BACKWARD,
-    NONE
-};
 
 class Player
 {
@@ -30,7 +22,6 @@ public:
     void ApplyBound();
     bool isDead = false;
     float currHeading = 0;
-    MovementType currMovement = NONE;
     glm::vec2 position;
     void Die();
 

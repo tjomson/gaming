@@ -10,6 +10,7 @@
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 #include "Score.h"
+#include "KeyboardCache.h"
 
 #pragma region Engine State
 #pragma endregion
@@ -49,14 +50,7 @@ void ResetGame()
 
 void ProcessEvents(SDL_Event &event)
 {
-    player->HandleKeyPress(event);
-    if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_SPACE)
-    {
-        if (player->isDead)
-            ResetGame();
-        else
-            particleManager->ShootLaser(player->position, player->currHeading);
-    }
+    KeyboardCache::HandleEvent(event);
 }
 
 void Update(float deltaTime)
@@ -67,6 +61,16 @@ void Update(float deltaTime)
     particleManager->DetectShotCollisions();
     if (particleManager->PlayerIsHit(player->position))
         player->Die();
+    if (KeyboardCache::space_clicked)
+    {
+        if (player->isDead)
+            ResetGame();
+        else
+        {
+            particleManager->ShootLaser(player->position, player->currHeading);
+            KeyboardCache::space_clicked = false;
+        }
+    }
 }
 
 void Render()

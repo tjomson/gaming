@@ -16,7 +16,6 @@ std::string Player::GetSpriteName()
 
 void Player::Die()
 {
-    currMovement = NONE;
     isDead = true;
 }
 
@@ -30,35 +29,6 @@ void Player::Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::S
 
 void Player::HandleKeyPress(SDL_Event &event)
 {
-    if (isDead)
-    {
-        currMovement = NONE;
-        return;
-    }
-    if (event.type == SDL_KEYDOWN)
-    {
-        switch (event.key.keysym.sym)
-        {
-        case SDLK_w:
-            currMovement = FORWARD;
-            break;
-        case SDLK_s:
-            currMovement = BACKWARD;
-            break;
-        case SDLK_a:
-            currMovement = COUNTERCLOCKWISE;
-            break;
-        case SDLK_d:
-            currMovement = CLOCKWISE;
-            break;
-        default:
-            currMovement = NONE;
-        }
-    }
-    else
-    {
-        currMovement = NONE;
-    }
 }
 
 void Player::ApplyBound()
@@ -75,26 +45,21 @@ void Player::ApplyBound()
 
 void Player::MoveStep(float deltaTime)
 {
+    if (isDead)
+        return;
     auto radians = glm::radians(floatMod(currHeading, 360));
     auto x = (sin(radians) * deltaTime * MOVESPEED) * -1;
     auto y = (cos(radians) * deltaTime * MOVESPEED);
 
-    switch (currMovement)
-    {
-    case CLOCKWISE:
-        currHeading = floatMod((currHeading - deltaTime * TURNINGSPEED), 360.0);
-        break;
-    case COUNTERCLOCKWISE:
-        currHeading = floatMod((currHeading + deltaTime * TURNINGSPEED), 360.0);
-        break;
-    case FORWARD:
+    if (KeyboardCache::w_clicked && !KeyboardCache::s_clicked)
         position += glm::vec2(x, y);
-        break;
-    case BACKWARD:
+    else if (!KeyboardCache::w_clicked && KeyboardCache::s_clicked)
         position += (glm::vec2(x, y) * glm::vec2(-1, -1));
-        break;
-    case NONE:
-        break;
-    }
+
+    if (KeyboardCache::a_clicked && !KeyboardCache::d_clicked)
+        currHeading = floatMod((currHeading + deltaTime * TURNINGSPEED), 360.0);
+    else if (!KeyboardCache::a_clicked && KeyboardCache::d_clicked)
+        currHeading = floatMod((currHeading - deltaTime * TURNINGSPEED), 360.0);
+
     ApplyBound();
 }
