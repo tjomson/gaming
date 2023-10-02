@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "Asteroids/CMakeLists.txt"
-  "CMakeFiles/3.27.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.27.4/CMakeSystem.cmake"
+  "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.27.6/CMakeSystem.cmake"
   "CMakeLists.txt"
   "Snake/CMakeLists.txt"
   "cmake/FindGLEW.cmake"

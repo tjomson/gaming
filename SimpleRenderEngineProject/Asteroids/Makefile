@@ -202,6 +202,30 @@ Asteroid.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/Asteroid.cpp.s
 .PHONY : Asteroid.cpp.s
 
+KeyboardCache.o: KeyboardCache.cpp.o
+.PHONY : KeyboardCache.o
+
+# target to build an object file
+KeyboardCache.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/KeyboardCache.cpp.o
+.PHONY : KeyboardCache.cpp.o
+
+KeyboardCache.i: KeyboardCache.cpp.i
+.PHONY : KeyboardCache.i
+
+# target to preprocess a source file
+KeyboardCache.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/KeyboardCache.cpp.i
+.PHONY : KeyboardCache.cpp.i
+
+KeyboardCache.s: KeyboardCache.cpp.s
+.PHONY : KeyboardCache.s
+
+# target to generate assembly for a file
+KeyboardCache.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/KeyboardCache.cpp.s
+.PHONY : KeyboardCache.cpp.s
+
 LaserShot.o: LaserShot.cpp.o
 .PHONY : LaserShot.o
 
@@ -362,6 +386,9 @@ help:
 	@echo "... Asteroid.o"
 	@echo "... Asteroid.i"
 	@echo "... Asteroid.s"
+	@echo "... KeyboardCache.o"
+	@echo "... KeyboardCache.i"
+	@echo "... KeyboardCache.s"
 	@echo "... LaserShot.o"
 	@echo "... LaserShot.i"
 	@echo "... LaserShot.s"
