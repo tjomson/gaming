@@ -5,6 +5,7 @@ LaserShot::LaserShot(glm::vec2 pos, float head)
     position = pos;
     heading = head;
     lifetime = 0;
+    prevPos = pos;
 }
 
 void LaserShot::Update(float deltaTime)
@@ -14,6 +15,7 @@ void LaserShot::Update(float deltaTime)
     auto radians = glm::radians(floatMod(heading, 360));
     auto x = (sin(radians) * deltaTime * velocity) * -1;
     auto y = (cos(radians) * deltaTime * velocity);
+    prevPos = position;
     position += glm::vec2(x, y);
     lifetime += deltaTime;
 }

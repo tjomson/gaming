@@ -21,7 +21,7 @@ void ParticleManager::UpdateAsteroids(float deltaTime)
     auto currentTime = std::chrono::system_clock::now();
     std::chrono::duration<double> diff = currentTime - lastSpawnTime;
 
-    if (diff.count() >= spawnInterval)
+    if (diff.count() >= spawnInterval * pow(0.97, Score::score))
     {
         lastSpawnTime = currentTime;
         SpawnAsteroid(randInRange(0, 2));
@@ -73,10 +73,13 @@ void ParticleManager::RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre:
     }
 }
 
-void ParticleManager::ShootLaser(glm::vec2 pos, float heading)
+void ParticleManager::ShootLaser(Player *player)
 {
-    auto laser = new LaserShot(pos, heading);
-    lasers.push_back(laser);
+    for (int i = 0; i < player->lasersPerShot; i++)
+    {
+        auto laser = new LaserShot(player->position, player->currHeading + randInRange(player->shotSpread * -1, player->shotSpread));
+        lasers.push_back(laser);
+    }
 }
 
 void ParticleManager::DetectShotCollisions()
@@ -90,7 +93,7 @@ void ParticleManager::DetectShotCollisions()
         {
             auto currAsteroid = *asteroidIt;
             auto dist = glm::length(currLaser->position - currAsteroid->position);
-            if (dist <= currAsteroid->GetRadius())
+            if (distanceBetweenLineAndPoint(currLaser->prevPos, currLaser->position, currAsteroid->position) <= currAsteroid->GetRadius())
             {
                 Score::score++;
                 laserIt = lasers.erase(laserIt);

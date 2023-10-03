@@ -63,12 +63,12 @@ void Update(float deltaTime)
         player->isDead = true;
     if (KeyboardCache::space_clicked)
     {
-        KeyboardCache::space_clicked = false;
+        KeyboardCache::space_clicked = player->allowSpray;
         if (player->isDead)
             ResetGame();
         else
         {
-            particleManager->ShootLaser(player->position, player->currHeading);
+            particleManager->ShootLaser(player);
         }
     }
 }

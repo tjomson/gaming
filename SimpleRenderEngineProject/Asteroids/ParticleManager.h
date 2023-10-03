@@ -16,7 +16,7 @@ public:
     void RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void UpdateLasers(float deltaTime);
     void RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
-    void ShootLaser(glm::vec2 pos, float heading);
+    void ShootLaser(Player *player);
     void DetectShotCollisions();
     bool PlayerIsHit(glm::vec2 &playerPos);
 

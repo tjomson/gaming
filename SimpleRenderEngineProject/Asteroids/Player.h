@@ -20,6 +20,9 @@ public:
     bool isDead = false;
     float currHeading = 0;
     glm::vec2 position;
+    bool allowSpray = false;
+    int lasersPerShot = 1;
+    int shotSpread = 0;
 
 private:
     void ApplyBound();

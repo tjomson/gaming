@@ -13,6 +13,7 @@ public:
     float lifetime;
     void Update(float deltaTime);
     void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
+    glm::vec2 prevPos;
 
 private:
     float velocity = 2000;
