@@ -1214,7 +1214,7 @@ Asteroids/CMakeFiles/Asteroids.dir/clean:
 # Target rules for target Engine/CMakeFiles/MyEngine.dir
 
 # All Build rule for target.
-Engine/CMakeFiles/MyEngine.dir/all:
+Engine/CMakeFiles/MyEngine.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=7,8,9,10 "Built target MyEngine"
@@ -1222,7 +1222,7 @@ Engine/CMakeFiles/MyEngine.dir/all:
 
 # Build rule for subdir invocation for target.
 Engine/CMakeFiles/MyEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Engine/CMakeFiles/MyEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : Engine/CMakeFiles/MyEngine.dir/rule
