@@ -70,6 +70,8 @@ all: submodules/SimpleRenderEngine/all
 all: project/all
 all: Snake/all
 all: Asteroids/all
+all: Engine/all
+all: ExampleGame/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -77,6 +79,8 @@ preinstall: submodules/SimpleRenderEngine/preinstall
 preinstall: project/preinstall
 preinstall: Snake/preinstall
 preinstall: Asteroids/preinstall
+preinstall: Engine/preinstall
+preinstall: ExampleGame/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -84,6 +88,8 @@ clean: submodules/SimpleRenderEngine/clean
 clean: project/clean
 clean: Snake/clean
 clean: Asteroids/clean
+clean: Engine/clean
+clean: ExampleGame/clean
 .PHONY : clean
 
 #=============================================================================
@@ -100,6 +106,36 @@ Asteroids/preinstall:
 # Recursive "clean" directory target.
 Asteroids/clean: Asteroids/CMakeFiles/Asteroids.dir/clean
 .PHONY : Asteroids/clean
+
+#=============================================================================
+# Directory level rules for directory Engine
+
+# Recursive "all" directory target.
+Engine/all: Engine/CMakeFiles/MyEngine.dir/all
+.PHONY : Engine/all
+
+# Recursive "preinstall" directory target.
+Engine/preinstall:
+.PHONY : Engine/preinstall
+
+# Recursive "clean" directory target.
+Engine/clean: Engine/CMakeFiles/MyEngine.dir/clean
+.PHONY : Engine/clean
+
+#=============================================================================
+# Directory level rules for directory ExampleGame
+
+# Recursive "all" directory target.
+ExampleGame/all: ExampleGame/CMakeFiles/MyGame.dir/all
+.PHONY : ExampleGame/all
+
+# Recursive "preinstall" directory target.
+ExampleGame/preinstall:
+.PHONY : ExampleGame/preinstall
+
+# Recursive "clean" directory target.
+ExampleGame/clean: ExampleGame/CMakeFiles/MyGame.dir/clean
+.PHONY : ExampleGame/clean
 
 #=============================================================================
 # Directory level rules for directory Snake
@@ -323,12 +359,12 @@ submodules/SimpleRenderEngine/submodules/clean:
 submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all:
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/build.make submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/build.make submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target SRE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target SRE"
 .PHONY : submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/rule
@@ -349,12 +385,12 @@ submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/clean:
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=31 "Built target SRE-Example-00_hello-engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=36 "Built target SRE-Example-00_hello-engine"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.dir/rule
@@ -375,12 +411,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-00_hello-engine.di
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=32,33 "Built target SRE-Example-01_hello-engine-raw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=37,38 "Built target SRE-Example-01_hello-engine-raw"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-raw.dir/rule
@@ -401,12 +437,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-01_hello-engine-ra
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=34 "Built target SRE-Example-02_spheres"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=39 "Built target SRE-Example-02_spheres"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/rule
@@ -427,12 +463,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-02_spheres.dir/cle
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=35,36 "Built target SRE-Example-03_spinning-cube"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=40,41 "Built target SRE-Example-03_spinning-cube"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.dir/rule
@@ -453,12 +489,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-03_spinning-cube.d
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=37,38 "Built target SRE-Example-04_spinning-primitives-tex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=42 "Built target SRE-Example-04_spinning-primitives-tex"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primitives-tex.dir/rule
@@ -479,7 +515,7 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-04_spinning-primit
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=39 "Built target SRE-Example-05_obj-viewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=43,44 "Built target SRE-Example-05_obj-viewer"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -505,12 +541,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-05_obj-viewer.dir/
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=40,41 "Built target SRE-Example-06_custom-mesh-layout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=45 "Built target SRE-Example-06_custom-mesh-layout"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-layout.dir/rule
@@ -531,7 +567,7 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-06_custom-mesh-lay
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=42 "Built target SRE-Example-07_matcap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=46,47 "Built target SRE-Example-07_matcap"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/all
 
 # Build rule for subdir invocation for target.
@@ -557,12 +593,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-07_matcap.dir/clea
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=43,44 "Built target SRE-Example-08_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=48 "Built target SRE-Example-08_gui"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/rule
@@ -583,12 +619,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-08_gui.dir/clean:
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=45,46 "Built target SRE-Example-09_picking"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=49,50 "Built target SRE-Example-09_picking"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/rule
@@ -609,12 +645,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-09_picking.dir/cle
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=47 "Built target SRE-Example-10_skybox-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=51 "Built target SRE-Example-10_skybox-example"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.dir/rule
@@ -635,12 +671,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-10_skybox-example.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=48,49 "Built target SRE-Example-11_sprite-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=52 "Built target SRE-Example-11_sprite-example"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.dir/rule
@@ -661,7 +697,7 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-11_sprite-example.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=50 "Built target SRE-Example-12_render-to-texture"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=53,54 "Built target SRE-Example-12_render-to-texture"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-texture.dir/all
 
 # Build rule for subdir invocation for target.
@@ -687,12 +723,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-12_render-to-textu
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=51,52 "Built target SRE-Example-13_benchmark64k"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=55 "Built target SRE-Example-13_benchmark64k"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.dir/rule
@@ -713,7 +749,7 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-13_benchmark64k.di
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=53 "Built target SRE-Example-14_spinning-primitives-openvr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=56,57 "Built target SRE-Example-14_spinning-primitives-openvr"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primitives-openvr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -739,12 +775,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-14_spinning-primit
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=54,55 "Built target SRE-Example-15_cloth_simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=58 "Built target SRE-Example-15_cloth_simulation"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulation.dir/rule
@@ -765,12 +801,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-15_cloth_simulatio
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=56,57 "Built target SRE-Example-16_shadows"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=59,60 "Built target SRE-Example-16_shadows"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/rule
@@ -791,12 +827,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-16_shadows.dir/cle
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/build.make submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=58 "Built target SRE-Example-17_deferred-shading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=61 "Built target SRE-Example-17_deferred-shading"
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shading.dir/rule
@@ -817,12 +853,12 @@ submodules/SimpleRenderEngine/examples/CMakeFiles/SRE-Example-17_deferred-shadin
 project/CMakeFiles/SRE-node-editor.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-node-editor.dir/build.make project/CMakeFiles/SRE-node-editor.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-node-editor.dir/build.make project/CMakeFiles/SRE-node-editor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=91,92 "Built target SRE-node-editor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=92 "Built target SRE-node-editor"
 .PHONY : project/CMakeFiles/SRE-node-editor.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-node-editor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-node-editor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-node-editor.dir/rule
@@ -843,12 +879,12 @@ project/CMakeFiles/SRE-node-editor.dir/clean:
 project/CMakeFiles/SRE-box2d-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-box2d-example.dir/build.make project/CMakeFiles/SRE-box2d-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-box2d-example.dir/build.make project/CMakeFiles/SRE-box2d-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=85 "Built target SRE-box2d-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=86 "Built target SRE-box2d-example"
 .PHONY : project/CMakeFiles/SRE-box2d-example.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-box2d-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-box2d-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-box2d-example.dir/rule
@@ -869,12 +905,12 @@ project/CMakeFiles/SRE-box2d-example.dir/clean:
 project/CMakeFiles/SRE-box2d-platform-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-box2d-platform-example.dir/build.make project/CMakeFiles/SRE-box2d-platform-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-box2d-platform-example.dir/build.make project/CMakeFiles/SRE-box2d-platform-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=86,87 "Built target SRE-box2d-platform-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=87,88 "Built target SRE-box2d-platform-example"
 .PHONY : project/CMakeFiles/SRE-box2d-platform-example.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-box2d-platform-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-box2d-platform-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-box2d-platform-example.dir/rule
@@ -895,7 +931,7 @@ project/CMakeFiles/SRE-box2d-platform-example.dir/clean:
 project/CMakeFiles/SRE-project.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-project.dir/build.make project/CMakeFiles/SRE-project.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-project.dir/build.make project/CMakeFiles/SRE-project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=93 "Built target SRE-project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=93,94 "Built target SRE-project"
 .PHONY : project/CMakeFiles/SRE-project.dir/all
 
 # Build rule for subdir invocation for target.
@@ -921,7 +957,7 @@ project/CMakeFiles/SRE-project.dir/clean:
 project/CMakeFiles/SRE-sdl2_mixer-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-sdl2_mixer-example.dir/build.make project/CMakeFiles/SRE-sdl2_mixer-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-sdl2_mixer-example.dir/build.make project/CMakeFiles/SRE-sdl2_mixer-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=96 "Built target SRE-sdl2_mixer-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=96,97 "Built target SRE-sdl2_mixer-example"
 .PHONY : project/CMakeFiles/SRE-sdl2_mixer-example.dir/all
 
 # Build rule for subdir invocation for target.
@@ -947,12 +983,12 @@ project/CMakeFiles/SRE-sdl2_mixer-example.dir/clean:
 project/CMakeFiles/SRE-lua-example.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-lua-example.dir/build.make project/CMakeFiles/SRE-lua-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-lua-example.dir/build.make project/CMakeFiles/SRE-lua-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=88 "Built target SRE-lua-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=89 "Built target SRE-lua-example"
 .PHONY : project/CMakeFiles/SRE-lua-example.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-lua-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-lua-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-lua-example.dir/rule
@@ -973,12 +1009,12 @@ project/CMakeFiles/SRE-lua-example.dir/clean:
 project/CMakeFiles/SRE-lua-example-lines.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-lua-example-lines.dir/build.make project/CMakeFiles/SRE-lua-example-lines.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-lua-example-lines.dir/build.make project/CMakeFiles/SRE-lua-example-lines.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=89,90 "Built target SRE-lua-example-lines"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=90,91 "Built target SRE-lua-example-lines"
 .PHONY : project/CMakeFiles/SRE-lua-example-lines.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-lua-example-lines.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-lua-example-lines.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-lua-example-lines.dir/rule
@@ -999,12 +1035,12 @@ project/CMakeFiles/SRE-lua-example-lines.dir/clean:
 project/CMakeFiles/SRE-scene-graph.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-scene-graph.dir/build.make project/CMakeFiles/SRE-scene-graph.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/CMakeFiles/SRE-scene-graph.dir/build.make project/CMakeFiles/SRE-scene-graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=94,95 "Built target SRE-scene-graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=95 "Built target SRE-scene-graph"
 .PHONY : project/CMakeFiles/SRE-scene-graph.dir/all
 
 # Build rule for subdir invocation for target.
 project/CMakeFiles/SRE-scene-graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/CMakeFiles/SRE-scene-graph.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/CMakeFiles/SRE-scene-graph.dir/rule
@@ -1025,12 +1061,12 @@ project/CMakeFiles/SRE-scene-graph.dir/clean:
 project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/build.make project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/build.make project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=81,82,83,84 "Built target SRE-box2d-Testbed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=82,83,84,85 "Built target SRE-box2d-Testbed"
 .PHONY : project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/all
 
 # Build rule for subdir invocation for target.
 project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/rule
@@ -1051,12 +1087,12 @@ project/Box2DTestbed/CMakeFiles/SRE-box2d-Testbed.dir/clean:
 project/platformer/CMakeFiles/SRE-Platformer.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/platformer/CMakeFiles/SRE-Platformer.dir/build.make project/platformer/CMakeFiles/SRE-Platformer.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/platformer/CMakeFiles/SRE-Platformer.dir/build.make project/platformer/CMakeFiles/SRE-Platformer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80 "Built target SRE-Platformer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81 "Built target SRE-Platformer"
 .PHONY : project/platformer/CMakeFiles/SRE-Platformer.dir/all
 
 # Build rule for subdir invocation for target.
 project/platformer/CMakeFiles/SRE-Platformer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 32
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/platformer/CMakeFiles/SRE-Platformer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/platformer/CMakeFiles/SRE-Platformer.dir/rule
@@ -1077,12 +1113,12 @@ project/platformer/CMakeFiles/SRE-Platformer.dir/clean:
 project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/build.make project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/build.make project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=66,67,68,69 "Built target SRE-ParticleSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=69,70,71 "Built target SRE-ParticleSystem"
 .PHONY : project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/all
 
 # Build rule for subdir invocation for target.
 project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/rule
@@ -1103,12 +1139,12 @@ project/particle_system/CMakeFiles/SRE-ParticleSystem.dir/clean:
 project/gui/CMakeFiles/SRE-Gui.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f project/gui/CMakeFiles/SRE-Gui.dir/build.make project/gui/CMakeFiles/SRE-Gui.dir/depend
 	$(MAKE) $(MAKESILENT) -f project/gui/CMakeFiles/SRE-Gui.dir/build.make project/gui/CMakeFiles/SRE-Gui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=59,60,61,62,63,64,65 "Built target SRE-Gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=62,63,64,65,66,67,68 "Built target SRE-Gui"
 .PHONY : project/gui/CMakeFiles/SRE-Gui.dir/all
 
 # Build rule for subdir invocation for target.
 project/gui/CMakeFiles/SRE-Gui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project/gui/CMakeFiles/SRE-Gui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : project/gui/CMakeFiles/SRE-Gui.dir/rule
@@ -1129,12 +1165,12 @@ project/gui/CMakeFiles/SRE-Gui.dir/clean:
 Snake/CMakeFiles/Snake.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/depend
 	$(MAKE) $(MAKESILENT) -f Snake/CMakeFiles/Snake.dir/build.make Snake/CMakeFiles/Snake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=97,98,99,100 "Built target Snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=98,99,100 "Built target Snake"
 .PHONY : Snake/CMakeFiles/Snake.dir/all
 
 # Build rule for subdir invocation for target.
 Snake/CMakeFiles/Snake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Snake/CMakeFiles/Snake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : Snake/CMakeFiles/Snake.dir/rule
@@ -1155,12 +1191,12 @@ Snake/CMakeFiles/Snake.dir/clean:
 Asteroids/CMakeFiles/Asteroids.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
 	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/depend
 	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Asteroids"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Asteroids"
 .PHONY : Asteroids/CMakeFiles/Asteroids.dir/all
 
 # Build rule for subdir invocation for target.
 Asteroids/CMakeFiles/Asteroids.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Asteroids/CMakeFiles/Asteroids.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : Asteroids/CMakeFiles/Asteroids.dir/rule
@@ -1173,6 +1209,59 @@ Asteroids: Asteroids/CMakeFiles/Asteroids.dir/rule
 Asteroids/CMakeFiles/Asteroids.dir/clean:
 	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/clean
 .PHONY : Asteroids/CMakeFiles/Asteroids.dir/clean
+
+#=============================================================================
+# Target rules for target Engine/CMakeFiles/MyEngine.dir
+
+# All Build rule for target.
+Engine/CMakeFiles/MyEngine.dir/all:
+	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/depend
+	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=7,8,9,10 "Built target MyEngine"
+.PHONY : Engine/CMakeFiles/MyEngine.dir/all
+
+# Build rule for subdir invocation for target.
+Engine/CMakeFiles/MyEngine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Engine/CMakeFiles/MyEngine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
+.PHONY : Engine/CMakeFiles/MyEngine.dir/rule
+
+# Convenience name for target.
+MyEngine: Engine/CMakeFiles/MyEngine.dir/rule
+.PHONY : MyEngine
+
+# clean rule for target.
+Engine/CMakeFiles/MyEngine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/clean
+.PHONY : Engine/CMakeFiles/MyEngine.dir/clean
+
+#=============================================================================
+# Target rules for target ExampleGame/CMakeFiles/MyGame.dir
+
+# All Build rule for target.
+ExampleGame/CMakeFiles/MyGame.dir/all: submodules/SimpleRenderEngine/src/CMakeFiles/SRE.dir/all
+ExampleGame/CMakeFiles/MyGame.dir/all: Engine/CMakeFiles/MyEngine.dir/all
+	$(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/depend
+	$(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles --progress-num=11,12,13 "Built target MyGame"
+.PHONY : ExampleGame/CMakeFiles/MyGame.dir/all
+
+# Build rule for subdir invocation for target.
+ExampleGame/CMakeFiles/MyGame.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 29
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/CMakeFiles/MyGame.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
+.PHONY : ExampleGame/CMakeFiles/MyGame.dir/rule
+
+# Convenience name for target.
+MyGame: ExampleGame/CMakeFiles/MyGame.dir/rule
+.PHONY : MyGame
+
+# clean rule for target.
+ExampleGame/CMakeFiles/MyGame.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/clean
+.PHONY : ExampleGame/CMakeFiles/MyGame.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

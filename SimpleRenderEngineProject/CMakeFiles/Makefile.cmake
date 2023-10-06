@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.6/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "Engine/CMakeLists.txt"
+  "ExampleGame/CMakeLists.txt"
   "Snake/CMakeLists.txt"
   "cmake/FindGLEW.cmake"
   "cmake/FindSDL2.cmake"
@@ -71,6 +73,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "project/gui/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Snake/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Asteroids/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Engine/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ExampleGame/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -108,4 +112,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "project/gui/CMakeFiles/SRE-Gui.dir/DependInfo.cmake"
   "Snake/CMakeFiles/Snake.dir/DependInfo.cmake"
   "Asteroids/CMakeFiles/Asteroids.dir/DependInfo.cmake"
+  "Engine/CMakeFiles/MyEngine.dir/DependInfo.cmake"
+  "ExampleGame/CMakeFiles/MyGame.dir/DependInfo.cmake"
   )

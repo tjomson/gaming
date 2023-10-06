@@ -593,6 +593,32 @@ Asteroids/fast:
 	$(MAKE) $(MAKESILENT) -f Asteroids/CMakeFiles/Asteroids.dir/build.make Asteroids/CMakeFiles/Asteroids.dir/build
 .PHONY : Asteroids/fast
 
+#=============================================================================
+# Target rules for targets named MyEngine
+
+# Build rule for target.
+MyEngine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyEngine
+.PHONY : MyEngine
+
+# fast build rule for target.
+MyEngine/fast:
+	$(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/build
+.PHONY : MyEngine/fast
+
+#=============================================================================
+# Target rules for targets named MyGame
+
+# Build rule for target.
+MyGame: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyGame
+.PHONY : MyGame
+
+# fast build rule for target.
+MyGame/fast:
+	$(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/build
+.PHONY : MyGame/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -606,6 +632,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Asteroids"
+	@echo "... MyEngine"
+	@echo "... MyGame"
 	@echo "... SRE"
 	@echo "... SRE-Example-00_hello-engine"
 	@echo "... SRE-Example-01_hello-engine-raw"
