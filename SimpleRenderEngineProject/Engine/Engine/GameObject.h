@@ -5,8 +5,9 @@
 #include <list>
 #include <memory>
 #include <string>
-#include "sre/RenderPass.hpp"
+
 #include "sre/SpriteBatch.hpp"
+#include "sre/RenderPass.hpp"
 
 #include "rapidjson/document.h"
 
