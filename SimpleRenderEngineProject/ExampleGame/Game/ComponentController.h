@@ -10,4 +10,8 @@ class ComponentController : public MyEngine::Component
 	void Render(sre::RenderPass &) override;
 	float mov_speed;
 	float rot_speed;
+	bool w_clicked = false;
+	bool s_clicked = false;
+	bool a_clicked = false;
+	bool d_clicked = false;
 };
