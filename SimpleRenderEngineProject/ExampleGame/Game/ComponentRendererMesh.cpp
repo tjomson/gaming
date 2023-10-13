@@ -13,7 +13,7 @@ void ComponentRendererMesh::Init(rapidjson::Value &serializedData)
 
     _texture = sre::Texture::create().withFile("data/level0.png").withGenerateMipmaps(false).withFilterSampling(false).build();
     _material->setTexture(_texture);
-    _material->setColor({0, 1, 0, 1});
+    // _material->setColor({0, 1, 0, 1});
 }
 
 void ComponentRendererMesh::Update(float deltaTime)
