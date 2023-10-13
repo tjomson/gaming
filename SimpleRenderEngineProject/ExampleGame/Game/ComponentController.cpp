@@ -21,6 +21,13 @@ void ComponentController::Update(float deltaTime)
 	else if (d_clicked)
 		turn = -1.0;
 	game->transform = glm::rotate(game->transform, turn * deltaTime, glm::vec3(0, 1, 0));
+
+	float move = 0;
+	if (w_clicked)
+		move = -1;
+	else if (s_clicked)
+		move = 1;
+	game->transform = glm::translate(game->transform, glm::vec3(0, 0, move * deltaTime));
 }
 
 void ComponentController::KeyEvent(SDL_Event &event)
