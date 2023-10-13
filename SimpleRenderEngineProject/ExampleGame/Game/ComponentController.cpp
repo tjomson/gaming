@@ -14,43 +14,13 @@ void ComponentController::Init(rapidjson::Value &serializedData)
 
 void ComponentController::Update(float deltaTime)
 {
-	auto transform = GetGameObject()->transform;
-	glm::vec3 position, scale;
-	glm::quat rotation;
-
-	glm::vec3 skew;
-	glm::vec4 perspective;
-
-	glm::decompose(transform, scale, rotation, position, skew, perspective);
-
-	glm::vec3 display_rot = glm::degrees(glm::eulerAngles(rotation));
-	auto x = (sin(glm::radians(display_rot.y)) * deltaTime);
-	auto z = (cos(glm::radians(display_rot.y)) * deltaTime);
-
-	// std::cout << display_rot.x << " " << display_rot.y << " " << display_rot.z << std::endl;
-
+	auto game = GetGameObject();
+	float turn = 0;
 	if (a_clicked)
-	{
-		display_rot.y += deltaTime * rot_speed * 50;
-	}
+		turn = 1.0;
 	else if (d_clicked)
-	{
-		display_rot.y -= deltaTime * rot_speed * 50;
-	}
-	if (w_clicked)
-	{
-		position -= glm::vec3(x, 0, z);
-	}
-	else if (s_clicked)
-	{
-		position += glm::vec3(x, 0, z);
-	}
-	std::cout << position.x << " " << position.y << " " << position.z << std::endl;
-
-	GetGameObject()->transform =
-		glm::scale(scale) *
-		glm::translate(position) *
-		glm::mat4_cast(glm::quat(glm::radians(display_rot)));
+		turn = -1.0;
+	game->transform = glm::rotate(game->transform, turn * deltaTime, glm::vec3(0, 1, 0));
 }
 
 void ComponentController::KeyEvent(SDL_Event &event)
