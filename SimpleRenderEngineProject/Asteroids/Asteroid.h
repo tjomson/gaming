@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "sre/SDLRenderer.hpp"
 #include "sre/SpriteAtlas.hpp"
 #include "utils.h"
@@ -19,7 +20,7 @@ class Asteroid
 {
 public:
     Asteroid(int astSize);
-    Asteroid(Asteroid *toCopy);
+    Asteroid(std::shared_ptr<Asteroid> toCopy);
     void Update(float deltaTime);
     void Render(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     float angularVelocity;

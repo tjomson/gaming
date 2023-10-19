@@ -2,6 +2,7 @@
 
 #include <chrono>
 #include <ctime>
+#include <memory>
 #include "Asteroid.h"
 #include "Player.h"
 #include "LaserShot.h"
@@ -16,7 +17,7 @@ public:
     void RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
     void UpdateLasers(float deltaTime);
     void RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre::SpriteBatch::SpriteBatchBuilder &builder);
-    void ShootLaser(Player *player);
+    void ShootLaser(std::shared_ptr<Player> player);
     void DetectShotCollisions();
     bool PlayerIsHit(glm::vec2 &playerPos);
 
@@ -24,9 +25,9 @@ private:
     void SpawnAsteroid(int size);
     void RemoveOutOfBoundsAsteroids();
     void RemoveOldLasers();
-    std::vector<Asteroid *> ExplodeAsteroid(Asteroid *asteroid);
-    std::vector<Asteroid *> asteroids;
-    std::vector<LaserShot *> lasers;
+    std::vector<std::shared_ptr<Asteroid>> ExplodeAsteroid(std::shared_ptr<Asteroid> asteroid);
+    std::vector<std::shared_ptr<Asteroid>> asteroids;
+    std::vector<std::shared_ptr<LaserShot>> lasers;
     float spawnInterval;
     std::chrono::system_clock::time_point lastSpawnTime;
 };

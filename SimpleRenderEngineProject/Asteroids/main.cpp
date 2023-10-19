@@ -2,6 +2,7 @@
 #include <chrono>
 #include <random>
 #include <tuple>
+#include <memory>
 
 #include "Player.h"
 #include "Asteroid.h"
@@ -18,14 +19,13 @@
 #pragma endregion
 #include "main.h"
 
-Player *player;
-ParticleManager *particleManager;
+std::shared_ptr<Player> player;
+std::shared_ptr<ParticleManager> particleManager;
 
 glm::vec2 window_size = glm::vec2(GAMEWIDTH, GAMEHEIGHT);
 sre::SDLRenderer renderer;
 sre::Camera camera;
 std::shared_ptr<sre::SpriteAtlas> atlas;
-LaserShot *laser;
 
 int main()
 {
@@ -44,8 +44,8 @@ int main()
 void ResetGame()
 {
     Score::score = 0;
-    player = new Player(GAMEWIDTH / 2, GAMEHEIGHT / 2);
-    particleManager = new ParticleManager(5, 0.5);
+    player = std::make_shared<Player>(GAMEWIDTH / 2, GAMEHEIGHT / 2);
+    particleManager = std::make_shared<ParticleManager>(5, 0.5);
 }
 
 void ProcessEvents(SDL_Event &event)

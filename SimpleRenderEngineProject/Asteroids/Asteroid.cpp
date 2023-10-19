@@ -13,7 +13,7 @@ Asteroid::Asteroid(int astSize)
     size = astSize;
 }
 
-Asteroid::Asteroid(Asteroid *toCopy)
+Asteroid::Asteroid(std::shared_ptr<Asteroid> toCopy)
 {
     velocity = toCopy->velocity;
     angularVelocity = toCopy->angularVelocity;

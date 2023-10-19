@@ -38,21 +38,21 @@ void ParticleManager::RenderAsteroids(std::shared_ptr<sre::SpriteAtlas> atlas, s
 
 void ParticleManager::RemoveOutOfBoundsAsteroids()
 {
-    auto newEnd = std::remove_if(asteroids.begin(), asteroids.end(), [](Asteroid *a)
+    auto newEnd = std::remove_if(asteroids.begin(), asteroids.end(), [](std::shared_ptr<Asteroid> a)
                                  { return a->lifetime > 5 && a->IsOutOfBounds(); });
     asteroids.erase(newEnd, asteroids.end());
 }
 
 void ParticleManager::RemoveOldLasers()
 {
-    auto newEnd = std::remove_if(lasers.begin(), lasers.end(), [](LaserShot *l)
+    auto newEnd = std::remove_if(lasers.begin(), lasers.end(), [](std::shared_ptr<LaserShot> l)
                                  { return l->lifetime > 1; });
     lasers.erase(newEnd, lasers.end());
 }
 
 void ParticleManager::SpawnAsteroid(int size)
 {
-    auto asteroid1 = new Asteroid(size);
+    auto asteroid1 = std::make_shared<Asteroid>(size);
     asteroids.push_back(asteroid1);
 }
 
@@ -73,18 +73,18 @@ void ParticleManager::RenderLasers(std::shared_ptr<sre::SpriteAtlas> atlas, sre:
     }
 }
 
-void ParticleManager::ShootLaser(Player *player)
+void ParticleManager::ShootLaser(std::shared_ptr<Player> player)
 {
     for (int i = 0; i < player->lasersPerShot; i++)
     {
-        auto laser = new LaserShot(player->position, player->currHeading + randInRange(player->shotSpread * -1, player->shotSpread));
+        auto laser = std::make_shared<LaserShot>(player->position, player->currHeading + randInRange(player->shotSpread * -1, player->shotSpread));
         lasers.push_back(laser);
     }
 }
 
 void ParticleManager::DetectShotCollisions()
 {
-    std::vector<Asteroid *> asteroidsToAdd;
+    std::vector<std::shared_ptr<Asteroid>> asteroidsToAdd;
     for (auto laserIt = lasers.begin(); laserIt != lasers.end();)
     {
         bool laserRemoved = false;
@@ -114,23 +114,23 @@ void ParticleManager::DetectShotCollisions()
     asteroids.insert(asteroids.end(), asteroidsToAdd.begin(), asteroidsToAdd.end());
 }
 
-std::vector<Asteroid *> ParticleManager::ExplodeAsteroid(Asteroid *asteroid)
+std::vector<std::shared_ptr<Asteroid>> ParticleManager::ExplodeAsteroid(std::shared_ptr<Asteroid> asteroid)
 {
-    auto copy1 = new Asteroid(asteroid);
+    auto copy1 = std::make_shared<Asteroid>(asteroid);
     copy1->size--;
     copy1->direction = floatMod(copy1->direction + randInRange(10, 70), 360);
 
-    auto copy2 = new Asteroid(asteroid);
+    auto copy2 = std::make_shared<Asteroid>(asteroid);
     copy2->size--;
     copy2->direction = floatMod(copy2->direction - randInRange(10, 70), 360);
 
-    std::vector<Asteroid *> newAsteroids = {copy1, copy2};
+    std::vector<std::shared_ptr<Asteroid>> newAsteroids = {copy1, copy2};
     return newAsteroids;
 }
 
 bool ParticleManager::PlayerIsHit(glm::vec2 &playerPos)
 {
-    return std::any_of(asteroids.begin(), asteroids.end(), [&playerPos](Asteroid *a)
+    return std::any_of(asteroids.begin(), asteroids.end(), [&playerPos](std::shared_ptr<Asteroid> a)
                        {
         auto dist = glm::length(playerPos - a->position);
         return PLAYERRADIUS + a->GetRadius() >= dist; });
