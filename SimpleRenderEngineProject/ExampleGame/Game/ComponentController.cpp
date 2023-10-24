@@ -27,7 +27,12 @@ void ComponentController::Update(float deltaTime)
 		move = -1;
 	else if (s_clicked)
 		move = 1;
-	game->transform = glm::translate(game->transform, glm::vec3(0, 0, move * deltaTime));
+    float sideMove = 0;
+    if (q_clicked)
+        sideMove = -1;
+    else if (e_clicked)
+        sideMove = 1;
+	game->transform = glm::translate(game->transform, glm::vec3(sideMove * deltaTime, 0, move * deltaTime));
 }
 
 void ComponentController::KeyEvent(SDL_Event &event)
@@ -48,6 +53,12 @@ void ComponentController::KeyEvent(SDL_Event &event)
 		case SDLK_d:
 			d_clicked = true;
 			break;
+        case SDLK_q:
+            q_clicked = true;
+            break;
+        case SDLK_e:
+            e_clicked = true;
+            break;
 		}
 	}
 	else if (event.type == SDL_KEYUP)
@@ -66,6 +77,12 @@ void ComponentController::KeyEvent(SDL_Event &event)
 		case SDLK_d:
 			d_clicked = false;
 			break;
+        case SDLK_q:
+            q_clicked = false;
+            break;
+        case SDLK_e:
+            e_clicked = false;
+            break;
 		}
 	}
 }
