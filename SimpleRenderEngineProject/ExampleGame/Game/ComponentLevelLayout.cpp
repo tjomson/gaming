@@ -3,17 +3,16 @@
 #include "MyEngine.h"
 
 void ComponentLevelLayout::Init(rapidjson::Value& serializedData) {
-//    gameObject = std::shared_ptr<MyEngine::GameObject>
     auto& ints = serializedData["layout"];
     auto count = serializedData["layoutCount"].GetInt();
     auto engine = MyEngine::Engine::GetInstance();
     auto gameObj = engine->CreateGameObject("lay");
     for (int i = 0; i < count; i++) {
         auto renderer = std::make_shared<ComponentRendererMesh>();
+        renderer->Init(serializedData);
         renderer->uvs = CalculateUVs(ints[i].GetInt());
         gameObj.lock()->AddComponent(renderer);
     }
-    std::cout << "bruhhruhr" << std::endl;
 }
 
 std::vector<glm::vec4> ComponentLevelLayout::CalculateUVs(int spriteIndex) {
