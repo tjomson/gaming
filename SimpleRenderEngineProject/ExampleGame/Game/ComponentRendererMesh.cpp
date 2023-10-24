@@ -29,4 +29,5 @@ void ComponentRendererMesh::Render(sre::RenderPass &renderPass)
         auto t = glm::translate(r, glm::vec3(0,0,0.5));
         renderPass.draw(_mesh, t, _material);
     }
+    std::cout << "lmao" << std::endl;
 }

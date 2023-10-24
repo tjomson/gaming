@@ -8,8 +8,6 @@ public:
 	void Init(rapidjson::Value &serializedData) override;
 	void Update(float deltaTime) override;
 	void Render(sre::RenderPass &renderPass) override;
-
-private:
 	std::shared_ptr<sre::Mesh> _mesh;
 	std::shared_ptr<sre::Material> _material;
 	std::shared_ptr<sre::Texture> _texture;
@@ -25,7 +23,7 @@ private:
 		glm::vec3(0.5, -0.5, 0.0)	// Lower-right
 	};
 
-	const std::vector<glm::vec4> uvs = {
+	std::vector<glm::vec4> uvs = {
 		glm::vec4(0.0, 0.0, 0, 0),			// Lower-left
 		glm::vec4(0.0, 1.0 / 6, 0, 0),		// Upper-left
 		glm::vec4(1.0 / 16, 1.0 / 6, 0, 0), // Upper-right
