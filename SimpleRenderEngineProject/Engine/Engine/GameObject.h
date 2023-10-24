@@ -11,12 +11,10 @@
 
 #include "rapidjson/document.h"
 
-namespace MyEngine
-{
+namespace MyEngine {
 	class Component;
 
-	class GameObject
-	{
+	class GameObject {
 		friend class Engine;
 
 		// public API
@@ -44,8 +42,19 @@ namespace MyEngine
 		std::string _name;
 
 	public:
-		glm::mat4 DeserializeTransform(rapidjson::Value &transformData);
+		glm::mat4 DeserializeTransform(rapidjson::Value& transformData);
 
-		glm::vec3 DeserializeVector(rapidjson::Value &vectorData);
+		glm::vec3 DeserializeVector(rapidjson::Value& vectorData);
+
+		// transform
+		// (it would be a good idea to move this to its own class, so that the GameObject doesn't need to import all the extra glm classes)
+		glm::vec3 GetPosition();
+		glm::quat GetRotation();
+		glm::vec3 GetEulerAngles();
+		glm::vec3 GetScale();
+		void SetPosition(glm::vec3 position);
+		void SetRotation(glm::quat rotation);
+		void SetEulerAngles(glm::vec3 eulerAngles);
+		void SetScale(glm::vec3 scale);
 	};
 }
