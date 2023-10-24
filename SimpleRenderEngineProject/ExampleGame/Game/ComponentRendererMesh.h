@@ -32,5 +32,5 @@ private:
 		glm::vec4(1.0 / 16, 0.0, 0, 0)		// Lower-right
 	};
 
-	const std::vector<uint16_t> idxs = {3, 1, 0, 3, 2, 1};
+    const std::vector<uint16_t> idxs = {3, 1, 0, 3, 2, 1};
 };
