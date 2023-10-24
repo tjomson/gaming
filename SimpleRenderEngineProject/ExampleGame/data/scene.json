@@ -62,7 +62,7 @@
 				"children": []
 			},
 			{
-				"name": "cube0",
+				"name": "layout0",
 				"transform": {
 					"position": [
 						0,
@@ -82,8 +82,11 @@
 				},
 				"components": [
 					{
-						"typeId": "CUBE_RENDERER",
-						"serializedData": {}
+						"typeId": "LEVEL_LAYOUT",
+						"serializedData": {
+							"layout": [1,2,3,4],
+							"layoutCount": 4
+						}
 					}
 				],
 				"children": []

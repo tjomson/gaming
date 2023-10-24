@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/include/SDL2 -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/thirdparty/Linux/Box2D/include -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/thirdparty/All/include -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/include -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/submodules/ImGuiColorTextEdit -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/submodules/imgui -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/submodules/glm -I/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/submodules/SimpleRenderEngine/submodules/picojson
 
-CXX_FLAGS = -std=c++14
+CXX_FLAGS = -g -std=c++14
 

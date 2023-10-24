@@ -226,6 +226,30 @@ Game/ComponentController.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentController.cpp.s
 .PHONY : Game/ComponentController.cpp.s
 
+Game/ComponentLevelLayout.o: Game/ComponentLevelLayout.cpp.o
+.PHONY : Game/ComponentLevelLayout.o
+
+# target to build an object file
+Game/ComponentLevelLayout.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.o
+.PHONY : Game/ComponentLevelLayout.cpp.o
+
+Game/ComponentLevelLayout.i: Game/ComponentLevelLayout.cpp.i
+.PHONY : Game/ComponentLevelLayout.i
+
+# target to preprocess a source file
+Game/ComponentLevelLayout.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.i
+.PHONY : Game/ComponentLevelLayout.cpp.i
+
+Game/ComponentLevelLayout.s: Game/ComponentLevelLayout.cpp.s
+.PHONY : Game/ComponentLevelLayout.s
+
+# target to generate assembly for a file
+Game/ComponentLevelLayout.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.s
+.PHONY : Game/ComponentLevelLayout.cpp.s
+
 Game/ComponentRendererMesh.o: Game/ComponentRendererMesh.cpp.o
 .PHONY : Game/ComponentRendererMesh.o
 
@@ -293,6 +317,9 @@ help:
 	@echo "... Game/ComponentController.o"
 	@echo "... Game/ComponentController.i"
 	@echo "... Game/ComponentController.s"
+	@echo "... Game/ComponentLevelLayout.o"
+	@echo "... Game/ComponentLevelLayout.i"
+	@echo "... Game/ComponentLevelLayout.s"
 	@echo "... Game/ComponentRendererMesh.o"
 	@echo "... Game/ComponentRendererMesh.i"
 	@echo "... Game/ComponentRendererMesh.s"

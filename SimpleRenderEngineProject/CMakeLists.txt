@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(SimpleRenderEngineProject CXX)
 
 set( CMAKE_VERBOSE_MAKEFILE on )
+set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
