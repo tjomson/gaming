@@ -110,10 +110,10 @@
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Engine/CMakeFiles/install.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Engine/CMakeFiles/install/local.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Engine/CMakeFiles/install/strip.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/MyGame.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/edit_cache.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/rebuild_cache.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/list_install_components.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/install.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/install/local.dir
-/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/CMakeFiles/install/strip.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/Wolfenstein.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/list_install_components.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install/local.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install/strip.dir

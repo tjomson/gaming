@@ -1,0 +1,96 @@
+{
+	"root": {
+		"name": "_root",
+		"transform": {
+			"position": [
+				0,
+				0,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"components": [],
+		"children": [
+			{
+				"name": "camera",
+				"transform": {
+					"position": [
+						0,
+						0,
+						2
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"components": [
+					{
+						"typeId": "CAMERA",
+						"serializedData": {
+							"projectionType": 1,
+							"projectionParams": [
+								45,
+								0.1,
+								1000
+							]
+						}
+					},
+					{
+						"typeId": "CONTROLLER",
+						"serializedData": {
+							"movSpeed": 1,
+							"rotSpeed": 1
+						}
+					}
+				],
+				"children": []
+			},
+			{
+				"name": "layout0",
+				"transform": {
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"components": [
+					{
+						"typeId": "LEVEL_LAYOUT",
+						"serializedData": {
+							"layout": [5,18,27,56],
+							"layoutCount": 4
+						}
+					}
+				],
+				"children": []
+			}
+		]
+	}
+}

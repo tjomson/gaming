@@ -49,7 +49,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Snake/cmake_install.cmake")
   include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Asteroids/cmake_install.cmake")
   include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Engine/cmake_install.cmake")
-  include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame/cmake_install.cmake")
+  include("/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/cmake_install.cmake")
 
 endif()
 
