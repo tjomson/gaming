@@ -20,7 +20,7 @@ void ComponentController::Update(float deltaTime)
 		turn = 1.0;
 	else if (d_clicked)
 		turn = -1.0;
-	game->transform = glm::rotate(game->transform, turn * deltaTime, glm::vec3(0, 1, 0));
+	game->transform = glm::rotate(game->transform, turn * deltaTime * rot_speed, glm::vec3(0, 1, 0));
 
 	float move = 0;
 	if (w_clicked)
@@ -32,7 +32,7 @@ void ComponentController::Update(float deltaTime)
         sideMove = -1;
     else if (e_clicked)
         sideMove = 1;
-	game->transform = glm::translate(game->transform, glm::vec3(sideMove * deltaTime, 0, move * deltaTime));
+	game->transform = glm::translate(game->transform, glm::vec3(sideMove * deltaTime * mov_speed, 0, move * deltaTime * mov_speed));
 }
 
 void ComponentController::KeyEvent(SDL_Event &event)
@@ -85,8 +85,4 @@ void ComponentController::KeyEvent(SDL_Event &event)
             break;
 		}
 	}
-}
-
-void ComponentController::Render(sre::RenderPass &)
-{
 }

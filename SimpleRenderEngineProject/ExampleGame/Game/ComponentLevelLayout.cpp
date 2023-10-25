@@ -1,7 +1,6 @@
 #include "ComponentLevelLayout.h"
 #include "ComponentRendererMesh.h"
 #include "MyEngine.h"
-#include <format>
 #include <glm/glm.hpp>
 #include "glm/gtx/transform.hpp"
 #include <glm/gtc/quaternion.hpp>
@@ -27,11 +26,3 @@ void ComponentLevelLayout::Init(rapidjson::Value& serializedData) {
     }
 }
 
-void ComponentLevelLayout::Update(float deltaTime) {
-
-}
-
-void ComponentLevelLayout::Render(sre::RenderPass &renderPass) {
-
-//    gameObject->Render(renderPass);
-}

@@ -17,11 +17,6 @@ void ComponentRendererMesh::Init(rapidjson::Value &serializedData)
     _material->setTexture(_texture);
 }
 
-void ComponentRendererMesh::Update(float deltaTime)
-{
-    // GetGameObject()->transform = glm::rotate(GetGameObject()->transform, glm::pi<float>() * deltaTime, glm::vec3(0, 1, 0));
-}
-
 void ComponentRendererMesh::Render(sre::RenderPass &renderPass)
 {
     for (int i = 0; i < 4; i++)
