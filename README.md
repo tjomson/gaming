@@ -13,3 +13,4 @@ There will be a total of 10, of which the mandatory ones are
 - [Exercise 2, Basic snake](./Exercises/Excercise2/)
 - [Exercise 3, SimpleRenderEngine almost-snake](./SimpleRenderEngineProject/Snake/)
 - [Exercise 4, Asteroids game](./SimpleRenderEngineProject/Asteroids/)
+- [Exercise 6, Wolfenstein-ish 3D rendering](./SimpleRenderEngineProject/Wolfenstein/)
