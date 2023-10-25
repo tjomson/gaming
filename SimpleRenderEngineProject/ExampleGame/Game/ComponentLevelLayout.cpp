@@ -1,48 +1,30 @@
 #include "ComponentLevelLayout.h"
 #include "ComponentRendererMesh.h"
 #include "MyEngine.h"
+#include <format>
+#include <glm/glm.hpp>
+#include "glm/gtx/transform.hpp"
+#include <glm/gtc/quaternion.hpp>
 
 void ComponentLevelLayout::Init(rapidjson::Value& serializedData) {
     auto& ints = serializedData["layout"];
     auto count = serializedData["layoutCount"].GetInt();
     auto engine = MyEngine::Engine::GetInstance();
-    auto gameObj = engine->CreateGameObject("lay");
     for (int i = 0; i < count; i++) {
+        char name[100];
+        sprintf(name, "cube%i", i);
+        auto gameObj = engine->CreateGameObject(name);
         auto renderer = std::make_shared<ComponentRendererMesh>();
-        renderer->Init(serializedData);
-        renderer->uvs = CalculateUVs(ints[i].GetInt());
+        renderer->Init(ints[i]);
         gameObj.lock()->AddComponent(renderer);
+        auto pos = glm::vec3(i, 0, i);
+        auto rot = glm::vec3(0, 0, 0);
+        auto scl = glm::vec3(1, 1, 1);
+        gameObj.lock()->transform =
+                glm::translate(pos) *
+                glm::mat4_cast(glm::quat(glm::radians(rot))) *
+                glm::scale(scl);
     }
-}
-
-std::vector<glm::vec4> ComponentLevelLayout::CalculateUVs(int spriteIndex) {
-    // Calculate the number of rows and columns in the sprite sheet
-    int numRows = 6;
-    int numCols = 16;
-
-    // Calculate the width and height of each sprite in UV space
-    float spriteWidth = 1.0f / numCols;
-    float spriteHeight = 1.0f / numRows;
-
-    // Calculate the row and column of the sprite based on the index
-    int row = spriteIndex / numCols;
-    int col = spriteIndex % numCols;
-
-    // Calculate the UV coordinates for the sprite's four corners
-    float uMin = col * spriteWidth;
-    float uMax = (col + 1) * spriteWidth;
-    float vMin = row * spriteHeight;
-    float vMax = (row + 1) * spriteHeight;
-
-    // Define the UV coordinates for the four corners
-    std::vector<glm::vec4> uvCoordinates = {
-            glm::vec4(uMin, vMin, 0, 0),
-            glm::vec4(uMin, vMax, 0, 0),
-            glm::vec4(uMax, vMax, 0, 0),
-            glm::vec4(uMax, vMin, 0, 0)
-    };
-
-    return uvCoordinates;
 }
 
 void ComponentLevelLayout::Update(float deltaTime) {
