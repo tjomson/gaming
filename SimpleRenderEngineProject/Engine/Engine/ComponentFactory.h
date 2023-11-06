@@ -10,10 +10,9 @@ namespace MyEngine {
 	private:
 		ComponentFactory() = delete;
 
-		static std::map<std::string, std::shared_ptr<MyEngine::Component>> _componentMap;
-
+		static std::map<std::string, std::function<std::shared_ptr<MyEngine::Component>()>> _componentMap;
 	public:
-		static void RegisterComponentOfType(std::string typeId, std::shared_ptr<MyEngine::Component> component);
+		static void RegisterComponentOfType(std::string typeId, std::function<std::shared_ptr<MyEngine::Component>()> builder);
 		static std::shared_ptr<MyEngine::Component> GetComponentOfType(std::string typeId);
 	};
 }

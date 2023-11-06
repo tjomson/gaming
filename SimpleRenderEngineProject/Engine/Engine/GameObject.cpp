@@ -39,7 +39,8 @@ namespace MyEngine {
 			component->Update(deltaTime);
 
 		for (auto& child : _children)
-			child->Update(deltaTime);
+			if(auto go = child.lock())
+				go->Update(deltaTime);
 	}
 
 	void GameObject::Render(sre::RenderPass& renderPass) {
@@ -47,7 +48,8 @@ namespace MyEngine {
 			component->Render(renderPass);
 
 		for (auto& child : _children)
-			child->Render(renderPass);
+			if (auto go = child.lock())
+				go->Render(renderPass);
 	}
 
 	void GameObject::KeyEvent(SDL_Event& e) {
@@ -55,7 +57,18 @@ namespace MyEngine {
 			component->KeyEvent(e);
 
 		for (auto& child : _children)
-			child->KeyEvent(e);
+			if (auto go = child.lock())
+				go->KeyEvent(e);
+	}
+
+	void GameObject::OnCollisionStart(ComponentPhysicsBody* other) {
+		for (auto& component : _components)
+			component->OnCollisionStart(other);
+	}
+
+	void GameObject::OnCollisionEnd(ComponentPhysicsBody* other) {
+		for (auto& component : _components)
+			component->OnCollisionEnd(other);
 	}
 
 	void GameObject::AddChild(std::shared_ptr<GameObject> p_object) {
@@ -87,6 +100,7 @@ namespace MyEngine {
 			glm::scale(scl);
 	}
 
+	// TODO move to deserialization library (as DeserializeVector3)
 	glm::vec3 GameObject::DeserializeVector(rapidjson::Value& vectorData) {
 		assert(vectorData.IsArray() && "Trying to deserialize a vector from non-vector json value");
 		assert(vectorData.Size() == 3 && "Trying to deserialize a vector from vector json value that doesn't have 3 elements (only 3d vectors supported ATM)");
@@ -148,5 +162,9 @@ namespace MyEngine {
 		// we first undo the current scale, then apply the new one
 		// (not pretty, but gets the job done)
 		transform = glm::scale(scale) * glm::scale(currScale) * transform;
+	}
+
+	void GameObject::ResetTransform() {
+		transform = glm::mat4(1);
 	}
 }

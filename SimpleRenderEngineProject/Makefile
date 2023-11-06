@@ -607,17 +607,30 @@ MyEngine/fast:
 .PHONY : MyEngine/fast
 
 #=============================================================================
-# Target rules for targets named MyGame
+# Target rules for targets named Wolfenstein
 
 # Build rule for target.
-MyGame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyGame
-.PHONY : MyGame
+Wolfenstein: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein
+.PHONY : Wolfenstein
 
 # fast build rule for target.
-MyGame/fast:
-	$(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/build
-.PHONY : MyGame/fast
+Wolfenstein/fast:
+	$(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/build
+.PHONY : Wolfenstein/fast
+
+#=============================================================================
+# Target rules for targets named Flappy
+
+# Build rule for target.
+Flappy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Flappy
+.PHONY : Flappy
+
+# fast build rule for target.
+Flappy/fast:
+	$(MAKE) $(MAKESILENT) -f Flappy/CMakeFiles/Flappy.dir/build.make Flappy/CMakeFiles/Flappy.dir/build
+.PHONY : Flappy/fast
 
 # Help Target
 help:
@@ -632,8 +645,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Asteroids"
+	@echo "... Flappy"
 	@echo "... MyEngine"
-	@echo "... MyGame"
 	@echo "... SRE"
 	@echo "... SRE-Example-00_hello-engine"
 	@echo "... SRE-Example-01_hello-engine-raw"
@@ -666,6 +679,7 @@ help:
 	@echo "... SRE-scene-graph"
 	@echo "... SRE-sdl2_mixer-example"
 	@echo "... Snake"
+	@echo "... Wolfenstein"
 .PHONY : help
 
 

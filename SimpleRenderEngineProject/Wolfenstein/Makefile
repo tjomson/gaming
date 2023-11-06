@@ -135,14 +135,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/ExampleGame//CMakeFiles/progress.marks
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/all
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein//CMakeFiles/progress.marks
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/clean
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein/clean
 .PHONY : clean
 
 # The main clean target
@@ -151,12 +151,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/preinstall
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -165,25 +165,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ExampleGame/CMakeFiles/MyGame.dir/rule:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleGame/CMakeFiles/MyGame.dir/rule
-.PHONY : ExampleGame/CMakeFiles/MyGame.dir/rule
+Wolfenstein/CMakeFiles/Wolfenstein.dir/rule:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Wolfenstein/CMakeFiles/Wolfenstein.dir/rule
+.PHONY : Wolfenstein/CMakeFiles/Wolfenstein.dir/rule
 
 # Convenience name for target.
-MyGame: ExampleGame/CMakeFiles/MyGame.dir/rule
-.PHONY : MyGame
+Wolfenstein: Wolfenstein/CMakeFiles/Wolfenstein.dir/rule
+.PHONY : Wolfenstein
 
 # fast build rule for target.
-MyGame/fast:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/build
-.PHONY : MyGame/fast
+Wolfenstein/fast:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/build
+.PHONY : Wolfenstein/fast
 
 Game/ComponentCamera.o: Game/ComponentCamera.cpp.o
 .PHONY : Game/ComponentCamera.o
 
 # target to build an object file
 Game/ComponentCamera.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentCamera.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentCamera.cpp.o
 .PHONY : Game/ComponentCamera.cpp.o
 
 Game/ComponentCamera.i: Game/ComponentCamera.cpp.i
@@ -191,7 +191,7 @@ Game/ComponentCamera.i: Game/ComponentCamera.cpp.i
 
 # target to preprocess a source file
 Game/ComponentCamera.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentCamera.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentCamera.cpp.i
 .PHONY : Game/ComponentCamera.cpp.i
 
 Game/ComponentCamera.s: Game/ComponentCamera.cpp.s
@@ -199,7 +199,7 @@ Game/ComponentCamera.s: Game/ComponentCamera.cpp.s
 
 # target to generate assembly for a file
 Game/ComponentCamera.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentCamera.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentCamera.cpp.s
 .PHONY : Game/ComponentCamera.cpp.s
 
 Game/ComponentController.o: Game/ComponentController.cpp.o
@@ -207,7 +207,7 @@ Game/ComponentController.o: Game/ComponentController.cpp.o
 
 # target to build an object file
 Game/ComponentController.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentController.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentController.cpp.o
 .PHONY : Game/ComponentController.cpp.o
 
 Game/ComponentController.i: Game/ComponentController.cpp.i
@@ -215,7 +215,7 @@ Game/ComponentController.i: Game/ComponentController.cpp.i
 
 # target to preprocess a source file
 Game/ComponentController.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentController.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentController.cpp.i
 .PHONY : Game/ComponentController.cpp.i
 
 Game/ComponentController.s: Game/ComponentController.cpp.s
@@ -223,7 +223,7 @@ Game/ComponentController.s: Game/ComponentController.cpp.s
 
 # target to generate assembly for a file
 Game/ComponentController.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentController.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentController.cpp.s
 .PHONY : Game/ComponentController.cpp.s
 
 Game/ComponentLevelLayout.o: Game/ComponentLevelLayout.cpp.o
@@ -231,7 +231,7 @@ Game/ComponentLevelLayout.o: Game/ComponentLevelLayout.cpp.o
 
 # target to build an object file
 Game/ComponentLevelLayout.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentLevelLayout.cpp.o
 .PHONY : Game/ComponentLevelLayout.cpp.o
 
 Game/ComponentLevelLayout.i: Game/ComponentLevelLayout.cpp.i
@@ -239,7 +239,7 @@ Game/ComponentLevelLayout.i: Game/ComponentLevelLayout.cpp.i
 
 # target to preprocess a source file
 Game/ComponentLevelLayout.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentLevelLayout.cpp.i
 .PHONY : Game/ComponentLevelLayout.cpp.i
 
 Game/ComponentLevelLayout.s: Game/ComponentLevelLayout.cpp.s
@@ -247,7 +247,7 @@ Game/ComponentLevelLayout.s: Game/ComponentLevelLayout.cpp.s
 
 # target to generate assembly for a file
 Game/ComponentLevelLayout.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentLevelLayout.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentLevelLayout.cpp.s
 .PHONY : Game/ComponentLevelLayout.cpp.s
 
 Game/ComponentRendererMesh.o: Game/ComponentRendererMesh.cpp.o
@@ -255,7 +255,7 @@ Game/ComponentRendererMesh.o: Game/ComponentRendererMesh.cpp.o
 
 # target to build an object file
 Game/ComponentRendererMesh.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentRendererMesh.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentRendererMesh.cpp.o
 .PHONY : Game/ComponentRendererMesh.cpp.o
 
 Game/ComponentRendererMesh.i: Game/ComponentRendererMesh.cpp.i
@@ -263,7 +263,7 @@ Game/ComponentRendererMesh.i: Game/ComponentRendererMesh.cpp.i
 
 # target to preprocess a source file
 Game/ComponentRendererMesh.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentRendererMesh.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentRendererMesh.cpp.i
 .PHONY : Game/ComponentRendererMesh.cpp.i
 
 Game/ComponentRendererMesh.s: Game/ComponentRendererMesh.cpp.s
@@ -271,7 +271,7 @@ Game/ComponentRendererMesh.s: Game/ComponentRendererMesh.cpp.s
 
 # target to generate assembly for a file
 Game/ComponentRendererMesh.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/Game/ComponentRendererMesh.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/Game/ComponentRendererMesh.cpp.s
 .PHONY : Game/ComponentRendererMesh.cpp.s
 
 main.o: main.cpp.o
@@ -279,7 +279,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/main.cpp.o
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -287,7 +287,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/main.cpp.i
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -295,7 +295,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f ExampleGame/CMakeFiles/MyGame.dir/build.make ExampleGame/CMakeFiles/MyGame.dir/main.cpp.s
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Wolfenstein/CMakeFiles/Wolfenstein.dir/build.make Wolfenstein/CMakeFiles/Wolfenstein.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -310,7 +310,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... MyGame"
+	@echo "... Wolfenstein"
 	@echo "... Game/ComponentCamera.o"
 	@echo "... Game/ComponentCamera.i"
 	@echo "... Game/ComponentCamera.s"

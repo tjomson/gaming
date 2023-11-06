@@ -178,6 +178,30 @@ MyEngine/fast:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/build
 .PHONY : MyEngine/fast
 
+3rdParty/Box2DDebugDraw.o: 3rdParty/Box2DDebugDraw.cpp.o
+.PHONY : 3rdParty/Box2DDebugDraw.o
+
+# target to build an object file
+3rdParty/Box2DDebugDraw.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/3rdParty/Box2DDebugDraw.cpp.o
+.PHONY : 3rdParty/Box2DDebugDraw.cpp.o
+
+3rdParty/Box2DDebugDraw.i: 3rdParty/Box2DDebugDraw.cpp.i
+.PHONY : 3rdParty/Box2DDebugDraw.i
+
+# target to preprocess a source file
+3rdParty/Box2DDebugDraw.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/3rdParty/Box2DDebugDraw.cpp.i
+.PHONY : 3rdParty/Box2DDebugDraw.cpp.i
+
+3rdParty/Box2DDebugDraw.s: 3rdParty/Box2DDebugDraw.cpp.s
+.PHONY : 3rdParty/Box2DDebugDraw.s
+
+# target to generate assembly for a file
+3rdParty/Box2DDebugDraw.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/3rdParty/Box2DDebugDraw.cpp.s
+.PHONY : 3rdParty/Box2DDebugDraw.cpp.s
+
 Engine/Component.o: Engine/Component.cpp.o
 .PHONY : Engine/Component.o
 
@@ -225,6 +249,102 @@ Engine/ComponentFactory.s: Engine/ComponentFactory.cpp.s
 Engine/ComponentFactory.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/ComponentFactory.cpp.s
 .PHONY : Engine/ComponentFactory.cpp.s
+
+Engine/Components/ComponentCamera.o: Engine/Components/ComponentCamera.cpp.o
+.PHONY : Engine/Components/ComponentCamera.o
+
+# target to build an object file
+Engine/Components/ComponentCamera.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentCamera.cpp.o
+.PHONY : Engine/Components/ComponentCamera.cpp.o
+
+Engine/Components/ComponentCamera.i: Engine/Components/ComponentCamera.cpp.i
+.PHONY : Engine/Components/ComponentCamera.i
+
+# target to preprocess a source file
+Engine/Components/ComponentCamera.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentCamera.cpp.i
+.PHONY : Engine/Components/ComponentCamera.cpp.i
+
+Engine/Components/ComponentCamera.s: Engine/Components/ComponentCamera.cpp.s
+.PHONY : Engine/Components/ComponentCamera.s
+
+# target to generate assembly for a file
+Engine/Components/ComponentCamera.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentCamera.cpp.s
+.PHONY : Engine/Components/ComponentCamera.cpp.s
+
+Engine/Components/ComponentPhysicsBody.o: Engine/Components/ComponentPhysicsBody.cpp.o
+.PHONY : Engine/Components/ComponentPhysicsBody.o
+
+# target to build an object file
+Engine/Components/ComponentPhysicsBody.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentPhysicsBody.cpp.o
+.PHONY : Engine/Components/ComponentPhysicsBody.cpp.o
+
+Engine/Components/ComponentPhysicsBody.i: Engine/Components/ComponentPhysicsBody.cpp.i
+.PHONY : Engine/Components/ComponentPhysicsBody.i
+
+# target to preprocess a source file
+Engine/Components/ComponentPhysicsBody.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentPhysicsBody.cpp.i
+.PHONY : Engine/Components/ComponentPhysicsBody.cpp.i
+
+Engine/Components/ComponentPhysicsBody.s: Engine/Components/ComponentPhysicsBody.cpp.s
+.PHONY : Engine/Components/ComponentPhysicsBody.s
+
+# target to generate assembly for a file
+Engine/Components/ComponentPhysicsBody.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentPhysicsBody.cpp.s
+.PHONY : Engine/Components/ComponentPhysicsBody.cpp.s
+
+Engine/Components/ComponentRendererMesh.o: Engine/Components/ComponentRendererMesh.cpp.o
+.PHONY : Engine/Components/ComponentRendererMesh.o
+
+# target to build an object file
+Engine/Components/ComponentRendererMesh.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererMesh.cpp.o
+.PHONY : Engine/Components/ComponentRendererMesh.cpp.o
+
+Engine/Components/ComponentRendererMesh.i: Engine/Components/ComponentRendererMesh.cpp.i
+.PHONY : Engine/Components/ComponentRendererMesh.i
+
+# target to preprocess a source file
+Engine/Components/ComponentRendererMesh.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererMesh.cpp.i
+.PHONY : Engine/Components/ComponentRendererMesh.cpp.i
+
+Engine/Components/ComponentRendererMesh.s: Engine/Components/ComponentRendererMesh.cpp.s
+.PHONY : Engine/Components/ComponentRendererMesh.s
+
+# target to generate assembly for a file
+Engine/Components/ComponentRendererMesh.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererMesh.cpp.s
+.PHONY : Engine/Components/ComponentRendererMesh.cpp.s
+
+Engine/Components/ComponentRendererSprite.o: Engine/Components/ComponentRendererSprite.cpp.o
+.PHONY : Engine/Components/ComponentRendererSprite.o
+
+# target to build an object file
+Engine/Components/ComponentRendererSprite.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererSprite.cpp.o
+.PHONY : Engine/Components/ComponentRendererSprite.cpp.o
+
+Engine/Components/ComponentRendererSprite.i: Engine/Components/ComponentRendererSprite.cpp.i
+.PHONY : Engine/Components/ComponentRendererSprite.i
+
+# target to preprocess a source file
+Engine/Components/ComponentRendererSprite.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererSprite.cpp.i
+.PHONY : Engine/Components/ComponentRendererSprite.cpp.i
+
+Engine/Components/ComponentRendererSprite.s: Engine/Components/ComponentRendererSprite.cpp.s
+.PHONY : Engine/Components/ComponentRendererSprite.s
+
+# target to generate assembly for a file
+Engine/Components/ComponentRendererSprite.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/Components/ComponentRendererSprite.cpp.s
+.PHONY : Engine/Components/ComponentRendererSprite.cpp.s
 
 Engine/GameObject.o: Engine/GameObject.cpp.o
 .PHONY : Engine/GameObject.o
@@ -274,6 +394,30 @@ Engine/MyEngine.cpp.s:
 	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/MyEngine.cpp.s
 .PHONY : Engine/MyEngine.cpp.s
 
+Engine/ResourceManager.o: Engine/ResourceManager.cpp.o
+.PHONY : Engine/ResourceManager.o
+
+# target to build an object file
+Engine/ResourceManager.cpp.o:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/ResourceManager.cpp.o
+.PHONY : Engine/ResourceManager.cpp.o
+
+Engine/ResourceManager.i: Engine/ResourceManager.cpp.i
+.PHONY : Engine/ResourceManager.i
+
+# target to preprocess a source file
+Engine/ResourceManager.cpp.i:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/ResourceManager.cpp.i
+.PHONY : Engine/ResourceManager.cpp.i
+
+Engine/ResourceManager.s: Engine/ResourceManager.cpp.s
+.PHONY : Engine/ResourceManager.s
+
+# target to generate assembly for a file
+Engine/ResourceManager.cpp.s:
+	cd /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject && $(MAKE) $(MAKESILENT) -f Engine/CMakeFiles/MyEngine.dir/build.make Engine/CMakeFiles/MyEngine.dir/Engine/ResourceManager.cpp.s
+.PHONY : Engine/ResourceManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,18 +431,36 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... MyEngine"
+	@echo "... 3rdParty/Box2DDebugDraw.o"
+	@echo "... 3rdParty/Box2DDebugDraw.i"
+	@echo "... 3rdParty/Box2DDebugDraw.s"
 	@echo "... Engine/Component.o"
 	@echo "... Engine/Component.i"
 	@echo "... Engine/Component.s"
 	@echo "... Engine/ComponentFactory.o"
 	@echo "... Engine/ComponentFactory.i"
 	@echo "... Engine/ComponentFactory.s"
+	@echo "... Engine/Components/ComponentCamera.o"
+	@echo "... Engine/Components/ComponentCamera.i"
+	@echo "... Engine/Components/ComponentCamera.s"
+	@echo "... Engine/Components/ComponentPhysicsBody.o"
+	@echo "... Engine/Components/ComponentPhysicsBody.i"
+	@echo "... Engine/Components/ComponentPhysicsBody.s"
+	@echo "... Engine/Components/ComponentRendererMesh.o"
+	@echo "... Engine/Components/ComponentRendererMesh.i"
+	@echo "... Engine/Components/ComponentRendererMesh.s"
+	@echo "... Engine/Components/ComponentRendererSprite.o"
+	@echo "... Engine/Components/ComponentRendererSprite.i"
+	@echo "... Engine/Components/ComponentRendererSprite.s"
 	@echo "... Engine/GameObject.o"
 	@echo "... Engine/GameObject.i"
 	@echo "... Engine/GameObject.s"
 	@echo "... Engine/MyEngine.o"
 	@echo "... Engine/MyEngine.i"
 	@echo "... Engine/MyEngine.s"
+	@echo "... Engine/ResourceManager.o"
+	@echo "... Engine/ResourceManager.i"
+	@echo "... Engine/ResourceManager.s"
 .PHONY : help
 
 

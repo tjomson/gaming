@@ -5,7 +5,9 @@
 #include "sre/RenderPass.hpp"
 #include "rapidjson/document.h"
 
-#include "GameObject.h"
+#include "Engine/GameObject.h"
+
+class ComponentPysicsComponent;
 
 namespace MyEngine {
 	class Engine;
@@ -13,17 +15,15 @@ namespace MyEngine {
 	class Component {
 		friend class GameObject;
 
-	private:
-
 	public:
 		virtual void Init(rapidjson::Value& serializedData) {};
 		virtual void Update(float) {};
 		virtual void Render(sre::RenderPass& renderPass) {};
 		virtual void KeyEvent(SDL_Event&) {};
+		virtual void OnCollisionStart(ComponentPhysicsBody* other) {};
+		virtual void OnCollisionEnd(ComponentPhysicsBody* other) {};
 
-		// interface used by gameplay components
-	protected:
-		GameObject* GetGameObject();
+		std::weak_ptr<GameObject> GetGameObject();
 
 	private:
 		std::weak_ptr<GameObject> _gameObject;

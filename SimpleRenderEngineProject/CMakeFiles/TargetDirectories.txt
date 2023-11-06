@@ -117,3 +117,10 @@
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install/local.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Wolfenstein/CMakeFiles/install/strip.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/Flappy.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/list_install_components.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install/local.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install/strip.dir
