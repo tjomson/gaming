@@ -67,13 +67,14 @@
 						"serializedData":
 						{
 							"atlas": "bird",
-							"sprite": "bird1.png"
+							"sprite": "bird1.png"	
 						}
 					},
 					{
 						"typeId": "CONTROLLER",
 						"serializedData": {
-							"movSpeed": 1,
+							"movSpeed": 50,
+							"impulse": 5,
 							"rotSpeed": 1
 						}
 					},

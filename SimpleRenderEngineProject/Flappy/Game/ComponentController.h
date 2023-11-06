@@ -10,6 +10,7 @@ class ComponentController : public MyEngine::Component {
 
 private:
 	glm::vec3 _mov;
+    float upwards_impulse;
 	float mov_speed;
 	float rot_speed;
 };
