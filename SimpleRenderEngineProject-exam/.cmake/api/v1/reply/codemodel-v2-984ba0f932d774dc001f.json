@@ -1,0 +1,569 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5,
+						10
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "submodules/SimpleRenderEngine",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-submodules.SimpleRenderEngine-Debug-3d0b9dd6c65e849815b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "submodules/SimpleRenderEngine"
+				},
+				{
+					"build" : "submodules/SimpleRenderEngine/submodules",
+					"jsonFile" : "directory-submodules.SimpleRenderEngine.submodules-Debug-1ce680f5debfc5fdfda6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "submodules/SimpleRenderEngine/submodules"
+				},
+				{
+					"build" : "submodules/SimpleRenderEngine/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-submodules.SimpleRenderEngine.src-Debug-faa756554924108e0ef5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "submodules/SimpleRenderEngine/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "submodules/SimpleRenderEngine/examples",
+					"jsonFile" : "directory-submodules.SimpleRenderEngine.examples-Debug-060b2037c57e9ca6023f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "submodules/SimpleRenderEngine/examples",
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					]
+				},
+				{
+					"build" : "project",
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9
+					],
+					"jsonFile" : "directory-project-Debug-357bc229ad25d66d3f3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "project",
+					"targetIndexes" : 
+					[
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					]
+				},
+				{
+					"build" : "project/Box2DTestbed",
+					"jsonFile" : "directory-project.Box2DTestbed-Debug-7220de62621331ad1817.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "project/Box2DTestbed",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "project/platformer",
+					"jsonFile" : "directory-project.platformer-Debug-34e6aacf4d6b0fd39bcf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "project/platformer",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "project/particle_system",
+					"jsonFile" : "directory-project.particle_system-Debug-f393b1f533d01788550d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "project/particle_system",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "project/gui",
+					"jsonFile" : "directory-project.gui-Debug-e3c27b49f4666feba35b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "project/gui",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "notplateup",
+					"childIndexes" : 
+					[
+						11,
+						12
+					],
+					"jsonFile" : "directory-notplateup-Debug-04617b41b9a0efd99c85.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "notplateup",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "notplateup/Engine",
+					"jsonFile" : "directory-notplateup.Engine-Debug-45511c9fe9e4717d1e8b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 0,
+					"source" : "notplateup/Engine",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "notplateup/NotPlateup",
+					"jsonFile" : "directory-notplateup.NotPlateup-Debug-a15e53de833cf444cff3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 0,
+					"source" : "notplateup/NotPlateup",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "SimpleRenderEngineProject",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "SimpleRenderEngine",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 10,
+					"id" : "ExampleGame2::@33fb0c147f43d2fe49f4",
+					"jsonFile" : "target-ExampleGame2-Debug-b21caa55413dcf7a84aa.json",
+					"name" : "ExampleGame2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "MyEngine::@c2aff31a23f7b03ebe6d",
+					"jsonFile" : "target-MyEngine-Debug-b0514435b04a027dd050.json",
+					"name" : "MyEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "NotPlateup::@e46fc09c488db475820b",
+					"jsonFile" : "target-NotPlateup-Debug-f9ace269182433927fe9.json",
+					"name" : "NotPlateup",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "SRE::@6f858f49817b2f3dd29a",
+					"jsonFile" : "target-SRE-Debug-2f34377e834a49d1cd9f.json",
+					"name" : "SRE",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-00_hello-engine::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-00_hello-engine-Debug-295a49540a6d05ff7522.json",
+					"name" : "SRE-Example-00_hello-engine",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-01_hello-engine-raw::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-01_hello-engine-raw-Debug-70b6ca39f6a1559e3ce9.json",
+					"name" : "SRE-Example-01_hello-engine-raw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-02_spheres::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-02_spheres-Debug-e26252a241d7283e0b03.json",
+					"name" : "SRE-Example-02_spheres",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-03_spinning-cube::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-03_spinning-cube-Debug-175b53e996b4366b882d.json",
+					"name" : "SRE-Example-03_spinning-cube",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-04_spinning-primitives-tex::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-04_spinning-primitives-tex-Debug-fdc1e5515ccc94c8e6f0.json",
+					"name" : "SRE-Example-04_spinning-primitives-tex",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-05_obj-viewer::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-05_obj-viewer-Debug-e6e397944e582e118f84.json",
+					"name" : "SRE-Example-05_obj-viewer",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-06_custom-mesh-layout::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-06_custom-mesh-layout-Debug-e59b6794c223e2ac9095.json",
+					"name" : "SRE-Example-06_custom-mesh-layout",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-07_matcap::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-07_matcap-Debug-f40747c161c053e75d23.json",
+					"name" : "SRE-Example-07_matcap",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-08_gui::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-08_gui-Debug-30881c1f1b714704b9ea.json",
+					"name" : "SRE-Example-08_gui",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-09_picking::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-09_picking-Debug-9763afad0e2fff6f2b0d.json",
+					"name" : "SRE-Example-09_picking",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-10_skybox-example::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-10_skybox-example-Debug-b6d7f610ab982ac58a74.json",
+					"name" : "SRE-Example-10_skybox-example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-11_sprite-example::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-11_sprite-example-Debug-f935984249cd4d22a332.json",
+					"name" : "SRE-Example-11_sprite-example",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-12_render-to-texture::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-12_render-to-texture-Debug-e8fb91c65911cdcbea3c.json",
+					"name" : "SRE-Example-12_render-to-texture",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-13_benchmark64k::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-13_benchmark64k-Debug-feebc4abd1197ea82d0b.json",
+					"name" : "SRE-Example-13_benchmark64k",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-14_spinning-primitives-openvr::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-14_spinning-primitives-openvr-Debug-630f734b7758b7fcefe0.json",
+					"name" : "SRE-Example-14_spinning-primitives-openvr",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-15_cloth_simulation::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-15_cloth_simulation-Debug-cf80004354c4aed15b26.json",
+					"name" : "SRE-Example-15_cloth_simulation",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-16_shadows::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-16_shadows-Debug-7d0564a3fb54f41f3c31.json",
+					"name" : "SRE-Example-16_shadows",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SRE-Example-17_deferred-shading::@1845079b24ff75818807",
+					"jsonFile" : "target-SRE-Example-17_deferred-shading-Debug-ec6c340d327143554182.json",
+					"name" : "SRE-Example-17_deferred-shading",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "SRE-Gui::@d91e1d0f78e3841a7320",
+					"jsonFile" : "target-SRE-Gui-Debug-6193faa71f01ec11ab79.json",
+					"name" : "SRE-Gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "SRE-ParticleSystem::@c8da8c4d5bf229d13237",
+					"jsonFile" : "target-SRE-ParticleSystem-Debug-12c833485be78b517383.json",
+					"name" : "SRE-ParticleSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "SRE-Platformer::@aee5187e8c5a79a9bbf3",
+					"jsonFile" : "target-SRE-Platformer-Debug-8bdd8f1c2d37b9688f06.json",
+					"name" : "SRE-Platformer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SRE-box2d-Testbed::@9a479cfe4d6e29dac892",
+					"jsonFile" : "target-SRE-box2d-Testbed-Debug-126713e7cc9d971f9515.json",
+					"name" : "SRE-box2d-Testbed",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-box2d-example::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-box2d-example-Debug-95ddc1f33615b08857fc.json",
+					"name" : "SRE-box2d-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-box2d-platform-example::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-box2d-platform-example-Debug-3dd81f5461bdd6909881.json",
+					"name" : "SRE-box2d-platform-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-lua-example::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-lua-example-Debug-275c49580795c6956269.json",
+					"name" : "SRE-lua-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-lua-example-lines::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-lua-example-lines-Debug-806d04659432808a7090.json",
+					"name" : "SRE-lua-example-lines",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-node-editor::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-node-editor-Debug-7c8452d5907f734353c7.json",
+					"name" : "SRE-node-editor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-project::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-project-Debug-8c26f7ca2ecb9bb028dd.json",
+					"name" : "SRE-project",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-scene-graph::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-scene-graph-Debug-55503a033c35527ffcfa.json",
+					"name" : "SRE-scene-graph",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SRE-sdl2_mixer-example::@1ff0e79755c878899e1a",
+					"jsonFile" : "target-SRE-sdl2_mixer-example-Debug-70b7d6e50fe0ff317fda.json",
+					"name" : "SRE-sdl2_mixer-example",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject-exam",
+		"source" : "/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject-exam"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

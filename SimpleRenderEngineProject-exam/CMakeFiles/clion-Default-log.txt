@@ -1,0 +1,48 @@
+/home/tjoms/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_MAKE_PROGRAM=/home/tjoms/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject-exam -B /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject-exam
+-- The CXX compiler identification is GNU 13.2.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+<FindSDL2.cmake>
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+</FindSDL2.cmake>
+-- Found SDL2: /usr/lib64/libSDL2main.a;/usr/lib64/libSDL2.so  
+CMake Warning (dev) at /home/tjoms/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindOpenGL.cmake:315 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib64/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib64/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib64/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  CMakeLists.txt:33 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenGL: /usr/lib64/libOpenGL.so   
+-- Found GLEW: /usr/include  
+<FindSDL2_image.cmake>
+-- Found SDL2_IMAGE: /usr/lib64/libSDL2_image.so (found version "..") 
+</FindSDL2_image.cmake>
+<FindSDL2_mixer.cmake>
+</FindSDL2_mixer.cmake>
+-- Found Lua: /usr/lib64/liblua-5.4.so;/usr/lib64/libm.so (found version "5.4.4") 
+<FindSDL2.cmake>
+</FindSDL2.cmake>
+<FindSDL2_image.cmake>
+</FindSDL2_image.cmake>
+-- Configuring done (0.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject-exam
