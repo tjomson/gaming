@@ -12,8 +12,8 @@ void ComponentSpawner::Init(rapidjson::Value&) {
 	// you can tweak these to find a pipe distriv
 	float xOffsetStart = 45;
 	float curve = 250;
-	float heighVariation = 10;
-	float xVariation = 50;
+	float heighVariation = 50;
+	float xVariation = 5;
 	int nWalls = 50;
 	
 	for (int i = 0; i < nWalls; ++i) {
@@ -33,9 +33,25 @@ void ComponentSpawner::Init(rapidjson::Value&) {
 		SpawnWall("WallTop" + std::to_string(i), "column_top.png", posTop);
 	}
 
-	// TODO spawn floor
+    SpawnHorizontalBound(0, "Floor");
+    SpawnHorizontalBound(winHeight, "Ceiling");
+
 
 	// TODO spawn coins
+}
+
+void ComponentSpawner::SpawnHorizontalBound(float height, std::string name) {
+    auto engine = MyEngine::Engine::GetInstance();
+    auto gameObject = GetGameObject();
+
+    auto wall = engine->CreateGameObject(name, gameObject).lock();
+    glm::vec3 zero {0,height,0};
+    wall->SetPosition(zero);
+
+    auto body = wall->CreateComponent<ComponentPhysicsBody>().lock();
+
+    glm::vec2 s {10000, 0};
+    body->CreateBody(b2_staticBody, false, s);
 }
 
 void ComponentSpawner::SpawnWall(std::string name, std::string spriteId, glm::vec3 pos) {
