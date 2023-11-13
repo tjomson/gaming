@@ -31,6 +31,9 @@ void ComponentSpawner::Init(rapidjson::Value&) {
 
 		SpawnWall("WallBottom" + std::to_string(i), "column_bottom.png", posBot);
 		SpawnWall("WallTop" + std::to_string(i), "column_top.png", posTop);
+
+        auto coinPos = glm::vec3{posBot.x, (posBot.y + posTop.y) / 2, 0};
+        SpawnCoin("Coin" + std::to_string(i), coinPos);
 	}
 
     SpawnHorizontalBound(0, "Floor");
@@ -73,4 +76,24 @@ void ComponentSpawner::SpawnWall(std::string name, std::string spriteId, glm::ve
 
 	glm::vec2 s { sprite->getSpriteSize().x * sprite->getScale().x / 2, sprite->getSpriteSize().y * sprite->getScale().y / 2};
 	body->CreateBody(b2_staticBody, false, s);
+}
+
+void ComponentSpawner::SpawnCoin(std::string name, glm::vec3 pos) {
+    auto engine = MyEngine::Engine::GetInstance();
+    auto gameObject = GetGameObject();
+
+    auto coin = engine->CreateGameObject(name, gameObject).lock();
+    auto renderer = coin->CreateComponent<ComponentRendererSprite>().lock();
+    renderer->SetSprite("bird", "coin.png");
+
+    auto sprite = renderer->GetSprite();
+    sprite->setScale({ 2, 2 });
+
+    pos.y += sprite->getSpriteSize().y / 2;
+    coin->SetPosition(pos);
+
+    auto body = coin->CreateComponent<ComponentPhysicsBody>().lock();
+
+    glm::vec2 s { sprite->getSpriteSize().x * sprite->getScale().x / 2, sprite->getSpriteSize().y * sprite->getScale().y / 2};
+    body->CreateBody(b2_staticBody, true, s);
 }
