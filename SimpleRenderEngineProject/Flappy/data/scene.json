@@ -2,31 +2,54 @@
 	"root": {
 		"name": "_root",
 		"transform": {
-			"position": [0, 0, 0],
-			"rotation": [0, 0, 0],
-			"scale": [1, 1, 1]
+			"position": [
+				0,
+				0,
+				0
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
 		},
 		"components": [],
 		"children": [
 			{
 				"name": "bg0",
 				"transform": {
-					"position": [0, 0, 0],
-					"rotation": [0, 0, 0],
-					"scale": [1, 1, 1]
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
 				},
 				"components": [
 					{
 						"typeId": "SPRITE_RENDERER",
-						"serializedData":
-						{
+						"serializedData": {
 							"atlas": "SINGLE",
-							"sprite": "background"	
+							"sprite": "background"
 						}
 					},
 					{
 						"typeId": "BACKGROUND",
-						"serializedData": { }
+						"serializedData": {}
 					}
 				],
 				"children": []
@@ -34,22 +57,33 @@
 			{
 				"name": "bg1",
 				"transform": {
-					"position": [0, 0, 0],
-					"rotation": [0, 0, 0],
-					"scale": [1, 1, 1]
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
 				},
 				"components": [
 					{
 						"typeId": "SPRITE_RENDERER",
-						"serializedData":
-						{
+						"serializedData": {
 							"atlas": "SINGLE",
-							"sprite": "background2"	
+							"sprite": "background2"
 						}
 					},
 					{
 						"typeId": "BACKGROUND",
-						"serializedData": { }
+						"serializedData": {}
 					}
 				],
 				"children": []
@@ -57,17 +91,28 @@
 			{
 				"name": "bird",
 				"transform": {
-					"position": [100, 300, 0],
-					"rotation": [0, 0, 0],
-					"scale": [2, 2, 1]
+					"position": [
+						100,
+						300,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						2,
+						2,
+						1
+					]
 				},
 				"components": [
 					{
 						"typeId": "SPRITE_RENDERER",
-						"serializedData":
-						{
+						"serializedData": {
 							"atlas": "bird",
-							"sprite": "bird1.png"	
+							"sprite": "bird1.png"
 						}
 					},
 					{
@@ -83,7 +128,10 @@
 						"serializedData": {
 							"bodyType": 2,
 							"isSensor": false,
-							"size": [15, 10]
+							"size": [
+								15,
+								10
+							]
 						}
 					}
 				],
@@ -92,16 +140,32 @@
 			{
 				"name": "camera",
 				"transform": {
-					"position": [150, 300, 0],
-					"rotation": [0, 0, 0],
-					"scale": [1, 1, 1]
+					"position": [
+						150,
+						300,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
 				},
 				"components": [
 					{
 						"typeId": "CAMERA",
 						"serializedData": {
 							"projectionType": 0,
-							"projectionParams": [300,-1,1]
+							"projectionParams": [
+								300,
+								-1,
+								1
+							]
 						}
 					},
 					{
@@ -119,16 +183,26 @@
 			{
 				"name": "Spawner",
 				"transform": {
-					"position": [0, 0, 0],
-					"rotation": [0, 0, 0],
-					"scale": [1, 1, 1]
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
 				},
 				"components": [
 					{
 						"typeId": "SPAWNER",
-						"serializedData": {
-							
-						}
+						"serializedData": {}
 					}
 				],
 				"children": []
