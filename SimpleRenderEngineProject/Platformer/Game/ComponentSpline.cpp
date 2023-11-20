@@ -26,9 +26,12 @@ void ComponentSpline::Update(float delta) {
 
 	int segment = (int)fmod(_t, _points.size() - 1);
 	float t = fmod(_t, 1.0f);
+    auto t0 = glm::mix(_points[segment], _points[segment + 1], t);
+    auto t1 = glm::mix(_points[segment + 1], _points[segment + 2], t);
+    auto p = glm::mix(t0, t1, t);
 
-	// TODO use Quadratic Bézier spline instead
-	gameObject->SetPosition(glm::mix(_points[segment], _points[segment + 1], t));
+	// TODO use Quadratic Bezier spline instead
+	gameObject->SetPosition(p);
 }
 
 void ComponentSpline::Render(sre::RenderPass& renderPass) {
