@@ -4,6 +4,7 @@
 
 #include "sre/RenderPass.hpp"
 #include "rapidjson/document.h"
+#include "Box2D/Box2D.h"
 
 #include "Engine/GameObject.h"
 
@@ -20,8 +21,8 @@ namespace MyEngine {
 		virtual void Update(float) {};
 		virtual void Render(sre::RenderPass& renderPass) {};
 		virtual void KeyEvent(SDL_Event&) {};
-		virtual void OnCollisionStart(ComponentPhysicsBody* other) {};
-		virtual void OnCollisionEnd(ComponentPhysicsBody* other) {};
+		virtual void OnCollisionStart(ComponentPhysicsBody* other, b2Manifold* manifold) {};
+		virtual void OnCollisionEnd(ComponentPhysicsBody* other, b2Manifold* manifold) {};
 
 		std::weak_ptr<GameObject> GetGameObject();
 

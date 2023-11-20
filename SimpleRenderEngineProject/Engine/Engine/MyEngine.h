@@ -25,10 +25,11 @@ namespace MyEngine {
 	public:
 		static Engine* GetInstance() { return _instance; }
 	public:
-		const glm::vec2 WIN_SIZE = glm::vec2(400, 600);
+		const glm::vec2 WIN_SIZE = glm::vec2(800, 600);
 		const float PHYSICS_FIXED_FRAME_TIME = 1 / 60.0f;
 		const int   PHYSICS_ITERATION_POSITION = 2;
 		const int   PHYSICS_ITERATION_VELOCITY = 6;
+		const float PHYSICS_SCALE = 100;
 
 		Engine();
 
@@ -48,7 +49,7 @@ namespace MyEngine {
 		float GetTime() const { return time; }
 		sre::Camera* GetCamera() { return &_camera; };
 		b2World* GetB2World() { return _b2World; }
-		float GetPhysicsScale() { return _physicsScale; }
+		float GetPhysicsScale() { return PHYSICS_SCALE; }
 
 		void RegisterPhysicsComponent(ComponentPhysicsBody* body);
 		void DeregisterPhysicsComponent(ComponentPhysicsBody* body);
@@ -78,7 +79,6 @@ namespace MyEngine {
 
 		// physics
 		b2World* _b2World;
-		float _physicsScale = 100;
 		std::map<b2Fixture*, ComponentPhysicsBody*> _physicsLookup;
 		void BeginContact(b2Contact* contact) override;
 		void EndContact(b2Contact* contact) override;

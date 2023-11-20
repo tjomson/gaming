@@ -6,9 +6,8 @@
 #include <memory>
 #include <string>
 
-#include "sre/SpriteBatch.hpp"
 #include "sre/RenderPass.hpp"
-
+#include "Box2D/Box2D.h"
 #include "rapidjson/document.h"
 
 class ComponentPhysicsBody;
@@ -28,8 +27,8 @@ namespace MyEngine {
 		void Update(float);
 		void Render(sre::RenderPass&);
 		void KeyEvent(SDL_Event&);
-		void OnCollisionStart(ComponentPhysicsBody* other);
-		void OnCollisionEnd(ComponentPhysicsBody* other);
+		void OnCollisionStart(ComponentPhysicsBody* other, b2Manifold* manifold);
+		void OnCollisionEnd(ComponentPhysicsBody* other, b2Manifold* manifold);
 
 		void AddChild(std::shared_ptr<GameObject>);
 		void AddComponent(std::shared_ptr<Component>);
@@ -69,7 +68,7 @@ namespace MyEngine {
 	public:
 		glm::mat4 DeserializeTransform(rapidjson::Value& transformData);
 
-		glm::vec3 DeserializeVector(rapidjson::Value& vectorData);
+		static glm::vec3 DeserializeVector(rapidjson::Value& vectorData);
 
 		// transform
 		// (it would be a good idea to move this to its own class, so that the GameObject doesn't need to import all the extra glm classes)

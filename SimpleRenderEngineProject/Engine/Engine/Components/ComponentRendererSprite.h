@@ -12,6 +12,7 @@ public:
 
 	void SetSprite(std::string idAtlas, std::string idSprite);
 	sre::Sprite* GetSprite() { return &_sprite; }
+	void SetSpritePosition(glm::vec2& position);
 
 protected:
 	sre::Sprite _sprite;

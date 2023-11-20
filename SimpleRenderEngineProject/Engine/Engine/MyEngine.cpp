@@ -16,7 +16,7 @@
 namespace MyEngine {
 	Engine* Engine::_instance = nullptr;
 
-	Engine::Engine() : _b2DebugDraw(_physicsScale) {
+	Engine::Engine() : _b2DebugDraw(PHYSICS_SCALE) {
 		assert(_instance == nullptr && " Only one instance of MyEngine::Engine allowed!");
 		_instance = this;
 
@@ -112,7 +112,7 @@ namespace MyEngine {
 			const float   angle = b2Body->GetAngle();
 			if (auto gameObject = physicsBody->GetGameObject().lock())
 			{
-				gameObject->SetPosition(glm::vec3(position.x * _physicsScale, position.y * _physicsScale, 0));
+				gameObject->SetPosition(glm::vec3(position.x * PHYSICS_SCALE, position.y * PHYSICS_SCALE, 0));
 				gameObject->SetEulerAngles(glm::vec3(0, 0, angle));
 			}
 
@@ -216,13 +216,22 @@ namespace MyEngine {
 			auto gameObjA = physA->second->GetGameObject().lock();
 			auto gameObjB = physB->second->GetGameObject().lock();
 
+			// collision info
+			b2Manifold*  manifold = contact->GetManifold();
+
 			if (!gameObjA || !gameObjB)
 				return;
 
 			if (begin)
-				gameObjA->OnCollisionStart(physB->second);
+			{
+				gameObjA->OnCollisionStart(physB->second, manifold);
+				gameObjB->OnCollisionStart(physA->second, manifold);
+			}
 			else
-				gameObjB->OnCollisionEnd(physB->second);
+			{
+				gameObjA->OnCollisionEnd(physB->second, manifold);
+				gameObjB->OnCollisionEnd(physA->second, manifold);
+			}
 		}
 	}
 }

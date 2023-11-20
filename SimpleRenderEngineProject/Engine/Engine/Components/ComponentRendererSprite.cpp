@@ -36,3 +36,7 @@ void ComponentRendererSprite::Render(sre::RenderPass& renderPass) {
 	auto batch = builder.build();
 	renderPass.draw(batch, gameObject->transform);
 }
+
+void ComponentRendererSprite::SetSpritePosition(glm::vec2& pivot) {
+	_sprite.setPosition(pivot);
+}

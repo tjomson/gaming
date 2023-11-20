@@ -26,11 +26,38 @@ void ComponentCamera::Init(rapidjson::Value& serializedData) {
 	_camera->lookAt(glm::vec3(0, 0, 0), glm::vec3(0, 0, -1), glm::vec3{ 0,1,0 });
 }
 
-void ComponentCamera::Update(float) {
+void ComponentCamera::Update(float delta) {
+	if (_debugging)
+		if (auto gameObject = GetGameObject().lock()) {
+			glm::vec3 pos = gameObject->GetPosition();
+			pos.x += _debugMov.x * _debugMovSpeed;
+			pos.y += _debugMov.y * _debugMovSpeed;
+			gameObject->SetPosition(pos);
+		}
+
 	if (auto gameObject = GetGameObject().lock())
 	{
 		glm::vec3 position = gameObject->GetPosition();
 		glm::quat rotation = gameObject->GetRotation();
 		_camera->setPositionAndRotation(position, glm::degrees(glm::eulerAngles(rotation)));
+	}
+
+}
+
+void ComponentCamera::KeyEvent(SDL_Event& event) {
+	if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_F3)
+	{
+		_debugging = !_debugging;
+		return;
+	}
+
+	if (!_debugging)
+		return;
+
+	switch (event.key.keysym.sym) {
+		case SDLK_w: _debugMov.y = -(event.type == SDL_KEYDOWN); break;
+		case SDLK_s: _debugMov.y = +(event.type == SDL_KEYDOWN); break;
+		case SDLK_a: _debugMov.x = +(event.type == SDL_KEYDOWN); break;
+		case SDLK_d: _debugMov.x = -(event.type == SDL_KEYDOWN); break;
 	}
 }

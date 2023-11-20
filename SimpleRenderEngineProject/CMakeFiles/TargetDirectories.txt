@@ -124,3 +124,10 @@
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install/local.dir
 /home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Flappy/CMakeFiles/install/strip.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/Platformer.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/edit_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/rebuild_cache.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/list_install_components.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/install.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/install/local.dir
+/home/tjoms/Documents/GitHub/GameProgramming23-Exercises/SimpleRenderEngineProject/Platformer/CMakeFiles/install/strip.dir

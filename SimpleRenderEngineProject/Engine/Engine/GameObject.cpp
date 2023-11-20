@@ -19,19 +19,21 @@ namespace MyEngine {
 		_name = data["name"].GetString();
 		transform = DeserializeTransform(data["transform"]);
 
-		for (auto& componentData : data["components"].GetArray())
-		{
-			auto TMP_id = componentData["typeId"].GetString();
-			auto component = ComponentFactory::GetComponentOfType(componentData["typeId"].GetString());
-			AddComponent(component);
-			component->Init(componentData["serializedData"]);
-		}
+		if (data.HasMember("components"))
+			for (auto& componentData : data["components"].GetArray())
+			{
+				auto TMP_id = componentData["typeId"].GetString();
+				auto component = ComponentFactory::GetComponentOfType(componentData["typeId"].GetString());
+				AddComponent(component);
+				component->Init(componentData["serializedData"]);
+			}
 		
-		for (auto& childData : data["children"].GetArray())
-		{
-			auto child = engine->CreateGameObject(childData["name"].GetString(), _self);
-			child.lock()->Init(childData);
-		}
+		if (data.HasMember("children"))
+			for (auto& childData : data["children"].GetArray())
+			{
+				auto child = engine->CreateGameObject(childData["name"].GetString(), _self);
+				child.lock()->Init(childData);
+			}
 	}
 
 	void GameObject::Update(float deltaTime) {
@@ -61,14 +63,14 @@ namespace MyEngine {
 				go->KeyEvent(e);
 	}
 
-	void GameObject::OnCollisionStart(ComponentPhysicsBody* other) {
+	void GameObject::OnCollisionStart(ComponentPhysicsBody* other, b2Manifold* manifold) {
 		for (auto& component : _components)
-			component->OnCollisionStart(other);
+			component->OnCollisionStart(other, manifold);
 	}
 
-	void GameObject::OnCollisionEnd(ComponentPhysicsBody* other) {
+	void GameObject::OnCollisionEnd(ComponentPhysicsBody* other, b2Manifold* manifold) {
 		for (auto& component : _components)
-			component->OnCollisionEnd(other);
+			component->OnCollisionEnd(other, manifold);
 	}
 
 	void GameObject::AddChild(std::shared_ptr<GameObject> p_object) {
