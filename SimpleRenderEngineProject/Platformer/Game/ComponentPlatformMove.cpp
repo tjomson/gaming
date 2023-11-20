@@ -50,6 +50,8 @@ float ComponentPlatformMove::Easing(float t) {
 		case Constant: return 0;
 		case Linear: return t;
 		case Sin: return glm::sin(t);
+        case Cos: return glm::cos(t);
+        case Cubic: return t * t * t;
 		// TODO add your easing functions here
 	}
 }

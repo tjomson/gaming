@@ -5,7 +5,9 @@
 enum EasingType {
 	Constant,
 	Linear,
-	Sin
+	Sin,
+    Cos,
+    Cubic
 	// add your easings here
 };
 
