@@ -23,7 +23,7 @@ void ComponentSpline::Update(float delta) {
 		return;
 
 	_t += delta;
-
+    // This bezier curve is quite wonky, but i could not figure out how it should move
 	int segment = (int)fmod(_t, _points.size() - 1);
 	float t = fmod(_t, 1.0f);
     auto t0 = glm::mix(_points[segment], _points[segment + 1], t);
