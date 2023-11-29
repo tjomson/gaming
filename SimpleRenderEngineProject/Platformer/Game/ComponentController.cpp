@@ -4,6 +4,8 @@
 #include "SDL.h"
 
 #include "Engine/Components/ComponentPhysicsBody.h"
+#include "Engine/Components/ComponentRendererSprite.h"
+#include "Engine/MyEngine.h"
 
 void ComponentController::Init(rapidjson::Value& serializedData) {
 	auto gameObject = GetGameObject().lock();
@@ -13,15 +15,34 @@ void ComponentController::Init(rapidjson::Value& serializedData) {
 	_body = gameObject->FindComponent<ComponentPhysicsBody>();
 }
 
+std::string ComponentController::DetermineSprite(float deltaTime, glm::vec2 linearVelocity) {
+    auto velocity = glm::length(linearVelocity);
+    if (velocity == 0) return "19.png";
+    if (velocity > 0 && _grounded) {
+        lastSpriteChange += deltaTime;
+        if (lastSpriteChange > 0.3 / glm::abs(linearVelocity.x)) {
+            lastSpriteChange = 0;
+            currWalkSprite = currWalkSprite == "20.png" ? "21.png" : "20.png";
+        }
+        return currWalkSprite;
+    }
+    if (linearVelocity.y > 2) return "26.png";
+    if (linearVelocity.y < -2) return "28.png";
+    return "27.png";
+}
+
 void ComponentController::Update(float deltaTime) {
+    auto renderer = GetGameObject().lock()->FindComponent<ComponentRendererSprite>();
 	auto body = _body.lock();
 	if (!body)
 		return;
 
 	auto linearVelocity = body->getLinearVelocity();
+    renderer.lock()->SetSprite("platformer-art-deluxe", DetermineSprite(deltaTime, linearVelocity));
+    if (linearVelocity.x < 0) renderer.lock()->GetSprite()->setFlip({1, 0});
+
 	linearVelocity.x = _mov.x * _movSpeed;
 	body->setLinearVelocity(linearVelocity);
-
 	if (_jump) {
 		body->addImpulse(glm::vec2(0, _jumpStrength));
 		_jump = false;
